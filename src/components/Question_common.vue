@@ -9,18 +9,18 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
-          <path d="M25 0L31.9282 12H18.0718L25 0Z" fill="#333333" />
-          <rect x="37" width="12" height="12" fill="#333333" />
-          <circle cx="59.5" cy="6.5" r="6.5" fill="#333333" />
-          <path d="M78 0L84.9282 12H71.0718L78 0Z" fill="#333333" />
-          <rect x="90" width="12" height="12" fill="#333333" />
-          <circle cx="112.5" cy="6.5" r="6.5" fill="#333333" />
-          <path d="M131 0L137.928 12H124.072L131 0Z" fill="#333333" />
-          <rect x="143" width="12" height="12" fill="#333333" />
-          <circle cx="165.5" cy="6.5" r="6.5" fill="#333333" />
-          <path d="M184 0L190.928 12H177.072L184 0Z" fill="#333333" />
-          <rect x="196" width="12" height="12" fill="#333333" />
+          <circle cx="6.5" cy="6.5" r="6.5" :fill="getCounterColer(counterList[0])" />
+          <path d="M25 0L31.9282 12H18.0718L25 0Z" :fill="getCounterColer(counterList[1])" />
+          <rect x="37" width="12" height="12" :fill="getCounterColer(counterList[2])" />
+          <circle cx="59.5" cy="6.5" r="6.5" :fill="getCounterColer(counterList[3])" />
+          <path d="M78 0L84.9282 12H71.0718L78 0Z" :fill="getCounterColer(counterList[4])" />
+          <rect x="90" width="12" height="12" :fill="getCounterColer(counterList[5])" />
+          <circle cx="112.5" cy="6.5" r="6.5" :fill="getCounterColer(counterList[6])" />
+          <path d="M131 0L137.928 12H124.072L131 0Z" :fill="getCounterColer(counterList[7])" />
+          <rect x="143" width="12" height="12" :fill="getCounterColer(counterList[8])" />
+          <circle cx="165.5" cy="6.5" r="6.5" :fill="getCounterColer(counterList[9])" />
+          <path d="M184 0L190.928 12H177.072L184 0Z" :fill="getCounterColer(counterList[10])" />
+          <rect x="196" width="12" height="12" :fill="getCounterColer(counterList[11])" />
         </svg>
       </div>
       <img :src="`image/${questions[count].id}_question.png`" />
@@ -29,22 +29,10 @@
 
     <div class="option_box">
       <div id="timer">남은시간</div>
-      <button
-        v-on:click="
-          count += 1;
-          choice.push(0);
-        "
-        class="option"
-      >
+      <button v-on:click="toUserChoice(0)" class="option">
         {{ questions[count].option[0] }}</button
       ><br />
-      <button
-        v-on:click="
-          count += 1;
-          choice.push(1);
-        "
-        class="option"
-      >
+      <button v-on:click="toUserChoice(1)" class="option">
         {{ questions[count].option[1] }}
       </button>
     </div>
@@ -60,8 +48,23 @@ export default {
       return questionList;
     },
   },
+  methods: {
+    getCounterColer: function (num) {
+      if (num) return "#E73E7E";
+      return "#333333";
+    },
+    toUserChoice: function (option_number) {
+      if (this.choice.length > 11) return 0;
+      if (this.count < 11) this.count += 1;
+      this.choice.push(option_number);
+      this.counterList.unshift(1);
+      this.counterList.pop();
+      console.log(this.count, this.choice);
+    },
+  },
   data() {
     return {
+      counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
       choice: [],
     };
