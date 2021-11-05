@@ -39,7 +39,7 @@
 </template>
 <script>
 export default {
-  name: "Tutorial",
+  name: "TutorialPage",
   props: {},
 };
 </script>
