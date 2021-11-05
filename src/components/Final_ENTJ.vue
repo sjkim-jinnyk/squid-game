@@ -3,8 +3,8 @@
     <div class="testMBTI">
       <p class="mbti">ENTJ</p>
       <p class="charName">조상우</p>
-      <img src="../img/조상우_ENTJ.png" alt="성기훈 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+      <img src="../img/MBTI/조상우_ENTJ.png" alt="조상우 이미지" class="mbtiIMG" />
+      <p class="mbtiSummary">전략가로서 실리를 챙기는 지도자형 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
@@ -33,15 +33,15 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../img/강새벽_INFP.png" alt="ENFP와 잘맞는 유형" />
-            <p class="typeCharName">장새벽</p>
-            <p class="typeCharInfo">창의력과 통찰력이 뛰어난 독창적인 인물</p>
+            <img src="../img/MBTI/강새벽_INFP.png" alt="ENTJ와 잘맞는 유형" />
+            <p class="typeCharName">강새벽</p>
+            <p class="typeCharInfo">신념과 조화를 중시하는 이상주의자 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../img/병기_ISFJ.png" alt="ENFP와 잘맞는 유형" />
+            <img src="../img/MBTI/병기_ISFJ.png" alt="ENTJ와 잘맞는 유형" />
             <p class="typeCharName">병기</p>
-            <p class="typeCharInfo">전략가로서 실리를 챙기는 지도자형 인물</p>
+            <p class="typeCharInfo">책임감이 강하고 헌신적인 인내심 많은 인물</p>
           </section>
         </div>
       </section>
