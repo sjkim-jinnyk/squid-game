@@ -33,7 +33,7 @@
 
     <div class="option_box">
       <div id="timer">남은시간</div>
-      <button class="option1">한방으로 인생 역전을 노린다</button>
+      <button class="option1">한방으로 인생 역전을 노린다</button><br />
       <button class="option1">일단 계획을 짜서 일을 한다</button>
     </div>
   </div>
