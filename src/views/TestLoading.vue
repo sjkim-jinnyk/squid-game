@@ -7,7 +7,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    setTimeout(() => this.$router.push({ path: "/questions/result" }), 2500);
+  },
+};
 </script>
 
 <style scoped>

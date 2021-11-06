@@ -29,12 +29,23 @@
 
     <div class="option_box">
       <div id="timer">남은시간</div>
-      <button v-on:click="toUserChoice(0)" class="option">
-        {{ questions[count].option[0] }}</button
-      ><br />
-      <button v-on:click="toUserChoice(1)" class="option">
-        {{ questions[count].option[1] }}
-      </button>
+      <router-link to="loading" v-if="testdone">
+        <button v-on:click="toUserChoice(0)" class="option">
+          {{ questions[count].option[0] }}</button
+        ><br />
+        <button v-on:click="toUserChoice(1)" class="option">
+          {{ questions[count].option[1] }}
+        </button>
+      </router-link>
+
+      <div v-else>
+        <button v-on:click="toUserChoice(0)" class="option">
+          {{ questions[count].option[0] }}</button
+        ><br />
+        <button v-on:click="toUserChoice(1)" class="option">
+          {{ questions[count].option[1] }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +54,13 @@ import questionList from "../assets/questions.json";
 
 export default {
   name: "QuestionsPage",
+  watch: {
+    count: function (val) {
+      if (val >= 11) {
+        this.testdone = true;
+      }
+    },
+  },
   computed: {
     questions() {
       return questionList;
@@ -67,6 +85,7 @@ export default {
       counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
       choice: [],
+      testdone: false,
     };
   },
   props: {},
