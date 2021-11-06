@@ -33,7 +33,9 @@
 
     <div class="option_box">
       <div id="timer">남은시간</div>
-      <button class="option1">네</button>
+      <router-link to="/questions">
+        <button class="option1">네</button>
+      </router-link>
     </div>
   </div>
 </template>

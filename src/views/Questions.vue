@@ -42,7 +42,7 @@
 import questionList from "../assets/questions.json";
 
 export default {
-  name: "Question_common",
+  name: "QuestionsPage",
   computed: {
     questions() {
       return questionList;
