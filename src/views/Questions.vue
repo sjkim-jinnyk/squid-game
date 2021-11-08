@@ -30,7 +30,6 @@
     <div class="option_box">
       <div id="timer">남은시간</div>
       <router-link :to="{ name: 'Loading', params: { mbti: mbti } }" v-if="testdone">
-        <!-- <router-link to="loading" v-if="testdone"> -->
         <button
           v-on:click="
             toUserChoice(0);
