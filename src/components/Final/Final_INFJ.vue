@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="mbti">INFJ</p>
       <p class="charName">오일남</p>
-      <img src="../img/MBTI/오일남_INFJ.png" alt="오일남 이미지" class="mbtiIMG" />
+      <img src="../../img/MBTI/오일남_INFJ.png" alt="오일남 이미지" class="mbtiIMG" />
       <p class="mbtiSummary">창의력과 통찰력이 뛰어난 독창적인 인물</p>
     </div>
     <main>
@@ -32,13 +32,13 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../img/MBTI/장덕수_ESTP.png" alt="INFJ와 잘맞는 유형" />
+            <img src="../../img/MBTI/장덕수_ESTP.png" alt="INFJ와 잘맞는 유형" />
             <p class="typeCharName">장덕수</p>
             <p class="typeCharInfo">다양한 분야에 관심이 있는 활동적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../img/MBTI/VIP_ESTJ.png" alt="INFJ와 잘맞는 유형" />
+            <img src="../../img/MBTI/VIP_ESTJ.png" alt="INFJ와 잘맞는 유형" />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">계획하는 능력이 뛰어난 사업가형 인물</p>
           </section>
@@ -48,10 +48,10 @@
     <footer>
       <p class="share_box">공유하기</p>
       <div class="share_btn">
-        <img src="image/share_btn.svg" />
-        <img src="image/kakao.svg" />
-        <img src="image/facebook.svg" />
-        <img src="image/twitter.svg" />
+        <img src="/image/share_btn.svg" />
+        <img src="/image/kakao.svg" />
+        <img src="/image/facebook.svg" />
+        <img src="/image/twitter.svg" />
       </div>
       <div class="footerBTN">
         <button class="allResultBTN">결과 전체보기</button>
@@ -68,5 +68,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../css/Final_MBTI.css";
+@import "../../css/Final_MBTI.css";
 </style>
