@@ -29,7 +29,8 @@
 
     <div class="option_box">
       <div id="timer">남은시간</div>
-      <router-link to="loading" v-if="testdone">
+      <router-link :to="{ name: 'Loading', params: { mbti: mbti } }" v-if="testdone">
+        <!-- <router-link to="loading" v-if="testdone"> -->
         <button
           v-on:click="
             toUserChoice(0);
@@ -63,6 +64,7 @@
 </template>
 <script>
 import questionList from "../assets/questions.json";
+// import TestLoading from "./TestLoading.vue";
 
 export default {
   name: "QuestionsPage",
@@ -95,11 +97,10 @@ export default {
       console.log(choice);
       for (let i in choice) {
         if (choice[i] >= 2) {
-          this.result += i;
-          console.log(this.result);
+          this.mbti += i;
         }
       }
-      // console.log(this.choice2);
+      console.log(this.mbti);
     },
   },
   data() {
@@ -107,7 +108,7 @@ export default {
       counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
-      result: "",
+      mbti: "",
       testdone: false,
     };
   },
