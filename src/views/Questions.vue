@@ -30,10 +30,22 @@
     <div class="option_box">
       <div id="timer">남은시간</div>
       <router-link to="loading" v-if="testdone">
-        <button v-on:click="toUserChoice(0)" class="option">
+        <button
+          v-on:click="
+            toUserChoice(0);
+            getResult(choice);
+          "
+          class="option"
+        >
           {{ questions[count].option[0] }}</button
         ><br />
-        <button v-on:click="toUserChoice(1)" class="option">
+        <button
+          v-on:click="
+            toUserChoice(1);
+            getResult(choice);
+          "
+          class="option"
+        >
           {{ questions[count].option[1] }}
         </button>
       </router-link>
@@ -72,19 +84,30 @@ export default {
       return "#333333";
     },
     toUserChoice: function (option_number) {
-      if (this.choice.length > 11) return 0;
+      if (this.count > 12) return 0;
+      let mbti_value = this.questions[this.count].option_mbti[option_number];
+      this.choice[mbti_value] += 1;
       if (this.count < 11) this.count += 1;
-      this.choice.push(option_number);
       this.counterList.unshift(1);
       this.counterList.pop();
-      console.log(this.count, this.choice);
+    },
+    getResult: function (choice) {
+      console.log(choice);
+      for (let i in choice) {
+        if (choice[i] >= 2) {
+          this.result += i;
+          console.log(this.result);
+        }
+      }
+      // console.log(this.choice2);
     },
   },
   data() {
     return {
       counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
-      choice: [],
+      choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
+      result: "",
       testdone: false,
     };
   },
