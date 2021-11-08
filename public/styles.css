@@ -13,6 +13,10 @@ p {
     color: white;  
 }
 
+a {
+    text-decoration-line: none !important;
+  }
+
 h3 {
     color: white;  
     font-family: Noto Sans CJK KR;

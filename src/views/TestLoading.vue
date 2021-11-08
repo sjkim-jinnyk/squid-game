@@ -8,8 +8,10 @@
 
 <script>
 export default {
+  name: "TestLoading",
+  props: { mbti: String },
   created() {
-    setTimeout(() => this.$router.push({ path: "/questions/result" }), 2500);
+    setTimeout(() => this.$router.push({ name: `Final_${this.mbti}` }), 2500);
   },
 };
 </script>

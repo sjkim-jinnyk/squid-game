@@ -70,6 +70,5 @@ export default {
 </script>
 
 <style scoped>
-/* @import "../../css/Final_MBTI.css"; */
 @import "../../css/Final_MBTI.css";
 </style>
