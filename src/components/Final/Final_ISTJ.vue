@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="mbti">ISTJ</p>
       <p class="charName">황준호</p>
-      <img src="../img/MBTI/황준호_ISTJ.png" alt="황준호 이미지" class="mbtiIMG" />
+      <img src="../../img/MBTI/황준호_ISTJ.png" alt="황준호 이미지" class="mbtiIMG" />
       <p class="mbtiSummary">시작한 일은 끝까지 하는 완벽주의자 인물</p>
     </div>
     <main>
@@ -30,13 +30,13 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../img/MBTI/성기훈_ENFP.png" alt="ISTJ와 잘맞는 유형" />
+            <img src="../../img/MBTI/성기훈_ENFP.png" alt="ISTJ와 잘맞는 유형" />
             <p class="typeCharName">성기훈</p>
             <p class="typeCharInfo">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../img/MBTI/알리_ENFJ.png" alt="ISTJ와 잘맞는 유형" />
+            <img src="../../img/MBTI/알리_ENFJ.png" alt="ISTJ와 잘맞는 유형" />
             <p class="typeCharName">알리압둘</p>
             <p class="typeCharInfo">주변을 행복하게 만드는 친절한 인물</p>
           </section>
@@ -46,25 +46,45 @@
     <footer>
       <p class="share_box">공유하기</p>
       <div class="share_btn">
-        <img src="image/share_btn.svg" />
-        <img src="image/kakao.svg" />
-        <img src="image/facebook.svg" />
-        <img src="image/twitter.svg" />
+        <img src="/image/share_btn.svg" />
+        <img src="/image/kakao.svg" />
+        <img src="/image/facebook.svg" />
+        <img src="/image/twitter.svg" />
       </div>
       <div class="footerBTN">
-        <button class="allResultBTN">결과 전체보기</button>
+        <button class="allResultBTN" @click="showResult">결과 전체보기</button>
         <button class="testRestart">테스트다시하기</button>
       </div>
     </footer>
+    <Final_Modal v-if="showModal" @close="showModal = false" v-on:closeModal="closeModal">
+    </Final_Modal>
   </div>
 </template>
 
 <script>
+import Final_Modal from "./Final_Modal.vue";
+
 export default {
   name: "Final_ISTJ",
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+  components: {
+    Final_Modal,
+  },
+  methods: {
+    showResult() {
+      this.showModal = !this.showModal;
+    },
+    closeModal(show) {
+      this.showModal = show;
+    },
+  },
 };
 </script>
 
 <style scoped>
-@import "../css/Final_MBTI.css";
+@import "../../css/Final_MBTI.css";
 </style>

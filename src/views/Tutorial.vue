@@ -1,46 +1,45 @@
 <template>
-  <transition name="fade">
-    <div class="container" v-if="testStart">
-      <div class="main">
-        <div class="count_box">
-          <svg
-            width="208"
-            height="16"
-            viewBox="0 0 208 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
-            <path d="M25 0L31.9282 12H18.0718L25 0Z" fill="#E73E7E" />
-            <rect x="37" width="12" height="12" fill="#E73E7E" />
-            <circle cx="59.5" cy="6.5" r="6.5" fill="#E73E7E" />
-            <path d="M78 0L84.9282 12H71.0718L78 0Z" fill="#E73E7E" />
-            <rect x="90" width="12" height="12" fill="#E73E7E" />
-            <circle cx="112.5" cy="6.5" r="6.5" fill="#E73E7E" />
-            <path d="M131 0L137.928 12H124.072L131 0Z" fill="#E73E7E" />
-            <rect x="143" width="12" height="12" fill="#E73E7E" />
-            <circle cx="165.5" cy="6.5" r="6.5" fill="#E73E7E" />
-            <path d="M184 0L190.928 12H177.072L184 0Z" fill="#E73E7E" />
-            <rect x="196" width="12" height="12" fill="#E73E7E" />
-          </svg>
-        </div>
-        <img src="image/0_tutorial.png" />
-
-        <h3>
-          12개의 상황마다 <br />
-          시간제한이 있습니다. <br />
-          게임에 참가하시겠습니까?
-        </h3>
+  <div class="container" v-if="testStart">
+    <div class="main">
+      <div class="count_box">
+        <svg
+          width="208"
+          height="16"
+          viewBox="0 0 208 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
+          <path d="M25 0L31.9282 12H18.0718L25 0Z" fill="#E73E7E" />
+          <rect x="37" width="12" height="12" fill="#E73E7E" />
+          <circle cx="59.5" cy="6.5" r="6.5" fill="#E73E7E" />
+          <path d="M78 0L84.9282 12H71.0718L78 0Z" fill="#E73E7E" />
+          <rect x="90" width="12" height="12" fill="#E73E7E" />
+          <circle cx="112.5" cy="6.5" r="6.5" fill="#E73E7E" />
+          <path d="M131 0L137.928 12H124.072L131 0Z" fill="#E73E7E" />
+          <rect x="143" width="12" height="12" fill="#E73E7E" />
+          <circle cx="165.5" cy="6.5" r="6.5" fill="#E73E7E" />
+          <path d="M184 0L190.928 12H177.072L184 0Z" fill="#E73E7E" />
+          <rect x="196" width="12" height="12" fill="#E73E7E" />
+        </svg>
       </div>
+      <img src="image/0_tutorial.png" />
 
-      <div class="option_box">
-        <TimeOut />
-        <router-link to="/questions">
-          <button class="option1">네</button>
-        </router-link>
-      </div>
+      <h3>
+        12개의 상황마다 <br />
+        시간제한이 있습니다. <br />
+        게임에 참가하시겠습니까?
+      </h3>
     </div>
-  </transition>
+
+    <div class="option_box">
+      <TimeOut />
+
+      <router-link to="/questions" active-class="active">
+        <button class="option1">네</button>
+      </router-link>
+    </div>
+  </div>
 </template>
 <script>
 import TimeOut from "../components/TimeOut.vue";
@@ -49,12 +48,15 @@ export default {
   name: "TutorialPage",
   props: {
     testStart: {
-      type: String,
-      default: "true",
+      type: Boolean,
+      default: true,
     },
   },
   components: {
     TimeOut,
+  },
+  created() {
+    console.log(this.testStart);
   },
 };
 </script>
@@ -87,18 +89,12 @@ export default {
   height: 45px;
   left: 30.34px;
   top: 46px;
-
-  color: white;
-  background: #e73e7e;
+  background-color: rgba(231, 62, 126, 0.25);
+  border: 1px solid #e73e7e;
   border-radius: 60px;
+  color: white;
 }
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+.option1:active {
+  background-color: #e73e7e;
 }
 </style>

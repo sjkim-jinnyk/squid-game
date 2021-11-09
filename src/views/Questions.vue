@@ -29,20 +29,36 @@
 
     <div class="option_box">
       <TimeOut></TimeOut>
-      <router-link to="loading" v-if="testdone">
-        <button v-on:click="toUserChoice(0)" class="option">
-          {{ questions[count].option[0] }}</button
-        ><br />
-        <button v-on:click="toUserChoice(1)" class="option">
+      <router-link
+        :to="{ name: 'Loading', params: { mbti: mbti } }"
+        v-if="testdone"
+        class="optionBtn"
+      >
+        <button
+          v-on:click="
+            toUserChoice(0);
+            getResult(choice);
+          "
+          class="option1"
+        >
+          {{ questions[count].option[0] }}
+        </button>
+        <button
+          v-on:click="
+            toUserChoice(1);
+            getResult(choice);
+          "
+          class="option2"
+        >
           {{ questions[count].option[1] }}
         </button>
       </router-link>
 
-      <div v-else>
-        <button v-on:click="toUserChoice(0)" class="option">
-          {{ questions[count].option[0] }}</button
-        ><br />
-        <button v-on:click="toUserChoice(1)" class="option">
+      <div v-else class="optionBtn">
+        <button v-on:click="toUserChoice(0)" class="option1">
+          {{ questions[count].option[0] }}
+        </button>
+        <button v-on:click="toUserChoice(1)" class="option2">
           {{ questions[count].option[1] }}
         </button>
       </div>
@@ -73,19 +89,29 @@ export default {
       return "#333333";
     },
     toUserChoice: function (option_number) {
-      if (this.choice.length > 11) return 0;
+      if (this.count > 12) return 0;
+      let mbti_value = this.questions[this.count].option_mbti[option_number];
+      this.choice[mbti_value] += 1;
       if (this.count < 11) this.count += 1;
-      this.choice.push(option_number);
       this.counterList.unshift(1);
       this.counterList.pop();
-      console.log(this.count, this.choice);
+    },
+    getResult: function (choice) {
+      console.log(choice);
+      for (let i in choice) {
+        if (choice[i] >= 2) {
+          this.mbti += i;
+        }
+      }
+      console.log(this.mbti);
     },
   },
   data() {
     return {
       counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
-      choice: [],
+      choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
+      mbti: "",
       testdone: false,
     };
   },
@@ -116,17 +142,34 @@ export default {
   margin-top: 35px;
   height: 151px;
 }
-
-.option {
-  position: static;
-  margin-top: 10px;
+.optionBtn {
+  display: flex;
   width: 300px;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+.option1 {
+  margin-top: 10px;
   height: 45px;
-  left: 30.34px;
-  top: 46px;
-
   color: white;
-  background: #e73e7e;
+  background-color: rgba(231, 62, 126, 0.25);
+  border: 1px solid #e73e7e;
   border-radius: 60px;
+}
+.option2 {
+  margin-top: 10px;
+  height: 45px;
+  color: white;
+  background: rgba(37, 150, 165, 0.25);
+  border: 1px solid #2596a5;
+  border-radius: 60px;
+}
+
+.option1:active {
+  background: #e73e7e;
+}
+.option2:active {
+  background-color: #2596a5;
 }
 </style>

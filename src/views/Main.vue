@@ -13,7 +13,7 @@
 
     <footer>
       <!-- <router-link to="/tutorial"> -->
-      <router-link :to="{ path: '/tutorial', params: { testStart: 'true' } }">
+      <router-link :to="{ name: 'Tutorial', params: { testStart: testStart } }">
         <button id="start_btn" type="button">
           테스트하기
           <svg class="svg-icon-angle" viewBox="0 0 1024 1024" version="1.1">
@@ -40,6 +40,11 @@ export default {
   name: "MainPage",
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      testStart: true,
+    };
   },
 };
 </script>
