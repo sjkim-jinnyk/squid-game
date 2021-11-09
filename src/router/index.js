@@ -9,7 +9,7 @@ import Final from "../components/Final/Final_ENFP.vue";
 const routes = [
   { path: "", redirect: "/home" },
   { path: "/home", name: "Main", component: Main },
-  { path: "/tutorial", name: "Tutorial", component: Tutorial },
+  { path: "/tutorial", name: "Tutorial", component: Tutorial, props: true },
   { path: "/questions", name: "Questions", component: Questions },
   { path: "/questions/result", name: "Final_ENFP", component: Final },
   { path: "/loading", name: "Loading", component: Loading },

@@ -1,5 +1,9 @@
 <template>
-  <router-view></router-view>
+  <div>
+    <transition name="page">
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
 <script>
 export default {
@@ -16,5 +20,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+/* router transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 </style>

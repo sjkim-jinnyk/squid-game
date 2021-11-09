@@ -28,7 +28,7 @@
     </div>
 
     <div class="option_box">
-      <div id="timer">남은시간</div>
+      <TimeOut></TimeOut>
       <router-link to="loading" v-if="testdone">
         <button v-on:click="toUserChoice(0)" class="option">
           {{ questions[count].option[0] }}</button
@@ -51,6 +51,7 @@
 </template>
 <script>
 import questionList from "../assets/questions.json";
+import TimeOut from "../components/TimeOut.vue";
 
 export default {
   name: "QuestionsPage",
@@ -89,6 +90,9 @@ export default {
     };
   },
   props: {},
+  components: {
+    TimeOut,
+  },
 };
 </script>
 <style scoped>
@@ -111,25 +115,6 @@ export default {
 .option_box {
   margin-top: 35px;
   height: 151px;
-}
-
-#timer {
-  position: static;
-  width: 300.68px;
-  height: 16px;
-  left: 30px;
-  top: 20px;
-
-  background: #ffffff;
-  border-radius: 60px;
-
-  margin: 0px auto;
-  align-content: center;
-  font-family: Noto Sans CJK KR;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 15px;
 }
 
 .option {
