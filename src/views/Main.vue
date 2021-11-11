@@ -12,7 +12,8 @@
     </div>
 
     <footer>
-      <router-link to="/tutorial">
+      <!-- <router-link to="/tutorial"> -->
+      <router-link :to="{ name: 'Tutorial', params: { testStart: testStart } }">
         <button id="start_btn" type="button">
           테스트하기
           <svg class="svg-icon-angle" viewBox="0 0 1024 1024" version="1.1">
@@ -22,7 +23,6 @@
           </svg>
         </button>
       </router-link>
-
       <h2 class="share_box">공유하기</h2>
       <div class="share_btn">
         <img src="image/share_btn.svg" />
@@ -39,6 +39,11 @@ export default {
   name: "MainPage",
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      testStart: true,
+    };
   },
 };
 </script>

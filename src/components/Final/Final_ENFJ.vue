@@ -54,16 +54,36 @@
         <img src="/image/twitter.svg" />
       </div>
       <div class="footerBTN">
-        <button class="allResultBTN">결과 전체보기</button>
+        <button class="allResultBTN" @click="showResult">결과 전체보기</button>
         <button class="testRestart">테스트다시하기</button>
       </div>
     </footer>
+    <Final_Modal v-if="showModal" @close="showModal = false" v-on:closeModal="closeModal">
+    </Final_Modal>
   </div>
 </template>
 
 <script>
+import Final_Modal from "./Final_Modal.vue";
+
 export default {
-  name: "Final_ENFP",
+  name: "Final_ENFJ",
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+  components: {
+    Final_Modal,
+  },
+  methods: {
+    showResult() {
+      this.showModal = !this.showModal;
+    },
+    closeModal(show) {
+      this.showModal = show;
+    },
+  },
 };
 </script>
 

@@ -28,33 +28,34 @@
     </div>
 
     <div class="option_box">
-      <div id="timer">남은시간</div>
-      <router-link :to="{ name: 'Loading', params: { mbti: mbti } }" v-if="testdone">
+      <TimeOut></TimeOut>
+      <router-link
+        :to="{ name: 'Loading', params: { mbti: mbti } }"
+        v-if="testdone"
+        class="optionBtn"
+      >
+        <button v-on:click="[toUserChoice(0), getResult(choice)]" class="option1">
+          {{ questions[count].option[0] }}
+        </button>
         <button
-          v-on:click="
-            toUserChoice(0);
-            getResult(choice);
-          "
-          class="option"
-        >
-          {{ questions[count].option[0] }}</button
-        ><br />
-        <button
-          v-on:click="
-            toUserChoice(1);
-            getResult(choice);
-          "
-          class="option"
+          v-on:click="[toUserChoice(1), getResult(choice)]"
+          class="option2"
+          :class="{ option2Active: click }"
         >
           {{ questions[count].option[1] }}
         </button>
       </router-link>
 
-      <div v-else>
-        <button v-on:click="toUserChoice(0)" class="option">
-          {{ questions[count].option[0] }}</button
-        ><br />
-        <button v-on:click="toUserChoice(1)" class="option">
+      <div v-else class="optionBtn">
+        <button v-on:click="[toUserChoice(0), clickBtn()]" class="option1">
+          {{ questions[count].option[0] }}
+        </button>
+
+        <button
+          v-on:click="[toUserChoice(1), clickBtn()]"
+          class="option2"
+          :class="{ option2Active: click }"
+        >
           {{ questions[count].option[1] }}
         </button>
       </div>
@@ -63,7 +64,7 @@
 </template>
 <script>
 import questionList from "../assets/questions.json";
-// import TestLoading from "./TestLoading.vue";
+import TimeOut from "../components/TimeOut.vue";
 
 export default {
   name: "QuestionsPage",
@@ -101,6 +102,9 @@ export default {
       }
       console.log(this.mbti);
     },
+    clickBtn() {
+      this.click = true;
+    },
   },
   data() {
     return {
@@ -109,9 +113,14 @@ export default {
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
       mbti: "",
       testdone: false,
+      click: false,
+      test: true,
     };
   },
   props: {},
+  components: {
+    TimeOut,
+  },
 };
 </script>
 <style scoped>
@@ -135,36 +144,37 @@ export default {
   margin-top: 35px;
   height: 151px;
 }
-
-#timer {
-  position: static;
-  width: 300.68px;
-  height: 16px;
-  left: 30px;
-  top: 20px;
-
-  background: #ffffff;
-  border-radius: 60px;
-
-  margin: 0px auto;
-  align-content: center;
-  font-family: Noto Sans CJK KR;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 15px;
-}
-
-.option {
-  position: static;
-  margin-top: 10px;
+.optionBtn {
+  display: flex;
   width: 300px;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+.option1 {
+  margin-top: 10px;
   height: 45px;
-  left: 30.34px;
-  top: 46px;
-
   color: white;
-  background: #e73e7e;
+  background-color: rgba(231, 62, 126, 0.25);
+  border: 1px solid #e73e7e;
   border-radius: 60px;
+  animation: move 0.8s ease 0.3s;
+}
+@keyframes move {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.option2 {
+  margin-top: 10px;
+  height: 45px;
+  color: white;
+  background: rgba(37, 150, 165, 0.25);
+  border: 1px solid #2596a5;
+  border-radius: 60px;
+  animation: move 0.8s ease 0.5s;
 }
 </style>

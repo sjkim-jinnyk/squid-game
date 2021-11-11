@@ -28,7 +28,7 @@ import Final_ISTP from "../components/Final/Final_ISTP.vue";
 const routes = [
   { path: "", redirect: "/home" },
   { path: "/home", name: "Main", component: Main },
-  { path: "/tutorial", name: "Tutorial", component: Tutorial },
+  { path: "/tutorial", name: "Tutorial", component: Tutorial, props: true },
   { path: "/questions", name: "Questions", component: Questions },
   { path: "/loading", name: "Loading", component: Loading, props: true },
 

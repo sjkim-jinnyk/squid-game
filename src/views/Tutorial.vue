@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="testStart">
     <div class="main">
       <div class="count_box">
         <svg
@@ -24,6 +24,7 @@
         </svg>
       </div>
       <img src="image/0_tutorial.png" />
+
       <h3>
         12개의 상황마다 <br />
         시간제한이 있습니다. <br />
@@ -32,17 +33,46 @@
     </div>
 
     <div class="option_box">
-      <div id="timer">남은시간</div>
-      <router-link to="/questions">
-        <button class="option1">네</button>
-      </router-link>
+      <!-- <TimeOut /> -->
+      <div class="timer" :class="{ pause: timerStop }"></div>
+      <!-- <router-link to="/questions" active-class="active"> -->
+      <button class="option1" @click="click" :class="{ option1Active: clickClass }">네</button>
+      <!-- </router-link> -->
     </div>
   </div>
 </template>
 <script>
+// import TimeOut from "../components/TimeOut.vue";
+
 export default {
   name: "TutorialPage",
-  props: {},
+  props: {
+    testStart: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  components: {
+    // TimeOut,
+  },
+  created() {
+    console.log(this.testStart);
+  },
+  methods: {
+    click() {
+      setTimeout(() => {
+        this.$router.push({ name: "Questions" });
+      }, 800);
+      this.clickClass = true;
+      this.timerStop = true;
+    },
+  },
+  data() {
+    return {
+      clickClass: false,
+      timerStop: false,
+    };
+  },
 };
 </script>
 <style scoped>
@@ -67,14 +97,48 @@ export default {
   height: 151px;
 }
 
-#timer {
+.option1 {
   position: static;
-  width: 300.68px;
+  margin-top: 10px;
+  width: 300px;
+  height: 45px;
+  left: 30.34px;
+  top: 46px;
+  background-color: rgba(231, 62, 126, 0.25);
+  border: 1px solid #e73e7e;
+  border-radius: 60px;
+  color: white;
+  animation: move 0.8s ease 0.3s;
+}
+.option1Active {
+  background-color: #e73e7e;
+  animation: move2 0.7s ease 0.7s !important;
+}
+@keyframes move2 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@keyframes move {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.pause::before {
+  animation-play-state: paused !important;
+  background-color: #333 !important;
+}
+.timer {
+  position: relative;
+  width: 300px;
   height: 16px;
-  left: 30px;
-  top: 20px;
-
-  background: #ffffff;
+  background: #333;
   border-radius: 60px;
 
   margin: 0px auto;
@@ -85,17 +149,42 @@ export default {
   font-size: 10px;
   line-height: 15px;
 }
-
-.option1 {
-  position: static;
-  margin-top: 10px;
-  width: 300px;
-  height: 45px;
-  left: 30.34px;
-  top: 46px;
-
-  color: white;
-  background: #e73e7e;
+.timer::after {
+  content: "남은 시간";
+  position: relative;
+  color: #000;
+}
+.timer::before {
+  content: "";
+  position: absolute;
+  width: 300.68px;
+  background-color: white;
+  display: block;
+  height: 16px;
   border-radius: 60px;
+  box-sizing: border-box;
+  animation: timer 15s 1;
+  animation-play-state: running;
+}
+@keyframes timer {
+  0% {
+    width: 100%;
+    background-color: white;
+  }
+  20% {
+    background-color: #ffbfbf;
+  }
+  40% {
+    background-color: #ff8080;
+  }
+  60% {
+    background-color: #ff4040;
+  }
+  80% {
+    background-color: red;
+  }
+  100% {
+    width: 2%;
+  }
 }
 </style>
