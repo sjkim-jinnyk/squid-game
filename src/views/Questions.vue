@@ -31,7 +31,7 @@
       <TimeOut></TimeOut>
       <router-link
         :to="{ name: 'Loading', params: { mbti: mbti } }"
-        v-if="testdone"
+        v-if="testDone"
         class="optionBtn"
       >
         <button v-on:click="[toUserChoice(0), getResult(choice)]" class="option1">
@@ -71,7 +71,7 @@ export default {
   watch: {
     count: function (val) {
       if (val >= 11) {
-        this.testdone = true;
+        this.testDone = true;
       }
     },
   },
@@ -89,12 +89,10 @@ export default {
       if (this.count > 12) return 0;
       let mbti_value = this.questions[this.count].option_mbti[option_number];
       this.choice[mbti_value] += 1;
-      if (this.count < 11) this.count += 1;
       this.counterList.unshift(1);
       this.counterList.pop();
     },
     getResult: function (choice) {
-      console.log(choice);
       for (let i in choice) {
         if (choice[i] >= 2) {
           this.mbti += i;
@@ -104,6 +102,10 @@ export default {
     },
     clickBtn() {
       this.click = true;
+      setTimeout(() => {
+        if (this.count < 11) this.count += 1;
+        this.click = false;
+      }, 800);
     },
   },
   data() {
@@ -112,7 +114,7 @@ export default {
       count: 0,
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
       mbti: "",
-      testdone: false,
+      testDone: false,
       click: false,
       test: true,
     };
@@ -176,5 +178,10 @@ export default {
   border: 1px solid #2596a5;
   border-radius: 60px;
   animation: move 0.8s ease 0.5s;
+}
+
+.option2Active {
+  background-color: #2596a5;
+  animation: move2 0.7s ease 0.7s !important;
 }
 </style>

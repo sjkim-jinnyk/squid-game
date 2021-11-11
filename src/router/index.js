@@ -6,23 +6,18 @@ import Loading from "../views/TestLoading.vue";
 import Final_ENFJ from "../components/Final/Final_ENFJ.vue";
 import Final_ENFP from "../components/Final/Final_ENFP.vue";
 import Final_ENTJ from "../components/Final/Final_ENTJ.vue";
-
 import Final_ENTP from "../components/Final/Final_ENTP.vue";
 import Final_ESFJ from "../components/Final/Final_ESFJ.vue";
 import Final_ESFP from "../components/Final/Final_ESFP.vue";
-
 import Final_ESTJ from "../components/Final/Final_ESTJ.vue";
 import Final_ESTP from "../components/Final/Final_ESTP.vue";
 import Final_INFJ from "../components/Final/Final_INFJ.vue";
-
 import Final_INFP from "../components/Final/Final_INFP.vue";
 import Final_INTJ from "../components/Final/Final_INTJ.vue";
 import Final_INTP from "../components/Final/Final_INTP.vue";
-
 import Final_ISFJ from "../components/Final/Final_ISFJ.vue";
 import Final_ISFP from "../components/Final/Final_ISFP.vue";
 import Final_ISTJ from "../components/Final/Final_ISTJ.vue";
-
 import Final_ISTP from "../components/Final/Final_ISTP.vue";
 
 const routes = [
@@ -31,9 +26,6 @@ const routes = [
   { path: "/tutorial", name: "Tutorial", component: Tutorial, props: true },
   { path: "/questions", name: "Questions", component: Questions },
   { path: "/loading", name: "Loading", component: Loading, props: true },
-
-  // result 16
-  // { path: "/questions/result/:mbti", name: "Final_ENFJ", component: Final_ENFJ },
 
   { path: "/questions/result/ENFJ", name: "Final_ENFJ", component: Final_ENFJ },
   { path: "/questions/result/ENFP", name: "Final_ENFP", component: Final_ENFP },
