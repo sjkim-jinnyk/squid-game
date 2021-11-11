@@ -1,12 +1,15 @@
 <template>
-  <div>
-    <router-view></router-view>
+  <div id="app">
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
   </div>
 </template>
 <script>
 export default {
   name: "App",
-  components: {},
 };
 </script>
 
@@ -18,5 +21,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
 }
 </style>

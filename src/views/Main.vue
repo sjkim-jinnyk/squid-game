@@ -23,7 +23,6 @@
           </svg>
         </button>
       </router-link>
-
       <h2 class="share_box">공유하기</h2>
       <div class="share_btn">
         <img src="image/share_btn.svg" />

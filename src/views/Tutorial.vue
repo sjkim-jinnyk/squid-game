@@ -33,16 +33,16 @@
     </div>
 
     <div class="option_box">
-      <TimeOut />
-
-      <router-link to="/questions" active-class="active">
-        <button class="option1">네</button>
-      </router-link>
+      <!-- <TimeOut /> -->
+      <div class="timer" :class="{ pause: timerStop }"></div>
+      <!-- <router-link to="/questions" active-class="active"> -->
+      <button class="option1" @click="click" :class="{ option1Active: clickClass }">네</button>
+      <!-- </router-link> -->
     </div>
   </div>
 </template>
 <script>
-import TimeOut from "../components/TimeOut.vue";
+// import TimeOut from "../components/TimeOut.vue";
 
 export default {
   name: "TutorialPage",
@@ -53,10 +53,25 @@ export default {
     },
   },
   components: {
-    TimeOut,
+    // TimeOut,
   },
   created() {
     console.log(this.testStart);
+  },
+  methods: {
+    click() {
+      setTimeout(() => {
+        this.$router.push({ name: "Questions" });
+      }, 800);
+      this.clickClass = true;
+      this.timerStop = true;
+    },
+  },
+  data() {
+    return {
+      clickClass: false,
+      timerStop: false,
+    };
   },
 };
 </script>
@@ -93,8 +108,83 @@ export default {
   border: 1px solid #e73e7e;
   border-radius: 60px;
   color: white;
+  animation: move 0.8s ease 0.3s;
 }
-.option1:active {
+.option1Active {
   background-color: #e73e7e;
+  animation: move2 0.7s ease 0.7s !important;
+}
+@keyframes move2 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@keyframes move {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.pause::before {
+  animation-play-state: paused !important;
+  background-color: #333 !important;
+}
+.timer {
+  position: relative;
+  width: 300px;
+  height: 16px;
+  background: #333;
+  border-radius: 60px;
+
+  margin: 0px auto;
+  align-content: center;
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+}
+.timer::after {
+  content: "남은 시간";
+  position: relative;
+  color: #000;
+}
+.timer::before {
+  content: "";
+  position: absolute;
+  width: 300.68px;
+  background-color: white;
+  display: block;
+  height: 16px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  animation: timer 15s 1;
+  animation-play-state: running;
+}
+@keyframes timer {
+  0% {
+    width: 100%;
+    background-color: white;
+  }
+  20% {
+    background-color: #ffbfbf;
+  }
+  40% {
+    background-color: #ff8080;
+  }
+  60% {
+    background-color: #ff4040;
+  }
+  80% {
+    background-color: red;
+  }
+  100% {
+    width: 2%;
+  }
 }
 </style>

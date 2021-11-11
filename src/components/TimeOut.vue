@@ -36,7 +36,7 @@ export default {};
   height: 16px;
   border-radius: 60px;
   box-sizing: border-box;
-  animation: timer 10s 1;
+  animation: timer 15s 1;
 }
 @keyframes timer {
   0% {

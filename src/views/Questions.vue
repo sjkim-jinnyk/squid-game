@@ -34,31 +34,28 @@
         v-if="testdone"
         class="optionBtn"
       >
-        <button
-          v-on:click="
-            toUserChoice(0);
-            getResult(choice);
-          "
-          class="option1"
-        >
+        <button v-on:click="[toUserChoice(0), getResult(choice)]" class="option1">
           {{ questions[count].option[0] }}
         </button>
         <button
-          v-on:click="
-            toUserChoice(1);
-            getResult(choice);
-          "
+          v-on:click="[toUserChoice(1), getResult(choice)]"
           class="option2"
+          :class="{ option2Active: click }"
         >
           {{ questions[count].option[1] }}
         </button>
       </router-link>
 
       <div v-else class="optionBtn">
-        <button v-on:click="toUserChoice(0)" class="option1">
+        <button v-on:click="[toUserChoice(0), clickBtn()]" class="option1">
           {{ questions[count].option[0] }}
         </button>
-        <button v-on:click="toUserChoice(1)" class="option2">
+
+        <button
+          v-on:click="[toUserChoice(1), clickBtn()]"
+          class="option2"
+          :class="{ option2Active: click }"
+        >
           {{ questions[count].option[1] }}
         </button>
       </div>
@@ -105,6 +102,9 @@ export default {
       }
       console.log(this.mbti);
     },
+    clickBtn() {
+      this.click = true;
+    },
   },
   data() {
     return {
@@ -113,6 +113,8 @@ export default {
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
       mbti: "",
       testdone: false,
+      click: false,
+      test: true,
     };
   },
   props: {},
@@ -156,6 +158,15 @@ export default {
   background-color: rgba(231, 62, 126, 0.25);
   border: 1px solid #e73e7e;
   border-radius: 60px;
+  animation: move 0.8s ease 0.3s;
+}
+@keyframes move {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 .option2 {
   margin-top: 10px;
@@ -164,12 +175,6 @@ export default {
   background: rgba(37, 150, 165, 0.25);
   border: 1px solid #2596a5;
   border-radius: 60px;
-}
-
-.option1:active {
-  background: #e73e7e;
-}
-.option2:active {
-  background-color: #2596a5;
+  animation: move 0.8s ease 0.5s;
 }
 </style>
