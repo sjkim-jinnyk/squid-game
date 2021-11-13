@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="mbti">ISTJ</p>
       <p class="charName">황준호</p>
-      <img src="../../img/MBTI/황준호_ISTJ.png" alt="황준호 이미지" class="mbtiIMG" />
+      <img src="/image/final/황준호_ISTJ_200.png" alt="황준호 이미지" class="mbtiIMG" />
       <p class="mbtiSummary">시작한 일은 끝까지 하는 완벽주의자 인물</p>
     </div>
     <main>
@@ -30,13 +30,13 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../../img/MBTI/성기훈_ENFP.png" alt="ISTJ와 잘맞는 유형" />
+            <img src="/image/final/성기훈_ENFP_100.png" alt="ISTJ와 잘맞는 유형" />
             <p class="typeCharName">성기훈</p>
             <p class="typeCharInfo">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../../img/MBTI/알리_ENFJ.png" alt="ISTJ와 잘맞는 유형" />
+            <img src="/image/final/알리_ENFJ_100.png" alt="ISTJ와 잘맞는 유형" />
             <p class="typeCharName">알리압둘</p>
             <p class="typeCharInfo">주변을 행복하게 만드는 친절한 인물</p>
           </section>

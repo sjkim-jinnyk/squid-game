@@ -7,7 +7,7 @@
     </header>
     <main>
       <article class="mbtiType">
-        <img src="../../img/MBTI/성기훈_ENFP.png" alt="성기훈 이미지" class="typeImg" />
+        <img src="/image/final/성기훈_ENFP.png" alt="성기훈 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">성기훈</p>
@@ -17,7 +17,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/오일남_INFJ.png" alt="오일남 이미지" class="typeImg" />
+        <img src="/image/final/오일남_INFJ.png" alt="오일남 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">오일남</p>
@@ -27,7 +27,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/조상우_ENTJ.png" alt="조상우 이미지" class="typeImg" />
+        <img src="/image/final/조상우_ENTJ.png" alt="조상우 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">조상우</p>
@@ -37,7 +37,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/장덕수_ESTP.png" alt="장덕수 이미지" class="typeImg" />
+        <img src="/image/final/장덕수_ESTP.png" alt="장덕수 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">장덕수</p>
@@ -47,7 +47,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/강새벽_INFP.png" alt="강새벽 이미지" class="typeImg" />
+        <img src="/image/final/강새벽_INFP.png" alt="강새벽 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">강새벽</p>
@@ -57,7 +57,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/한미녀_ESFP.png" alt="한미녀 이미지" class="typeImg" />
+        <img src="/image/final/한미녀_ESFP.png" alt="한미녀 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">한미녀</p>
@@ -67,7 +67,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/황준호_ISTJ.png" alt="황준호 이미지" class="typeImg" />
+        <img src="/image/final/황준호_ISTJ.png" alt="황준호 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">황준호</p>
@@ -77,7 +77,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/프런트맨_ISTP.png" alt="프런트맨 이미지" class="typeImg" />
+        <img src="/image/final/프런트맨_ISTP.png" alt="프런트맨 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">프런트맨</p>
@@ -87,7 +87,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/병기_ISFJ.png" alt="병기 이미지" class="typeImg" />
+        <img src="/image/final/병기_ISFJ.png" alt="병기 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">병기</p>
@@ -97,7 +97,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/의문남_ENTP.png" alt="의문남 이미지" class="typeImg" />
+        <img src="/image/final/의문남_ENTP.png" alt="의문남 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">의문의 남자</p>
@@ -107,7 +107,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/VIP_ESTJ.png" alt="VIPS 이미지" class="typeImg" />
+        <img src="/image/final/VIP_ESTJ.png" alt="VIPS 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">VIPS</p>
@@ -117,7 +117,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/알리_ENFJ.png" alt="알리 이미지" class="typeImg" />
+        <img src="/image/final/알리_ENFJ.png" alt="알리 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">알리압둘</p>
@@ -127,7 +127,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/지영_ISFP.png" alt="지영 이미지" class="typeImg" />
+        <img src="/image/final/지영_ISFP.png" alt="지영 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">지영</p>
@@ -137,7 +137,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/진행요원_INTP.png" alt="진행요원 이미지" class="typeImg" />
+        <img src="/image/final/진행요원_INTP.png" alt="진행요원 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">진행요원</p>
@@ -147,7 +147,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/조상우맘_ESFJ.png" alt="조상우맘 이미지" class="typeImg" />
+        <img src="/image/final/조상우맘_ESFJ.png" alt="조상우맘 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">조상우의 어머니</p>
@@ -157,7 +157,7 @@
         </section>
       </article>
       <article class="mbtiType">
-        <img src="../../img/MBTI/주최자_INTJ.png" alt="주최자 이미지" class="typeImg" />
+        <img src="/image/final/주최자_INTJ.png" alt="주최자 이미지" class="typeImg" />
         <section class="cahrInfo">
           <section class="typeInfo">
             <p class="charName">주최자</p>

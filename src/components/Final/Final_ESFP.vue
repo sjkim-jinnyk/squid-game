@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="mbti">ESFP</p>
       <p class="charName">한미녀</p>
-      <img src="../../img/MBTI/한미녀_ESFP.png" alt="한미녀 이미지" class="mbtiIMG" />
+      <img src="/image/final/한미녀_ESFP_200.png" alt="한미녀 이미지" class="mbtiIMG" />
       <p class="mbtiSummary">현실적이고 실제적인 사교적인 인물</p>
     </div>
     <main>
@@ -33,13 +33,13 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../../img/MBTI/주최자_INTJ.png" alt="ESFP와 잘맞는 유형" />
+            <img src="/image/final/주최자_INTJ_100.png" alt="ESFP와 잘맞는 유형" />
             <p class="typeCharName">주최자</p>
             <p class="typeCharInfo">행동과 사고가 단호한 독립적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../../img/MBTI/성기훈_ENFP.png" alt="ESFP와 잘맞는 유형" />
+            <img src="/image/final/성기훈_ENFP_100.png" alt="ESFP와 잘맞는 유형" />
             <p class="typeCharName">성기훈</p>
             <p class="typeCharInfo">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
           </section>

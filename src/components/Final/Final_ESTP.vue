@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="mbti">ESTP</p>
       <p class="charName">장덕수</p>
-      <img src="../../img/MBTI/장덕수_ESTP.png" alt="장덕수 이미지" class="mbtiIMG" />
+      <img src="/image/final/장덕수_ESTP_200.png" alt="장덕수 이미지" class="mbtiIMG" />
       <p class="mbtiSummary">다양한 분야에 관심이 있는 활동적인 인물</p>
     </div>
     <main>
@@ -30,13 +30,13 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../../img/MBTI/오일남_INFJ.png" alt="ESTP와 잘맞는 유형" />
+            <img src="/image/final/오일남_INFJ_100.png" alt="ESTP와 잘맞는 유형" />
             <p class="typeCharName">오일남</p>
             <p class="typeCharInfo">창의력과 통찰력이 뛰어난 독창적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../../img/MBTI/강새벽_INFP.png" alt="ESTP와 잘맞는 유형" />
+            <img src="/image/final/강새벽_INFP_100.png" alt="ESTP와 잘맞는 유형" />
             <p class="typeCharName">강새벽</p>
             <p class="typeCharInfo">신념과 조화를 중시하는 이상주의자 인물</p>
           </section>

@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="mbti">INFP</p>
       <p class="charName">강새벽</p>
-      <img src="../../img/MBTI/강새벽_INFP.png" alt="강새벽 이미지" class="mbtiIMG" />
+      <img src="/image/final/강새벽_INFP_200.png" alt="강새벽 이미지" class="mbtiIMG" />
       <p class="mbtiSummary">신념과 조화를 중시하는 이상주의자 인물</p>
     </div>
     <main>
@@ -31,13 +31,13 @@
         <div class="GoodBad">
           <section class="typeGood">
             <p class="typeTitle">GOOD</p>
-            <img src="../../img/MBTI/알리_ENFJ.png" alt="INFP와 잘맞는 유형" />
+            <img src="/image/final/알리_ENFJ_100.png" alt="INFP와 잘맞는 유형" />
             <p class="typeCharName">알리압둘</p>
             <p class="typeCharInfo">주변을 행복하게 만드는 친절한 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
-            <img src="../../img/MBTI/장덕수_ESTP.png" alt="INFP와 잘맞는 유형" />
+            <img src="/image/final/장덕수_ESTP_100.png" alt="INFP와 잘맞는 유형" />
             <p class="typeCharName">장덕수</p>
             <p class="typeCharInfo">다양한 분야에 관심이 있는 활동적인 인물</p>
           </section>
