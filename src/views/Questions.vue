@@ -34,27 +34,35 @@
         v-if="testDone"
         class="optionBtn"
       >
-        <button v-on:click="[toUserChoice(0), getResult(choice)]" class="option1">
+        <button
+          v-on:click="[toUserChoice(0), clickBtn(0), getResult(choice)]"
+          class="option1"
+          :class="{ option1Active: option_0 }"
+        >
           {{ questions[count].option[0] }}
         </button>
         <button
-          v-on:click="[toUserChoice(1), getResult(choice)]"
+          v-on:click="[toUserChoice(1), clickBtn(1), getResult(choice)]"
           class="option2"
-          :class="{ option2Active: click }"
+          :class="{ option2Active: option_1 }"
         >
           {{ questions[count].option[1] }}
         </button>
       </router-link>
 
       <div v-else class="optionBtn">
-        <button v-on:click="[toUserChoice(0), clickBtn()]" class="option1">
+        <button
+          v-on:click="[toUserChoice(0), clickBtn(0)]"
+          class="option1"
+          :class="{ option1Active: option_0 }"
+        >
           {{ questions[count].option[0] }}
         </button>
 
         <button
-          v-on:click="[toUserChoice(1), clickBtn()]"
+          v-on:click="[toUserChoice(1), clickBtn(1)]"
           class="option2"
-          :class="{ option2Active: click }"
+          :class="{ option2Active: option_1 }"
         >
           {{ questions[count].option[1] }}
         </button>
@@ -100,11 +108,13 @@ export default {
       }
       console.log(this.mbti);
     },
-    clickBtn() {
-      this.click = true;
+    clickBtn(option_num) {
+      if (option_num == 0) this.option_0 = true;
+      else this.option_1 = true;
       setTimeout(() => {
         if (this.count < 11) this.count += 1;
-        this.click = false;
+        this.option_0 = false;
+        this.option_1 = false;
       }, 800);
     },
   },
@@ -115,8 +125,8 @@ export default {
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
       mbti: "",
       testDone: false,
-      click: false,
-      test: true,
+      option_0: false,
+      option_1: false,
     };
   },
   props: {},
@@ -178,6 +188,11 @@ export default {
   border: 1px solid #2596a5;
   border-radius: 60px;
   animation: move 0.8s ease 0.5s;
+}
+
+.option1Active {
+  background-color: #e73e7e;
+  animation: move2 0.7s ease 0.7s !important;
 }
 
 .option2Active {
