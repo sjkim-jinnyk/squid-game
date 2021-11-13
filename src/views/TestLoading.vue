@@ -1,7 +1,7 @@
 <template>
   <main>
     <p class="loadingTitle">결과 로딩중</p>
-    <img src="../img/결과로딩중.png" alt="결과로딩 이미지" />
+    <img src="/image/lodingLogo.png" alt="결과로딩 이미지" />
     <p class="loadingText">당신은 오징어게임에서...</p>
   </main>
 </template>
