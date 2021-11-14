@@ -31,13 +31,13 @@
       <section class="typeMatch">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
-          <section class="typeGood">
+          <section class="typeGood" @click="typeLink('ESFP')">
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/한미녀_ESFP_100.png" alt="INTJ와 잘맞는 유형" />
             <p class="typeCharName">한미녀</p>
             <p class="typeCharInfo">현실적이고 실제적인 <br />사교적인 인물</p>
           </section>
-          <section class="typeBad">
+          <section class="typeBad" @click="typeLink('ESFJ')">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/조상우맘_ESFJ_100.png" alt="INTJ와 잘맞는 유형" />
             <p class="typeCharName">조상우의 어머니</p>
@@ -83,6 +83,9 @@ export default {
     },
     closeModal(show) {
       this.showModal = show;
+    },
+    typeLink(type) {
+      this.$router.push({ name: `Final_${type}` });
     },
   },
 };
