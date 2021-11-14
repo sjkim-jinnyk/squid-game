@@ -28,13 +28,13 @@
       <section class="typeMatch">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
-          <section class="typeGood">
+          <section class="typeGood" @click="typeLink('INTP')">
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/진행요원_INTP_100.png" alt="ESFJ와 잘맞는 유형" />
             <p class="typeCharName">진행요원</p>
             <p class="typeCharInfo">이해가 빠르고 통찰력 있는 <br />아이디어형 인물</p>
           </section>
-          <section class="typeBad">
+          <section class="typeBad" @click="typeLink('INTJ')">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/주최자_INTJ_100.png" alt="ESFJ와 잘맞는 유형" />
             <p class="typeCharName">주최자</p>
@@ -53,7 +53,7 @@
       </div>
       <div class="footerBTN">
         <button class="allResultBTN" @click="showResult">결과 전체보기</button>
-        <button class="testRestart">테스트다시하기</button>
+        <button class="testRestart" @click="testRestart">테스트 다시하기</button>
       </div>
     </footer>
     <Final_Modal v-if="showModal" @close="showModal = false" v-on:closeModal="closeModal">
@@ -80,6 +80,12 @@ export default {
     },
     closeModal(show) {
       this.showModal = show;
+    },
+    typeLink(type) {
+      this.$router.push({ name: `Final_${type}` });
+    },
+    testRestart() {
+      this.$router.push({ name: "Main" });
     },
   },
 };
