@@ -57,6 +57,9 @@ export default {
   },
   created() {
     console.log(this.testStart);
+    setTimeout(() => {
+      this.$router.push({ name: "Questions" });
+    }, 13000);
   },
   methods: {
     click() {
@@ -163,7 +166,7 @@ export default {
   height: 16px;
   border-radius: 60px;
   box-sizing: border-box;
-  animation: timer 15s 1;
+  animation: timer 13s 1;
   animation-play-state: running;
 }
 @keyframes timer {

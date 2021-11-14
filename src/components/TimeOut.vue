@@ -1,12 +1,22 @@
 <template>
-  <div id="timer"></div>
+  <div id="timer" :class="{ pause: timerStop, disable: timerStop }"></div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "timeOut",
+  props: {
+    timerStop: Boolean,
+  },
+};
 </script>
 
 <style scoped>
+.pause::before {
+  animation-play-state: paused !important;
+  background-color: #333 !important;
+}
+
 #timer {
   position: relative;
   width: 300px;
@@ -36,7 +46,17 @@ export default {};
   height: 16px;
   border-radius: 60px;
   box-sizing: border-box;
-  animation: timer 15s 1;
+  animation: timer 13s 1;
+}
+#timer.disable::before {
+  content: "";
+  position: absolute;
+  width: 300.68px;
+  background-color: white;
+  display: none;
+  height: 16px;
+  border-radius: 60px;
+  box-sizing: border-box;
 }
 @keyframes timer {
   0% {
