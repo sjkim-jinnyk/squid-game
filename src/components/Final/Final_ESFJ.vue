@@ -4,11 +4,11 @@
       <p class="mbti">ESFJ</p>
       <p class="charName">조상우의 어머니</p>
       <img src="/image/final/조상우맘_ESFJ_200.png" alt="조상우맘 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">동정심과 참을성이 많은 양심적인 인물</p>
+      <p class="mbtiSummary">동정심과 참을성이 많은 <br />양심적인 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           항상 웃으면서 동정심과 동료애가 많다 양심적이고 정리정돈을 잘한다. 참을성이 많고 남을 잘
           돕는다. 다른 이들의 무관심에는 민감하고 남들이 인정해주면 엄청 좋아함. 성격이 급하고
@@ -17,7 +17,7 @@
       </section>
 
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           힘들게 가게를 운영하고 있는 현실에도 친절하고 재치가 있으며 다른 사람들에게 관심을 쏟는다.
           안타까운 상황에 처해있는 성기훈을 보고 안타까워하며 걱정을 한다. 아들의 자랑을 하는
@@ -32,13 +32,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/진행요원_INTP_100.png" alt="ESFJ와 잘맞는 유형" />
             <p class="typeCharName">진행요원</p>
-            <p class="typeCharInfo">이해가 빠르고 통찰력 있는 아이디어형 인물</p>
+            <p class="typeCharInfo">이해가 빠르고 통찰력 있는 <br />아이디어형 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/주최자_INTJ_100.png" alt="ESFJ와 잘맞는 유형" />
             <p class="typeCharName">주최자</p>
-            <p class="typeCharInfo">행동과 사고가 단호한 독립적인 인물</p>
+            <p class="typeCharInfo">행동과 사고가 단호한 <br />독립적인 인물</p>
           </section>
         </div>
       </section>

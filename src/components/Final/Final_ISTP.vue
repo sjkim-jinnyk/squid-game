@@ -4,11 +4,11 @@
       <p class="mbti">ISTP</p>
       <p class="charName">프런트맨</p>
       <img src="/image/final/프런트맨_ISTP_200.png" alt="프런트맨 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+      <p class="mbtiSummary">풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           조용하고 말이 없어서 처음에는 차가운 인상이지만 알고 보면 따듯한 사람. 절제된 호기심으로
           인생을 관찰하고 상황파악이 빠르다. 자기 자신을 필요 이상으로 드러내지 않는다. 자신의
@@ -19,7 +19,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           오징어게임의 진행을 총괄적으로 관리하는 인물로, 논리적이고 객관적으로 상황을 관찰하는
           모습을 보여준다. 감정 표현도 없이 차가운 인상을 보여주며 냉정하게 오징어 게임을 운영해
@@ -34,13 +34,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/조상우맘_ESFJ_100.png" alt="ISTP와 잘맞는 유형" />
             <p class="typeCharName">조상우의 어머니</p>
-            <p class="typeCharInfo">동정심과 참을성이 많은 양심적인 인물</p>
+            <p class="typeCharInfo">동정심과 참을성이 많은 <br />양심적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/한미녀_ESFP_100.png" alt="ISTP와 잘맞는 유형" />
             <p class="typeCharName">한미녀</p>
-            <p class="typeCharInfo">현실적이고 실제적인 사교적인 인물</p>
+            <p class="typeCharInfo">현실적이고 실제적인 <br />사교적인 인물</p>
           </section>
         </div>
       </section>

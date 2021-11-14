@@ -4,11 +4,11 @@
       <p class="mbti">ESFP</p>
       <p class="charName">한미녀</p>
       <img src="/image/final/한미녀_ESFP_200.png" alt="한미녀 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">현실적이고 실제적인 사교적인 인물</p>
+      <p class="mbtiSummary">현실적이고 실제적인 <br />사교적인 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           현실적이고 실제적이며 어떤 상황에도 타협적이다. 웃음과 오락 등 즐거움을 추구하는 성격이다.
           선입견이 적고 개방적이며 사람들을 잘 받아들인다. 다른 사람의 일과 행동에 관심이 많고
@@ -19,7 +19,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           드라마속에서 전과 5범의 사기꾼으로 누구에게도 신뢰를 받지 못하며 관종 취급을 받는다.
           장덕수와 성적인 관계를 가지는 것도 하듯이 목적을 위해서는 수단과 방법을 가리지 않는 모습을
@@ -35,13 +35,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/주최자_INTJ_100.png" alt="ESFP와 잘맞는 유형" />
             <p class="typeCharName">주최자</p>
-            <p class="typeCharInfo">행동과 사고가 단호한 독립적인 인물</p>
+            <p class="typeCharInfo">행동과 사고가 단호한 <br />독립적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/성기훈_ENFP_100.png" alt="ESFP와 잘맞는 유형" />
             <p class="typeCharName">성기훈</p>
-            <p class="typeCharInfo">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+            <p class="typeCharInfo">풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물</p>
           </section>
         </div>
       </section>

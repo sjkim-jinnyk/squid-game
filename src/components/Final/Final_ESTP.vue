@@ -4,11 +4,11 @@
       <p class="mbti">ESTP</p>
       <p class="charName">장덕수</p>
       <img src="/image/final/장덕수_ESTP_200.png" alt="장덕수 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">다양한 분야에 관심이 있는 활동적인 인물</p>
+      <p class="mbtiSummary">다양한 분야에 관심이 있는 <br />활동적인 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           삶을 즐기며, 관대하고 느긋하며 선입견이 없이 개방적인 성격이다. 갈등이나 긴장이 일어나는
           상황을 잘 무마하는 성격이다. 다양한 분야에 관심이 있고 알고 싶어한다. 매우 현실적이기
@@ -17,7 +17,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           조폭 출신으로 즉흥적으로 자신의 이익을 위해 잔인한 폭력을 저지르는 인물이다. 오랜 기간
           집단 생황을 해서 오징어 게임 내에서도 뛰어난 적응력을 보여준다. 누구 보다 뛰어난 상황
@@ -32,13 +32,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/오일남_INFJ_100.png" alt="ESTP와 잘맞는 유형" />
             <p class="typeCharName">오일남</p>
-            <p class="typeCharInfo">창의력과 통찰력이 뛰어난 독창적인 인물</p>
+            <p class="typeCharInfo">창의력과 통찰력이 뛰어난 <br />독창적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/강새벽_INFP_100.png" alt="ESTP와 잘맞는 유형" />
             <p class="typeCharName">강새벽</p>
-            <p class="typeCharInfo">신념과 조화를 중시하는 이상주의자 인물</p>
+            <p class="typeCharInfo">신념과 조화를 중시하는 <br />이상주의자 인물</p>
           </section>
         </div>
       </section>

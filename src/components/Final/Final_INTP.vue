@@ -4,11 +4,11 @@
       <p class="mbti">INTP</p>
       <p class="charName">진행요원</p>
       <img src="/image/final/진행요원_INTP_200.png" alt="진행요원 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">이해가 빠르고 통찰력 있는 아이디어형 인물</p>
+      <p class="mbtiSummary">이해가 빠르고 통찰력 있는 <br />아이디어형 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           조용하고 과묵하지만 관심 있는 분야에서는 말을 잘한다. 분석적이고 논리적이며 객관적 비평을
           잘해서 진지충이라는 소리를 자주 듣는다. 큰일에 잘 개입하지 않는다. 남을 설득하는 일이 거의
@@ -17,7 +17,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           무뚝뚝하게 가면만 쓰고 오징어 게임 진행을 도우는 인물이다. 조용하고 과묵하게 자기가 맡은
           일을 열심히 한다. 남을 설득하지 않고 논리적으로 생각을 하고 판단하는 모습을 보여준다.
@@ -30,13 +30,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/알리_ENFJ_100.png" alt="INTP와 잘맞는 유형" />
             <p class="typeCharName">알리압둘</p>
-            <p class="typeCharInfo">주변을 행복하게 만드는 친절한 인물</p>
+            <p class="typeCharInfo">주변을 행복하게 만드는 <br />친절한 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/성기훈_ENFP._100png" alt="INTP와 잘맞는 유형" />
             <p class="typeCharName">성기훈</p>
-            <p class="typeCharInfo">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+            <p class="typeCharInfo">풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물</p>
           </section>
         </div>
       </section>

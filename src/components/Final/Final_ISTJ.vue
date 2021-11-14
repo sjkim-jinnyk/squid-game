@@ -4,11 +4,11 @@
       <p class="mbti">ISTJ</p>
       <p class="charName">황준호</p>
       <img src="/image/final/황준호_ISTJ_200.png" alt="황준호 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">시작한 일은 끝까지 하는 완벽주의자 인물</p>
+      <p class="mbtiSummary">시작한 일은 끝까지 하는 <br />완벽주의자 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           궁금한 것은 목숨이 걸려도 직접 체험하고 경험하는 도전적인 성격이다. 한번 시작한 일은
           끝까지 성실하게 해내는 성격이다. 현실적, 실용적, 철저하고 체계적이다. 열심히 일하고
@@ -16,7 +16,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           도봉 경찰서 소속 경찰인 황준호는 형의 고시원 방에서 수상한 명함을 발견한 후에 사라진 형을
           찾아 오징어 게임이 열리는 섬까지 가는 철저한 계획을 망설임없이 실행하는 모습을 보여준다.
@@ -32,13 +32,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/성기훈_ENFP_100.png" alt="ISTJ와 잘맞는 유형" />
             <p class="typeCharName">성기훈</p>
-            <p class="typeCharInfo">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+            <p class="typeCharInfo">풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/알리_ENFJ_100.png" alt="ISTJ와 잘맞는 유형" />
             <p class="typeCharName">알리압둘</p>
-            <p class="typeCharInfo">주변을 행복하게 만드는 친절한 인물</p>
+            <p class="typeCharInfo">주변을 행복하게 만드는 <br />친절한 인물</p>
           </section>
         </div>
       </section>
