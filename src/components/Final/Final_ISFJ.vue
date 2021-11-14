@@ -4,11 +4,11 @@
       <p class="mbti">ISFJ</p>
       <p class="charName">병기</p>
       <img src="/image/final/병기_ISFJ_200.png" alt="병기 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">책임감이 강하고 헌신적인 인내심 많은 인물</p>
+      <p class="mbtiSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           열성적이며 활발하고 창의적임 철저한 계획을 세우기 보다는 자기 스타일대로 한다. 열정적으로
           새 관계를 만들어가며 사람들과 자유롭게 어울리는 것을 즐긴다. 주위의 분위기를 밝게 만드는
@@ -19,7 +19,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           드라마내에서 어마어마한 빚이 있을 때, 그 빚을 갚기 위해 도박을 하는 무모한 모습을
           보여준다. 조상우와는 반대되는 성격으로, 달고나 게임에서 달고나를 핥아서 뽑는 등, 창의적인
@@ -36,13 +36,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/오일남_INFJ_100.png" alt="ISFJ와 잘맞는 유형" />
             <p class="typeCharName">오일남</p>
-            <p class="typeCharInfo">창의력과 통찰력이 뛰어난 독창적인 인물</p>
+            <p class="typeCharInfo">창의력과 통찰력이 뛰어난 <br />독창적인 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/조상우_ENTJ_100.png" alt="ISFJ와 잘맞는 유형" />
             <p class="typeCharName">조상우</p>
-            <p class="typeCharInfo">전략가로서 실리를 챙기는 지도자형 인물</p>
+            <p class="typeCharInfo">전략가로서 실리를 챙기는 <br />지도자형 인물</p>
           </section>
         </div>
       </section>

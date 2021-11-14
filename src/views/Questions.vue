@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="main">
+    <main>
       <div class="count_box">
         <svg
           width="208"
@@ -24,8 +24,8 @@
         </svg>
       </div>
       <img :src="`image/${questions[count].id}_question.png`" />
-      <h3 v-html="questions[count].desc"></h3>
-    </div>
+      <p class="QuestionText" v-html="questions[count].desc"></p>
+    </main>
 
     <div class="option_box">
       <TimeOut :timerStop="timerStop"></TimeOut>
@@ -175,16 +175,18 @@ export default {
 };
 </script>
 <style scoped>
-.main {
+main {
   height: 419px;
 }
 
-.main > img {
+main > img {
   margin: 40px 26px 0px 26px;
 }
 
-.main > h3 {
+main > .QuestionText {
   margin-top: 32px;
+  line-height: 26.64px;
+  font-size: 18px;
 }
 
 .count_box {

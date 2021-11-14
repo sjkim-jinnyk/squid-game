@@ -4,11 +4,11 @@
       <p class="mbti">ENFJ</p>
       <p class="charName">알리압둘</p>
       <img src="/image/final/알리_ENFJ_200.png" alt="알리압둘 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">주변을 행복하게 만드는 친절한 인물</p>
+      <p class="mbtiSummary">주변을 행복하게 만드는 <br />친절한 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           인생을 따듯하게 바라보며, 동정심과 동료애가 많고 친절하다. 참을성이 많고 성실하다. 언변이
           능숙하고 사람을 좋아해서 함께 추구해야 할 목표를 설정해 사람들을 이끈다. 인관 관계에서
@@ -18,7 +18,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           파키스탄에서 온 외국인 노동자로 게임 중에도 남을 구하기 위해 위험을 무릎 쓰는 모습을
           보여준다. 마음이 착하고 동료애가 많아서 주변 사람들과 갈등이 생길 때 항상 말리며 싸움을
@@ -34,13 +34,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/프런트맨_ISTP_100.png" alt="ENFJ와 잘맞는 유형" />
             <p class="typeCharName">프런트맨</p>
-            <p class="typeCharInfo">논리적이고 객관적인 백과사전형 인물</p>
+            <p class="typeCharInfo">논리적이고 객관적인 <br />백과사전형 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/황준호_ISTJ_100.png" alt="ENFJ와 잘맞는 유형" />
             <p class="typeCharName">황준호</p>
-            <p class="typeCharInfo">시작한 일은 끝까지 하는 완벽주의자 인물</p>
+            <p class="typeCharInfo">시작한 일은 끝까지 하는 <br />완벽주의자 인물</p>
           </section>
         </div>
       </section>

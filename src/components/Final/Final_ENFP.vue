@@ -4,11 +4,11 @@
       <p class="mbti">ENFP</p>
       <p class="charName">성기훈</p>
       <img src="/image/final/성기훈_ENFP_200.png" alt="성기훈 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+      <p class="mbtiSummary">풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           열성적이며 활발하고 창의적임 철저한 계획을 세우기 보다는 자기 스타일대로 한다. 열정적으로
           새 관계를 만들어가며 사람들과 자유롭게 어울리는 것을 즐긴다. 주위의 분위기를 밝게 만드는
@@ -19,7 +19,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           드라마내에서 어마어마한 빚이 있을 때, 그 빚을 갚기 위해 도박을 하는 무모한 모습을
           보여준다. 조상우와는 반대되는 성격으로, 달고나 게임에서 달고나를 핥아서 뽑는 등, 창의적인
@@ -36,13 +36,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/황준호_ISTJ_100.png" alt="ENFP와 잘맞는 유형" />
             <p class="typeCharName">황준호</p>
-            <p class="typeCharInfo">시작한 일은 끝까지 하는 완벽주의자 인물</p>
+            <p class="typeCharInfo">시작한 일은 끝까지 하는 <br />완벽주의자 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/한미녀_ESFP_100.png" alt="ENFP와 잘맞는 유형" />
             <p class="typeCharName">한미녀</p>
-            <p class="typeCharInfo">현실적이고 실제적인 사교적인 인물</p>
+            <p class="typeCharInfo">현실적이고 실제적인 <br />사교적인 인물</p>
           </section>
         </div>
       </section>

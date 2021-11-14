@@ -4,11 +4,11 @@
       <p class="mbti">INFP</p>
       <p class="charName">강새벽</p>
       <img src="/image/final/강새벽_INFP_200.png" alt="강새벽 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">신념과 조화를 중시하는 이상주의자 인물</p>
+      <p class="mbtiSummary">신념과 조화를 중시하는 <br />이상주의자 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           마음은 따듯하지만 상대방을 잘 알기 전까지는 표현을 잘하지 않는다. 자신이 지향하는 이상에
           대해서는 정열적인 신념을 갖고 있다. 조화로운 관계를 중요시한다. 내면세계에 관심이 많아서
@@ -17,7 +17,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           오징어 게임에서 다른 사람들과 쉽게 어울리지 못하는 모습을 보여준다. 지속적으로 혼자서 있는
           모습이 자주 보이듯이 혼자 조용한 시간을 보내는 걸 즐기는 성격이다. 성훈이 다가가도 쉽게
@@ -33,13 +33,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/알리_ENFJ_100.png" alt="INFP와 잘맞는 유형" />
             <p class="typeCharName">알리압둘</p>
-            <p class="typeCharInfo">주변을 행복하게 만드는 친절한 인물</p>
+            <p class="typeCharInfo">주변을 행복하게 만드는 <br />친절한 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/장덕수_ESTP_100.png" alt="INFP와 잘맞는 유형" />
             <p class="typeCharName">장덕수</p>
-            <p class="typeCharInfo">다양한 분야에 관심이 있는 활동적인 인물</p>
+            <p class="typeCharInfo">다양한 분야에 관심이 있는 <br />활동적인 인물</p>
           </section>
         </div>
       </section>

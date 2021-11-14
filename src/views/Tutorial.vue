@@ -1,6 +1,6 @@
 <template>
   <div class="container" v-if="testStart">
-    <div class="main">
+    <main>
       <div class="count_box">
         <svg
           width="208"
@@ -25,12 +25,12 @@
       </div>
       <img src="image/0_tutorial.png" />
 
-      <h3>
+      <p class="tutorialText">
         12개의 상황마다 <br />
         시간제한이 있습니다. <br />
         게임에 참가하시겠습니까?
-      </h3>
-    </div>
+      </p>
+    </main>
 
     <div class="option_box">
       <!-- <TimeOut /> -->
@@ -79,16 +79,18 @@ export default {
 };
 </script>
 <style scoped>
-.main {
+main {
   height: 419px;
 }
 
-.main > img {
+main > img {
   margin: 40px 26px 0px 26px;
 }
 
-.main > h3 {
+main > .tutorialText {
   margin-top: 32px;
+  line-height: 26.64px;
+  font-size: 18px;
 }
 
 .count_box {

@@ -4,11 +4,11 @@
       <p class="mbti">ENTP</p>
       <p class="charName">의문의 남자</p>
       <img src="/image/final/의문남_ENTP_200.png" alt="의문남 이미지" class="mbtiIMG" />
-      <p class="mbtiSummary">자신감과 에너지가 넘치는 혁신적인 인물</p>
+      <p class="mbtiSummary">자신감과 에너지가 넘치는 <br />혁신적인 인물</p>
     </div>
     <main>
       <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">MBTI에 가장 알맞는 한줄설명</p>
+        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
         <p class="mbtiInfo_text">
           독창적인 혁신가이여 창의력이 풍부해서 새로운 시도를 즐기는 성격이다. 다방면에 재능이 있고
           자신감과 에너지가 넘친다. 다른 사람을 판단하기보다 이해하려고 노력한다. 감정에 솔직하고
@@ -17,7 +17,7 @@
         </p>
       </section>
       <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">MBTI에 맞는 드라마 속 모습들</p>
+        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
         <p class="mbtiInfo2_text">
           오징어 게임 참가자들과 딱지치기를 하여 10만원 내기를 하는 인물로서 자신감과 에너지가
           넘친다. 경쟁심이 강해서 성기훈과의 딱지치기에서도 연속적으로 승리한다.
@@ -30,13 +30,13 @@
             <p class="typeTitle">GOOD</p>
             <img src="/image/final/병기_ISFJ_100.png" alt="ENTP와 잘맞는 유형" />
             <p class="typeCharName">병기</p>
-            <p class="typeCharInfo">책임강이 강하고 헌신적인 인내심 많은 인물</p>
+            <p class="typeCharInfo">책임강이 강하고 헌신적인 <br />인내심 많은 인물</p>
           </section>
           <section class="typeBad">
             <p class="typeTitle">BAD</p>
             <img src="/image/final/지영_ISFP_100.png" alt="ENTP와 잘맞는 유형" />
             <p class="typeCharName">지영</p>
-            <p class="typeCharInfo">감수성이 풍부하고 독립심이 많은 인물</p>
+            <p class="typeCharInfo">감수성이 풍부하고 <br />독립심이 많은 인물</p>
           </section>
         </div>
       </section>
