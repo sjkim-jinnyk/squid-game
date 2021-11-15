@@ -115,9 +115,11 @@ export default {
     questfunc: function (option_num, choice) {
       if (option_num == 3) option_num = Math.round(Math.random());
 
-      this.toUserChoice(option_num);
-      this.clickAnimation(option_num);
-      if (choice) this.getResult(choice);
+      if (!this.option_0 && !this.option_1) {
+        this.toUserChoice(option_num);
+        this.clickAnimation(option_num);
+        if (choice) this.getResult(choice);
+      }
     },
     toUserChoice: function (option_num) {
       if (this.count > 12) return 0;
@@ -126,8 +128,10 @@ export default {
     },
     getResult: function (choice) {
       for (let i in choice) {
-        if (choice[i] >= 2) {
-          this.mbti += i;
+        if (this.mbti.length < 4) {
+          if (choice[i] >= 2) {
+            this.mbti += i;
+          }
         }
         this.$router.push({ name: "Loading", params: { mbti: this.mbti } });
       }
@@ -220,7 +224,6 @@ main > .QuestionText {
   background-color: rgba(231, 62, 126, 0.25);
   border: 1px solid #e73e7e;
   border-radius: 60px;
-  animation: move 0.5s ease 0.3s;
 }
 
 .option2 {
@@ -230,7 +233,6 @@ main > .QuestionText {
   background: rgba(37, 150, 165, 0.25);
   border: 1px solid #2596a5;
   border-radius: 60px;
-  animation: move 0.5s ease 0.5s;
 }
 
 .option1Active {
