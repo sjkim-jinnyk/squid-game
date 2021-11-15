@@ -1,0 +1,150 @@
+body{
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+.Final_MBTI {
+    margin: 60px 50px;
+}
+.mbti {
+    font-weight: 700;
+    font-size: 14px;
+    color: #e73e7e;
+}
+.charName {
+    font-weight: 700;
+    font-size: 18px;
+}
+.mbtiSummary {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20.72px;
+    width: 191px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.mbtiIMG {
+    width: 200px;
+    height: 200px;
+}
+.mbtiInfo {
+    width: 300px;
+    height: auto;
+    line-height: 22.4px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2596a5;
+    margin-bottom: 20px;
+}
+.mbtiInfo_summary {
+    padding: 20px 75px;
+    background-color: #2596a5;
+    font-weight: 700;
+    font-size: 18px;
+}
+.mbtiInfo_text {
+    padding: 30px;
+}
+.mbtiInfo2 {
+    width: 300px;
+    height: auto;
+    line-height: 22.4px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e73e7e;
+    margin-bottom: 60px;
+}
+.mbtiInfo2_summary {
+    padding: 20px 65px;
+    background-color: #e73e7e;
+    font-weight: 700;
+    font-size: 18px;
+}
+.mbtiInfo2_text {
+    padding: 30px;
+}
+.typeMatch {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    width: 86px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.typeTitle {
+    width: 39px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #e73e7e;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+.typeCharName {
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+.typeCharInfo {
+    width: 127px;
+    line-height: 14.8px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.GoodBad {
+    display: flex;
+    justify-content: space-evenly;
+}
+.share_box {
+    width: 66px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.share_btn {
+    width: 196px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.footerBTN {
+    display: flex;
+    flex-direction: column;
+    width: 234px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.allResultBTN {
+    height: 45px;
+    background-color: #555555;
+    border-radius: 60px;
+    color: white;
+    margin-bottom: 12px;
+}
+.testRestart {
+    height: 45px;
+    background-color: #e73e7e;
+    border-radius: 60px;
+    color: white;
+}
