@@ -117,23 +117,6 @@ main > .tutorialText {
 }
 .option1Active {
   background-color: #e73e7e;
-  animation: move2 0.7s ease 0.7s !important;
-}
-@keyframes move2 {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-300px);
-  }
-}
-@keyframes move {
-  from {
-    transform: translateX(300px);
-  }
-  to {
-    transform: translateX(0px);
-  }
 }
 .pause::before {
   animation-play-state: paused !important;

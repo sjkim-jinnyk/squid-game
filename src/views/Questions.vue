@@ -134,6 +134,7 @@ export default {
           }
         }
         this.$router.push({ name: "Loading", params: { mbti: this.mbti } });
+        clearTimeout(this.timeOutWorker);
       }
       console.log(this.mbti);
     },
@@ -147,8 +148,6 @@ export default {
         this.option_0 = false;
         this.option_1 = false;
         this.timerStop = false;
-        this.resetAnimation("option1");
-        this.resetAnimation("option2");
       }, 800);
       this.timerStop = true;
     },
