@@ -54,7 +54,7 @@
       </div>
       <div class="footerBTN">
         <button class="allResultBTN" @click="showResult">결과 전체보기</button>
-        <button class="testRestart">테스트다시하기</button>
+        <button class="testRestart" @click="testRestart">테스트 다시하기</button>
       </div>
     </footer>
     <Final_Modal v-if="showModal" @close="showModal = false" v-on:closeModal="closeModal">
@@ -84,6 +84,9 @@ export default {
     },
     typeLink(type) {
       this.$router.push({ name: `Final_${type}` });
+    },
+    testRestart() {
+      this.$router.push({ name: "Main" });
     },
   },
 };
