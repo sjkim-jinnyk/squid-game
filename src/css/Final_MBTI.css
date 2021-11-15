@@ -1,3 +1,11 @@
+body{
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
 .Final_MBTI {
     margin: 60px 50px;
 }
