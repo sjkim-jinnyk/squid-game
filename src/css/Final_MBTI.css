@@ -106,7 +106,6 @@ p {
     color: #cccccc;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
 }
 .GoodBad {
     display: flex;
@@ -119,6 +118,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    margin-top: 80px;
 }
 .share_btn {
     width: 196px;
@@ -147,4 +147,21 @@ p {
     background-color: #e73e7e;
     border-radius: 60px;
     color: white;
+}
+.returnResult {
+    margin-top: 72px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: white;
+    position: relative;
+}
+.returnResult::after {
+    content: '';
+    background-image: url("../../public/image/returnArrow.svg");
+    width: 9.93px;
+    height: 13px;
+    bottom: 5px;
+    right: -20px;
+    position: absolute;
 }
