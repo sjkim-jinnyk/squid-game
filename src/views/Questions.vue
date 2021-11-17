@@ -2,7 +2,7 @@
   <div>
     <div v-for="question in questionList.slice().reverse()" :key="question.id">
       <transition name="fade">
-        <div class="container" v-if="count + 1 == question.id">
+        <div class="container" v-if="!counterList[question.id - 1]">
           <main>
             <div class="count_box">
               <svg
@@ -12,7 +12,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle cx="6.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[0])" />
+                <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
                 <path d="M25 0L31.9282 12H18.0718L25 0Z" :fill="getCounterColor(counterList[1])" />
                 <rect x="37" width="12" height="12" :fill="getCounterColor(counterList[2])" />
                 <circle cx="59.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[3])" />
@@ -178,7 +178,7 @@ export default {
   },
   data() {
     return {
-      counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      counterList: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
       mbti: "",
