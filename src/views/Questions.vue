@@ -93,7 +93,7 @@ export default {
         } else if (!_this.option_0 && !_this.option_1 && _this.count >= 11) {
           _this.questfunc(3, _this.choice);
         }
-      }, 13000);
+      }, 15000);
     },
   },
   created() {
@@ -102,7 +102,7 @@ export default {
       if (!_this.option_0 && !_this.option_1) {
         _this.questfunc(3, false);
       }
-    }, 13000);
+    }, 15000);
   },
   computed: {
     questions() {
@@ -145,7 +145,6 @@ export default {
       else if (option_num == 1) this.option_1 = true;
       setTimeout(() => {
         if (this.count < 11) this.count += 1;
-        this.show = false;
         this.counterList.unshift(1);
         this.counterList.pop();
         this.option_0 = false;
@@ -155,7 +154,7 @@ export default {
       }, 800);
       setTimeout(() => {
         this.show = false;
-      }, 200);
+      }, 700);
       this.timerStop = true;
     },
     resetAnimation: function (id) {
@@ -186,6 +185,12 @@ export default {
 };
 </script>
 <style scoped>
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 main {
   height: 419px;
 }
@@ -216,14 +221,6 @@ main > .QuestionText {
   margin-left: auto;
 }
 
-@keyframes move {
-  from {
-    transform: translateX(300px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
 .option1 {
   margin-top: 10px;
   height: 45px;
@@ -254,7 +251,7 @@ main > .QuestionText {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.6s all;
 }
 
 .fade-enter-from,
