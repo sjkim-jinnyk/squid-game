@@ -144,7 +144,6 @@ export default {
       if (option_num == 0) this.option_0 = true;
       else if (option_num == 1) this.option_1 = true;
       setTimeout(() => {
-        if (this.count < 11) this.count += 1;
         this.counterList.unshift(1);
         this.counterList.pop();
         this.option_0 = false;
@@ -154,6 +153,7 @@ export default {
       }, 800);
       setTimeout(() => {
         this.show = false;
+        if (this.count < 11) this.count += 1;
       }, 700);
       this.timerStop = true;
     },
