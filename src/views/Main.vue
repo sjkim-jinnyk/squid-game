@@ -27,7 +27,7 @@
       <div class="share_btn">
         <img src="/image/share_btn.svg" />
         <img src="/image/kakao.svg" @click="kakaoLink" />
-        <a target="_blank" @click="facebookLink">
+        <a @click="facebookLink">
           <img src="/image/facebook.svg" />
         </a>
         <a class="twitter-share-button" @click="twitterLink">
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import 오징어게임_로고 from "../../public/image/오징어게임_로고 1.png";
 export default {
   name: "MainPage",
   props: {
@@ -47,22 +48,54 @@ export default {
   data() {
     return {
       testStart: true,
+      logoImg: 오징어게임_로고,
     };
   },
   methods: {
     kakaoLink() {
-      window.Kakao.Link.sendScrap({
-        requestUrl: "https://developers.kakao.com",
+      window.Kakao.Link.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "오징어 게임",
+          description: "나의 오징어게임 mbti 찾기",
+
+          // 이 부분 이미지 바인딩이 안됩니다.
+          imageUrl: this.logoImg,
+          link: {
+            mobileWebUrl: "https://developers.kakao.com",
+            androidExecutionParams: "test",
+          },
+        },
+        buttons: [
+          {
+            title: "웹으로 이동",
+            link: {
+              mobileWebUrl: "https://developers.kakao.com",
+            },
+          },
+          {
+            title: "앱으로 이동",
+            link: {
+              mobileWebUrl: "https://developers.kakao.com",
+            },
+          },
+        ],
       });
     },
     facebookLink() {
       window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse",
+        "pop01",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
     },
     twitterLink() {
       let sendUrl = "https://naver.com";
-      window.open(`https://twitter.com/intent/tweet?&url=${sendUrl}`);
+      window.open(
+        `https://twitter.com/intent/tweet?&url=${sendUrl}`,
+        "pop02",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
+      );
     },
   },
 };
