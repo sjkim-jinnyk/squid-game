@@ -152,10 +152,10 @@ export default {
         this.option_1 = false;
         this.timerStop = false;
         this.show = true;
-      }, 700);
+      }, 800);
       setTimeout(() => {
         this.show = false;
-      }, 100);
+      }, 200);
       this.timerStop = true;
     },
     resetAnimation: function (id) {
