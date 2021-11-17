@@ -1,78 +1,88 @@
 <template>
-  <transition name="fade">
-    <div class="container" v-if="show">
-      <main>
-        <div class="count_box">
-          <svg
-            width="208"
-            height="16"
-            viewBox="0 0 208 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="6.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[0])" />
-            <path d="M25 0L31.9282 12H18.0718L25 0Z" :fill="getCounterColor(counterList[1])" />
-            <rect x="37" width="12" height="12" :fill="getCounterColor(counterList[2])" />
-            <circle cx="59.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[3])" />
-            <path d="M78 0L84.9282 12H71.0718L78 0Z" :fill="getCounterColor(counterList[4])" />
-            <rect x="90" width="12" height="12" :fill="getCounterColor(counterList[5])" />
-            <circle cx="112.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[6])" />
-            <path d="M131 0L137.928 12H124.072L131 0Z" :fill="getCounterColor(counterList[7])" />
-            <rect x="143" width="12" height="12" :fill="getCounterColor(counterList[8])" />
-            <circle cx="165.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[9])" />
-            <path d="M184 0L190.928 12H177.072L184 0Z" :fill="getCounterColor(counterList[10])" />
-            <rect x="196" width="12" height="12" :fill="getCounterColor(counterList[11])" />
-          </svg>
+  <div>
+    <div v-for="question in questionList.slice().reverse()" :key="question.id">
+      <transition name="fade">
+        <div class="container" v-if="count + 1 == question.id">
+          <main>
+            <div class="count_box">
+              <svg
+                width="208"
+                height="16"
+                viewBox="0 0 208 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="6.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[0])" />
+                <path d="M25 0L31.9282 12H18.0718L25 0Z" :fill="getCounterColor(counterList[1])" />
+                <rect x="37" width="12" height="12" :fill="getCounterColor(counterList[2])" />
+                <circle cx="59.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[3])" />
+                <path d="M78 0L84.9282 12H71.0718L78 0Z" :fill="getCounterColor(counterList[4])" />
+                <rect x="90" width="12" height="12" :fill="getCounterColor(counterList[5])" />
+                <circle cx="112.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[6])" />
+                <path
+                  d="M131 0L137.928 12H124.072L131 0Z"
+                  :fill="getCounterColor(counterList[7])"
+                />
+                <rect x="143" width="12" height="12" :fill="getCounterColor(counterList[8])" />
+                <circle cx="165.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[9])" />
+                <path
+                  d="M184 0L190.928 12H177.072L184 0Z"
+                  :fill="getCounterColor(counterList[10])"
+                />
+                <rect x="196" width="12" height="12" :fill="getCounterColor(counterList[11])" />
+              </svg>
+            </div>
+            <img :src="`image/${question.id}_question.png`" />
+            <p class="QuestionText" v-html="question.desc"></p>
+          </main>
+
+          <div class="option_box">
+            <TimeOut :timerStop="timerStop"></TimeOut>
+            <router-link
+              :to="{ name: 'Loading', params: { mbti: mbti } }"
+              v-if="testDone"
+              class="optionBtn"
+            >
+              <button
+                v-on:click="questfunc(0, choice)"
+                class="option1"
+                :class="{ option1Active: option_0 }"
+              >
+                {{ question.option[0] }}
+              </button>
+              <button
+                v-on:click="questfunc(1, choice)"
+                class="option2"
+                :class="{ option2Active: option_1 }"
+              >
+                {{ question.option[1] }}
+              </button>
+            </router-link>
+
+            <div v-else class="optionBtn">
+              <button
+                v-on:click="questfunc(0, false)"
+                id="option1"
+                class="option1"
+                :class="{ option1Active: option_0, disable: timerStop }"
+              >
+                {{ question.option[0] }}
+              </button>
+
+              <button
+                v-on:click="questfunc(1, false)"
+                id="option2"
+                class="option2"
+                :class="{ option2Active: option_1, disable: timerStop }"
+              >
+                {{ question.option[1] }}
+              </button>
+            </div>
+          </div>
         </div>
-        <img :src="`image/${questions[count].id}_question.png`" />
-        <p class="QuestionText" v-html="questions[count].desc"></p>
-      </main>
-
-      <div class="option_box">
-        <TimeOut :timerStop="timerStop"></TimeOut>
-        <router-link
-          :to="{ name: 'Loading', params: { mbti: mbti } }"
-          v-if="testDone"
-          class="optionBtn"
-        >
-          <button
-            v-on:click="questfunc(0, choice)"
-            class="option1"
-            :class="{ option1Active: option_0 }"
-          >
-            {{ questions[count].option[0] }}
-          </button>
-          <button
-            v-on:click="questfunc(1, choice)"
-            class="option2"
-            :class="{ option2Active: option_1 }"
-          >
-            {{ questions[count].option[1] }}
-          </button>
-        </router-link>
-
-        <div v-else class="optionBtn">
-          <button
-            v-on:click="questfunc(0, false)"
-            id="option1"
-            class="option1"
-            :class="{ option1Active: option_0, disable: timerStop }"
-          >
-            {{ questions[count].option[0] }}
-          </button>
-
-          <button
-            v-on:click="questfunc(1, false)"
-            id="option2"
-            class="option2"
-            :class="{ option2Active: option_1, disable: timerStop }"
-          >
-            {{ questions[count].option[1] }}
-          </button>
-        </div>
-      </div>
+      </transition>
     </div>
-  </transition>
+  </div>
 </template>
 <script>
 import questionList from "../assets/questions.json";
@@ -97,6 +107,8 @@ export default {
     },
   },
   created() {
+    this.questionList = questionList;
+    console.log(this.questionList);
     const _this = this;
     this.timeOutWorker = setTimeout(function () {
       if (!_this.option_0 && !_this.option_1) {
@@ -104,11 +116,11 @@ export default {
       }
     }, 15000);
   },
-  computed: {
-    questions() {
-      return questionList;
-    },
-  },
+  // computed: {
+  //   questions() {
+  //     return questionList;
+  //   },
+  // },
   methods: {
     getCounterColor: function (num) {
       if (num) return "#E73E7E";
@@ -125,7 +137,7 @@ export default {
     },
     toUserChoice: function (option_num) {
       if (this.count > 12) return 0;
-      let mbti_value = this.questions[this.count].option_mbti[option_num];
+      let mbti_value = this.questionList[this.count].option_mbti[option_num];
       this.choice[mbti_value] += 1;
     },
     getResult: function (choice) {
@@ -176,6 +188,7 @@ export default {
       show: true,
       timerStop: false,
       timeOutWorker: setTimeout(() => {}),
+      questionList: [],
     };
   },
   props: {},
