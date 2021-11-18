@@ -27,7 +27,7 @@
           보여준다. 힘든 상황에서 다른 팀원들을 다독이며 이끄는 모습을 보여준다.
         </p>
       </section>
-      <section class="typeMatch">
+      <section class="typeMatch" v-if="!firstTest">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ISTP')">
@@ -46,17 +46,22 @@
       </section>
     </main>
     <footer>
-      <p class="share_box">공유하기</p>
-      <div class="share_btn">
-        <img src="/image/share_btn.svg" />
-        <img src="/image/kakao.svg" />
-        <img src="/image/facebook.svg" />
-        <img src="/image/twitter.svg" />
-      </div>
-      <div class="footerBTN">
-        <button class="allResultBTN" @click="showResult">결과 전체보기</button>
-        <button class="testRestart" @click="testRestart">테스트 다시하기</button>
-      </div>
+      <article v-if="!firstTest">
+        <p class="share_box">공유하기</p>
+        <div class="share_btn">
+          <img src="/image/share_btn.svg" />
+          <img src="/image/kakao.svg" />
+          <img src="/image/facebook.svg" />
+          <img src="/image/twitter.svg" />
+        </div>
+        <div class="footerBTN">
+          <button class="allResultBTN" @click="showResult">결과 전체보기</button>
+          <button class="testRestart" @click="testRestart">테스트 다시하기</button>
+        </div>
+      </article>
+      <article v-else>
+        <button class="returnResult" @click="returnResult">결과로 돌아가기</button>
+      </article>
     </footer>
     <Final_Modal v-if="showModal" @close="showModal = false" v-on:closeModal="closeModal">
     </Final_Modal>
@@ -68,6 +73,12 @@ import Final_Modal from "./Final_Modal.vue";
 
 export default {
   name: "Final_ENFJ",
+  props: {
+    firstTest: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       showModal: false,
@@ -75,6 +86,9 @@ export default {
   },
   components: {
     Final_Modal,
+  },
+  created() {
+    console.log(this.firstTest);
   },
   methods: {
     showResult() {
@@ -84,10 +98,13 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ name: `Final_${type}` });
+      this.$router.push({ name: `Final_${type}`, params: { firstTest: true } });
     },
     testRestart() {
       this.$router.push({ name: "Main" });
+    },
+    returnResult() {
+      this.$router.go(-1);
     },
   },
 };
