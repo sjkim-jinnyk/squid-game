@@ -14,7 +14,7 @@
                 <p class="charName">성기훈</p>
                 <p class="charType">ENFP</p>
               </section>
-              <p class="charSummary">풍부한 열정과 상상력으로 무엇이든 해내는 인물</p>
+              <p class="charSummary">풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('INFJ')">
@@ -24,7 +24,7 @@
                 <p class="charName">오일남</p>
                 <p class="charType">INFJ</p>
               </section>
-              <p class="charSummary">창의력과 통찰력이 뛰어난 독창적인 인물</p>
+              <p class="charSummary">창의력과 통찰력이 뛰어난 <br />독창적인 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ENTJ')">
@@ -34,7 +34,7 @@
                 <p class="charName">조상우</p>
                 <p class="charType">ENTJ</p>
               </section>
-              <p class="charSummary">전략가로서 실리를 챙기는 지도자형 인물</p>
+              <p class="charSummary">전략가로서 실리를 챙기는 <br />지도자형 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ESTP')">
@@ -44,7 +44,7 @@
                 <p class="charName">장덕수</p>
                 <p class="charType">ESTP</p>
               </section>
-              <p class="charSummary">다양한 분야에 관심이 있는 활동적인 인물</p>
+              <p class="charSummary">다양한 분야에 관심이 있는 <br />활동적인 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('INFP')">
@@ -54,7 +54,7 @@
                 <p class="charName">강새벽</p>
                 <p class="charType">INFP</p>
               </section>
-              <p class="charSummary">신념과 조화를 중시하는 이상주의자 인물</p>
+              <p class="charSummary">신념과 조화를 중시하는 <br />이상주의자 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ESFP')">
@@ -64,7 +64,7 @@
                 <p class="charName">한미녀</p>
                 <p class="charType">ESFP</p>
               </section>
-              <p class="charSummary">현실적이고 실제적인 사교적인 인물</p>
+              <p class="charSummary">현실적이고 실제적인 <br />사교적인 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ISTJ')">
@@ -74,7 +74,7 @@
                 <p class="charName">황준호</p>
                 <p class="charType">ISTJ</p>
               </section>
-              <p class="charSummary">시작한 일은 끝까지 하는 완벽주의자 인물</p>
+              <p class="charSummary">시작한 일은 끝까지 하는 <br />완벽주의자 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ISTP')">
@@ -84,7 +84,7 @@
                 <p class="charName">프런트맨</p>
                 <p class="charType">ISTP</p>
               </section>
-              <p class="charSummary">논리적이고 객관적인 백과사전형 인물</p>
+              <p class="charSummary">논리적이고 객관적인 <br />백과사전형 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ISFJ')">
@@ -94,7 +94,7 @@
                 <p class="charName">병기</p>
                 <p class="charType">ISFJ</p>
               </section>
-              <p class="charSummary">책임감이 강하고 헌신적인 인내심 많은 인물</p>
+              <p class="charSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ENTP')">
@@ -104,7 +104,7 @@
                 <p class="charName">의문의 남자</p>
                 <p class="charType">ENTP</p>
               </section>
-              <p class="charSummary">자신감과 에너지가 넘치는 현실적인 인물</p>
+              <p class="charSummary">자신감과 에너지가 넘치는 <br />현실적인 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ESTJ')">
@@ -114,7 +114,7 @@
                 <p class="charName">VIPS</p>
                 <p class="charType">ESTJ</p>
               </section>
-              <p class="charSummary">계획하는 능력이 뛰어난 사업가형 인물</p>
+              <p class="charSummary">계획하는 능력이 뛰어난 <br />사업가형 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ENFJ')">
@@ -124,7 +124,7 @@
                 <p class="charName">알리압둘</p>
                 <p class="charType">ENFJ</p>
               </section>
-              <p class="charSummary">주변을 행복하게 만드는 친절한 인물</p>
+              <p class="charSummary">주변을 행복하게 만드는 <br />친절한 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ISFP')">
@@ -134,7 +134,7 @@
                 <p class="charName">지영</p>
                 <p class="charType">ISFP</p>
               </section>
-              <p class="charSummary">감수성이 풍부하고 독립심이 많은 인물</p>
+              <p class="charSummary">감수성이 풍부하고 <br />독립심이 많은 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('INTP')">
@@ -144,7 +144,7 @@
                 <p class="charName">진행요원</p>
                 <p class="charType">INTP</p>
               </section>
-              <p class="charSummary">이해가 빠르고 통찰력 있는 아이디어형 인물</p>
+              <p class="charSummary">이해가 빠르고 통찰력 있는 <br />아이디어형 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ESFJ')">
@@ -154,7 +154,7 @@
                 <p class="charName">조상우의 어머니</p>
                 <p class="charType">ESFJ</p>
               </section>
-              <p class="charSummary">동정심과 참을성이 많은 양심적인 인물</p>
+              <p class="charSummary">동정심과 참을성이 많은 <br />양심적인 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('INTJ')">
@@ -164,7 +164,7 @@
                 <p class="charName">주최자</p>
                 <p class="charType">INTJ</p>
               </section>
-              <p class="charSummary">행동과 사고가 단호한 독립적인 인물</p>
+              <p class="charSummary">행동과 사고가 단호한 <br />독립적인 인물</p>
             </section>
           </article>
         </main>
