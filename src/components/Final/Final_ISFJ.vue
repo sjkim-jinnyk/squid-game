@@ -2,9 +2,9 @@
   <div class="Final_MBTI">
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
-      <img src="/image/final/병기_ISFJ_200.png" alt="병기 이미지" class="mbtiIMG" />
+      <img src="/image/final/성기훈어머니_ISFJ.png" alt="성기훈어머니 이미지" class="mbtiIMG" />
       <p class="mbti">ISFJ</p>
-      <p class="charName">병기</p>
+      <p class="charName">성기훈의 어머니</p>
       <p class="mbtiSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
     </div>
     <main>
@@ -125,8 +125,21 @@ export default {
   data() {
     return {
       showModal: false,
-      mbtiInfo_text: [],
-      mbtiInfo2_text: [],
+      mbtiInfo_text: [
+        "책임감이 강하고 헌신적이다.",
+        "치밀성과 반복을 요하는 일을 끝까지 하는 인내력이 높다.",
+        "온순하고 차분하다.",
+        "신중하고 꼼꼼하고 섬세하며 생각이 많다.",
+        "돈. 시간. 감정 등의 쓸모없는 낭비를 싫어한다.",
+        "상대에게 상처를 주지 않으므로 대인관계가 원만하다.",
+        "배려, 겸손 예의를 중시한다.",
+        "상대방의 이야기를 경청하고 공감해주지만 본인의 깊은 고민과 이야기는 잘 말하지 않는다. ",
+      ],
+      mbtiInfo2_text: [
+        "성기훈의 어머니로서 아버지의 의무를 다하지 못하고 있는 성기훈을 나무라지 않고 끝까지 인내하고 참는 모습을 보인다.",
+        "몸이 힘들어도 티 내지 않고 열심히 책임감 있게 일하는 모습을 보여준다.",
+        "성기훈의 모습이 탐탁치 않지만 그에게 상처를 주지 않고 차분하게 그를 대하는 모습이 나타난다.",
+      ],
     };
   },
   components: {

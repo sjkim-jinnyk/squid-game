@@ -88,10 +88,14 @@
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ISFJ')">
-            <img src="/image/final/병기_ISFJ_200.png" alt="병기 이미지" class="typeImg" />
+            <img
+              src="/image/final/성기훈어머니_ISFJ.png"
+              alt="성기훈어머니 이미지"
+              class="typeImg"
+            />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">병기</p>
+                <p class="charName">성기훈의 어머니</p>
                 <p class="charType">ISFJ</p>
               </section>
               <p class="charSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
