@@ -25,7 +25,7 @@
           벗어나면 쉽게 돌아선다. 한미녀를 배신할 때도 자신의 생존을 우선시하는 모습을 보였다
         </p>
       </section>
-      <section class="typeMatch">
+      <section class="typeMatch" v-if="!firstTest">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('INFJ')">
