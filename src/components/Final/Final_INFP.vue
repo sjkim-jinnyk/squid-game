@@ -94,7 +94,7 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ name: `Final_${type}` });
+      this.$router.push({ name: `Final_${type}`, params: { firstTest: true } });
     },
     testRestart() {
       this.$router.push({ name: "Main" });

@@ -27,7 +27,7 @@
           모습도 보여준다.
         </p>
       </section>
-      <section class="typeMatch">
+      <section class="typeMatch" v-if="!firstTest">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ESTP')">
@@ -95,7 +95,7 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ name: `Final_${type}` });
+      this.$router.push({ name: `Final_${type}`, params: { firstTest: true } });
     },
     testRestart() {
       this.$router.push({ name: "Main" });
