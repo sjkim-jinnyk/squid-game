@@ -50,9 +50,15 @@
         <p class="share_box">공유하기</p>
         <div class="share_btn">
           <img src="/image/share_btn.svg" />
-          <img src="/image/kakao.svg" />
-          <img src="/image/facebook.svg" />
-          <img src="/image/twitter.svg" />
+          <a @click="kakaoLink">
+            <img src="/image/kakao.svg" />
+          </a>
+          <a @click="facebookLink">
+            <img src="/image/facebook.svg" />
+          </a>
+          <a class="twitter-share-button" @click="twitterLink">
+            <img src="/image/twitter.svg" />
+          </a>
         </div>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">결과 전체보기</button>
@@ -80,6 +86,7 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+  },
   setup() {
     const siteData = reactive({
       title: "My website",
@@ -100,13 +107,12 @@ export default defineComponent({
   data() {
     return {
       showModal: false,
+      resultLink: window.location.href,
+      homeLink: window.location.origin,
     };
   },
   components: {
     Final_Modal,
-  },
-  created() {
-    console.log(this.firstTest);
   },
   methods: {
     showResult() {
@@ -123,6 +129,56 @@ export default defineComponent({
     },
     returnResult() {
       this.$router.go(-1);
+    },
+    kakaoLink() {
+      // 나중에 링크 수정
+
+      window.Kakao.Link.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "저랑 게임 하나 하시겠습니까? ",
+          description: "나는 오징어 게임에서 어떤 캐릭터일까?",
+
+          // 이 부분 이미지 바인딩이 안됩니다.
+          imageUrl:
+            "http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+          link: {
+            mobileWebUrl: this.homeLink,
+            webUrl: this.homeLink,
+          },
+        },
+        buttons: [
+          {
+            title: "결과보기",
+            link: {
+              mobileWebUrl: this.resultLink,
+              webUrl: this.resultLink,
+            },
+          },
+          {
+            title: "테스트하기",
+            link: {
+              mobileWebUrl: this.homeLink,
+              webUrl: this.homeLink,
+            },
+          },
+        ],
+      });
+    },
+    facebookLink() {
+      window.open(
+        `https://www.facebook.com/sharer/sharer.php?u=${this.resultLink}`,
+        "pop01",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
+      );
+    },
+    twitterLink() {
+      let text = "저랑 게임 한판 하실래요?";
+      window.open(
+        `https://twitter.com/intent/tweet?text=${text}&url=${this.resultLink}`,
+        "pop02",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
+      );
     },
   },
 });
