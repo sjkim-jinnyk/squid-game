@@ -25,10 +25,14 @@
       </router-link>
       <h2 class="share_box">공유하기</h2>
       <div class="share_btn">
-        <img src="image/share_btn.svg" />
-        <img src="image/kakao.svg" />
-        <img src="image/facebook.svg" />
-        <img src="image/twitter.svg" />
+        <img src="/image/share_btn.svg" />
+        <img src="/image/kakao.svg" @click="kakaoLink" />
+        <a target="_blank" @click="facebookLink">
+          <img src="/image/facebook.svg" />
+        </a>
+        <a class="twitter-share-button" @click="twitterLink">
+          <img src="/image/twitter.svg" />
+        </a>
       </div>
     </footer>
   </div>
@@ -44,6 +48,22 @@ export default {
     return {
       testStart: true,
     };
+  },
+  methods: {
+    kakaoLink() {
+      window.Kakao.Link.sendScrap({
+        requestUrl: "https://developers.kakao.com",
+      });
+    },
+    facebookLink() {
+      window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+      );
+    },
+    twitterLink() {
+      let sendUrl = "https://naver.com";
+      window.open(`https://twitter.com/intent/tweet?&url=${sendUrl}`);
+    },
   },
 };
 </script>

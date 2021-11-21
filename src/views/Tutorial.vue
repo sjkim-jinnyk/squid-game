@@ -56,7 +56,6 @@ export default {
     // TimeOut,
   },
   created() {
-    console.log(this.testStart);
     setTimeout(() => {
       this.$router.push({ name: "Questions" });
     }, 13000);
