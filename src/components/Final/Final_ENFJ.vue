@@ -49,16 +49,18 @@
       <article v-if="!firstTest">
         <p class="share_box">공유하기</p>
         <div class="share_btn">
-          <img src="/image/share_btn.svg" />
-          <a @click="kakaoLink">
+          <button @click="urlLink">
+            <img src="/image/linkshare_btn.svg" />
+          </button>
+          <button @click="kakaoLink">
             <img src="/image/kakao.svg" />
-          </a>
-          <a @click="facebookLink">
+          </button>
+          <button @click="facebookLink">
             <img src="/image/facebook.svg" />
-          </a>
-          <a class="twitter-share-button" @click="twitterLink">
+          </button>
+          <button class="twitter-share-button" @click="twitterLink">
             <img src="/image/twitter.svg" />
-          </a>
+          </button>
         </div>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">결과 전체보기</button>
@@ -130,18 +132,21 @@ export default defineComponent({
     returnResult() {
       this.$router.go(-1);
     },
+    urlLink() {
+      this.$copyText(this.resultLink).then(function () {
+        alert("복사되었습니다.");
+      });
+    },
     kakaoLink() {
-      // 나중에 링크 수정
-
       window.Kakao.Link.sendDefault({
         objectType: "feed",
         content: {
           title: "저랑 게임 하나 하시겠습니까? ",
           description: "나는 오징어 게임에서 어떤 캐릭터일까?",
-
-          // 이 부분 이미지 바인딩이 안됩니다.
           imageUrl:
-            "http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+            "https://www.squid-games.site/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
+          imageWidth: 800,
+          imageHeight: 400,
           link: {
             mobileWebUrl: this.homeLink,
             webUrl: this.homeLink,
