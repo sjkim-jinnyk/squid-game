@@ -90,7 +90,7 @@ export default {
     },
     facebookLink() {
       window.open(
-        `https://www.facebook.com/sharer/sharer.php?u=${this.homeLink}`,
+        "https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site&src=sdkpreparse",
         "pop01",
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );

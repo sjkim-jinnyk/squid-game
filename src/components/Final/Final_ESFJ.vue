@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ESFJ",
       mbtiInfo_text: [
         "항상 웃으면서 동정심과 동료애가 많다.",
         "양심적이고 정리정돈을 잘한다.",

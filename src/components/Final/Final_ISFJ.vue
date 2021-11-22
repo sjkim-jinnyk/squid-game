@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ISFJ",
       mbtiInfo_text: [
         "책임감이 강하고 헌신적이다.",
         "치밀성과 반복을 요하는 일을 끝까지 하는 인내력이 높다.",

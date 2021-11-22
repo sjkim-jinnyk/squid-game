@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "INFP",
       mbtiInfo_text: [
         "마음은 따듯하지만 상대방을 잘 알기 전까지는 표현을 잘하지 않는다.",
         "자신이 지향하는 이상에 대해서는 정열적인 신념을 갖고 있다.",

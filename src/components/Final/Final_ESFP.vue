@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ESFP",
       mbtiInfo_text: [
         "현실적이고 실제적이며 어떤 상황에도 타협적이다.",
         "웃음과 오락 등 즐거움을 추구하는 성격이다.",

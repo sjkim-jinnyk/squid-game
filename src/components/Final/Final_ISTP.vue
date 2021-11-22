@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ISTP",
       mbtiInfo_text: [
         "조용하고 말이 없어서 처음에는 차가운 인상이지만 알고 보면 따듯한 사람.",
         "절제된 호기심으로 인생을 관찰하고 상황파악이 빠르다.",

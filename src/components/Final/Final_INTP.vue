@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "INTP",
       mbtiInfo_text: [
         "조용하고 과묵하지만 관심 있는 분야에서는 말을 잘한다.",
         "분석적이고 논리적이며 객관적 비평을 잘해서 진지충이라는 소리를 자주 듣는다.",

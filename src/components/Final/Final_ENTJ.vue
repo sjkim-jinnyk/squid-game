@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -122,6 +122,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ENTJ",
       mbtiInfo_text: [
         "다소 내향적이고 합리적이며 이성적인 판단을 잘 한다.",
         "독립적인 성격이 강해 많은 사람들과 있는 거 보디 혼자 만의 시간을 즐기는 편이다. ",

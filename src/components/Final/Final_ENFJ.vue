@@ -44,7 +44,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -141,6 +141,7 @@ export default defineComponent({
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ENFJ",
       mbtiInfo_text: [
         "인생을 따듯하게 바라보며, 동정심과 동료애가 많고 친절하다.",
         "참을성이 많고 성실하다.",
