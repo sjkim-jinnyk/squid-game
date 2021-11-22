@@ -46,27 +46,13 @@
       </section>
     </main>
     <footer>
-      <article v-if="!firstTest">
-        <p class="share_box">공유하기</p>
-        <div class="share_btn">
-          <button @click="urlLink">
-            <img src="/image/linkshare_btn.svg" />
-          </button>
-          <button @click="kakaoLink">
-            <img src="/image/kakao.svg" />
-          </button>
-          <button @click="facebookLink">
-            <img src="/image/facebook.svg" />
-          </button>
-          <button class="twitter-share-button" @click="twitterLink">
-            <img src="/image/twitter.svg" />
-          </button>
-        </div>
+      <section v-if="!firstTest">
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">결과 전체보기</button>
           <button class="testRestart" @click="testRestart">테스트 다시하기</button>
         </div>
-      </article>
+      </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">결과로 돌아가기</button>
       </article>
@@ -80,6 +66,7 @@
 import Final_Modal from "./Final_Modal.vue";
 import { defineComponent, computed, reactive } from "vue";
 import { useHead } from "@vueuse/head";
+import LinkShare from "../LinkShare.vue";
 
 export default defineComponent({
   name: "Final_ENFJ",
@@ -115,6 +102,7 @@ export default defineComponent({
   },
   components: {
     Final_Modal,
+    LinkShare,
   },
   methods: {
     showResult() {
@@ -131,59 +119,6 @@ export default defineComponent({
     },
     returnResult() {
       this.$router.go(-1);
-    },
-    urlLink() {
-      this.$copyText(this.resultLink).then(function () {
-        alert("복사되었습니다.");
-      });
-    },
-    kakaoLink() {
-      window.Kakao.Link.sendDefault({
-        objectType: "feed",
-        content: {
-          title: "저랑 게임 하나 하시겠습니까? ",
-          description: "나는 오징어 게임에서 어떤 캐릭터일까?",
-          imageUrl:
-            "https://www.squid-games.site/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
-          imageWidth: 800,
-          imageHeight: 400,
-          link: {
-            mobileWebUrl: this.homeLink,
-            webUrl: this.homeLink,
-          },
-        },
-        buttons: [
-          {
-            title: "결과보기",
-            link: {
-              mobileWebUrl: this.resultLink,
-              webUrl: this.resultLink,
-            },
-          },
-          {
-            title: "테스트하기",
-            link: {
-              mobileWebUrl: this.homeLink,
-              webUrl: this.homeLink,
-            },
-          },
-        ],
-      });
-    },
-    facebookLink() {
-      window.open(
-        `https://www.facebook.com/sharer/sharer.php?u=${this.resultLink}`,
-        "pop01",
-        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
-      );
-    },
-    twitterLink() {
-      let text = "저랑 게임 한판 하실래요?";
-      window.open(
-        `https://twitter.com/intent/tweet?text=${text}&url=${this.resultLink}`,
-        "pop02",
-        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
-      );
     },
   },
 });
