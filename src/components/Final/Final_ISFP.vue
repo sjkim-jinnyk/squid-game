@@ -45,7 +45,7 @@
     </main>
     <footer>
       <section v-if="!firstTest">
-        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">결과 전체보기</button>
           <button class="testRestart" @click="testRestart">테스트 다시하기</button>
@@ -77,6 +77,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbti: "ISFP",
     };
   },
   components: {

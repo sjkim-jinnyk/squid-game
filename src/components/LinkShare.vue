@@ -8,7 +8,7 @@
       <button @click="kakaoLink(resultLink, homeLink)">
         <img src="/image/kakao.svg" />
       </button>
-      <button @click="facebookLink()" data-href="http://squid-games.site">
+      <button @click="facebookLink(mbti)">
         <img src="/image/facebook.svg" />
       </button>
       <button class="twitter-share-button" @click="twitterLink(resultLink)">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  props: ["resultLink", "homeLink"],
+  props: ["resultLink", "homeLink", "mbti"],
   methods: {
     urlLink(link) {
       this.$copyText(link).then(function () {
@@ -60,9 +60,9 @@ export default {
         ],
       });
     },
-    facebookLink() {
+    facebookLink(mbti) {
       window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=http://squid-games.site&src=sdkpreparse",
+        `https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site/questions/result/${mbti}&src=sdkpreparse`,
         "pop01",
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
