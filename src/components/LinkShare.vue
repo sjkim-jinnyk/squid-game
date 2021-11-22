@@ -8,7 +8,7 @@
       <button @click="kakaoLink(resultLink, homeLink)">
         <img src="/image/kakao.svg" />
       </button>
-      <button @click="facebookLink(resultLink)">
+      <button @click="facebookLink()" data-href="http://squid-games.site">
         <img src="/image/facebook.svg" />
       </button>
       <button class="twitter-share-button" @click="twitterLink(resultLink)">
@@ -60,9 +60,9 @@ export default {
         ],
       });
     },
-    facebookLink(resultLink) {
+    facebookLink() {
       window.open(
-        `https://www.facebook.com/sharer/sharer.php?u=${resultLink}`,
+        "https://www.facebook.com/sharer/sharer.php?u=http://squid-games.site&src=sdkpreparse",
         "pop01",
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
