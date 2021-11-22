@@ -43,14 +43,8 @@
       </section>
     </main>
     <footer>
-      <article v-if="!firstTest">
-        <p class="share_box">공유하기</p>
-        <div class="share_btn">
-          <img src="/image/share_btn.svg" />
-          <img src="/image/kakao.svg" />
-          <img src="/image/facebook.svg" />
-          <img src="/image/twitter.svg" />
-        </div>
+      <section v-if="!firstTest">
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -101,7 +95,7 @@
             </svg>
           </button>
         </div>
-      </article>
+      </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">결과로 돌아가기</button>
       </article>
@@ -113,6 +107,7 @@
 
 <script>
 import Final_Modal from "./Final_Modal.vue";
+import LinkShare from "../LinkShare.vue";
 
 export default {
   name: "Final_ISFJ",
@@ -125,6 +120,8 @@ export default {
   data() {
     return {
       showModal: false,
+      resultLink: window.location.href,
+      homeLink: window.location.origin,
       mbtiInfo_text: [
         "책임감이 강하고 헌신적이다.",
         "치밀성과 반복을 요하는 일을 끝까지 하는 인내력이 높다.",
@@ -144,6 +141,7 @@ export default {
   },
   components: {
     Final_Modal,
+    LinkShare,
   },
   methods: {
     showResult() {

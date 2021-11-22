@@ -25,20 +25,25 @@
       </router-link>
       <h2 class="share_box">공유하기</h2>
       <div class="share_btn">
-        <img src="/image/share_btn.svg" />
-        <img src="/image/kakao.svg" @click="kakaoLink" />
-        <a target="_blank" @click="facebookLink">
+        <button @click="urlLink">
+          <img src="/image/linkshare_btn.svg" />
+        </button>
+        <button @click="kakaoLink">
+          <img src="/image/kakao.svg" />
+        </button>
+        <button @click="facebookLink">
           <img src="/image/facebook.svg" />
-        </a>
-        <a class="twitter-share-button" @click="twitterLink">
+        </button>
+        <button class="twitter-share-button" @click="twitterLink">
           <img src="/image/twitter.svg" />
-        </a>
+        </button>
       </div>
     </footer>
   </div>
 </template>
 
 <script>
+import 오징어게임_로고 from "../../public/image/오징어게임_로고 1.png";
 export default {
   name: "MainPage",
   props: {
@@ -47,22 +52,56 @@ export default {
   data() {
     return {
       testStart: true,
+      logoImg: 오징어게임_로고,
+      homeLink: window.location.href,
     };
   },
   methods: {
+    urlLink() {
+      this.$copyText(this.homeLink).then(function () {
+        alert("복사되었습니다.");
+      });
+    },
     kakaoLink() {
-      window.Kakao.Link.sendScrap({
-        requestUrl: "https://developers.kakao.com",
+      window.Kakao.Link.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "저랑 게임 하나 하시겠습니까? ",
+          description: "나는 오징어 게임에서 어떤 캐릭터일까?",
+          imageUrl:
+            "https://www.squid-games.site/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
+          imageWidth: 800,
+          imageHeight: 400,
+          link: {
+            mobileWebUrl: this.homeLink,
+            webUrl: this.homeLink,
+          },
+        },
+        buttons: [
+          {
+            title: "테스트 하기",
+            link: {
+              mobileWebUrl: this.homeLink,
+              webUrl: this.homeLink,
+            },
+          },
+        ],
       });
     },
     facebookLink() {
       window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+        `https://www.facebook.com/sharer/sharer.php?u=${this.homeLink}`,
+        "pop01",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
     },
     twitterLink() {
-      let sendUrl = "https://naver.com";
-      window.open(`https://twitter.com/intent/tweet?&url=${sendUrl}`);
+      let text = "저랑 게임 한판 하실래요?";
+      window.open(
+        `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}`,
+        "pop02",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
+      );
     },
   },
 };
