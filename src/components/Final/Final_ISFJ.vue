@@ -1,34 +1,29 @@
 <template>
   <div class="Final_MBTI">
     <div class="testMBTI">
+      <p class="testTitle">당신은 오징어게임에서</p>
+      <img src="/image/final/성기훈어머니_ISFJ.png" alt="성기훈어머니 이미지" class="mbtiIMG" />
       <p class="mbti">ISFJ</p>
-      <p class="charName">병기</p>
-      <img src="/image/final/병기_ISFJ_200.png" alt="병기 이미지" class="mbtiIMG" />
+      <p class="charName">성기훈의 어머니</p>
       <p class="mbtiSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
     </div>
     <main>
-      <section class="mbtiInfo">
-        <p class="mbtiInfo_summary">현실세계에서 당신은</p>
-        <p class="mbtiInfo_text">
-          열성적이며 활발하고 창의적임 철저한 계획을 세우기 보다는 자기 스타일대로 한다. 열정적으로
-          새 관계를 만들어가며 사람들과 자유롭게 어울리는 것을 즐긴다. 주위의 분위기를 밝게 만드는
-          에너지의 소유자라 주변 사람들에게 인기가 많다. 다른 사람들에게 많은 관심을 주고 그들을 잘
-          통솔한다. 관심있는 일이면 무엇이든 해내는 열성파 풍부한 에너지와 상상력을 갖고 즉흥적으로
-          일을 재빠르게 하는 성격. 한가지 일을 마무리 짓지 않고 다른 일을 새롭게 시작하는 경향이
-          있다. 말이 많고 냉철해야 할 때 고민을 많이 함.
-        </p>
-      </section>
-      <section class="mbtiInfo2">
-        <p class="mbtiInfo2_summary">오징어 게임에서 당신은</p>
-        <p class="mbtiInfo2_text">
-          드라마내에서 어마어마한 빚이 있을 때, 그 빚을 갚기 위해 도박을 하는 무모한 모습을
-          보여준다. 조상우와는 반대되는 성격으로, 달고나 게임에서 달고나를 핥아서 뽑는 등, 창의적인
-          방법으로 문제를 해결하는 능력을 보여준다. 나이 많은 오일남과 아픈 강새벽을 계속
-          챙겨주듯이, 다른 사람들을 잘 도와주는 성격이다. 오징어 게임 내에서도 항상 적극적이고
-          열정적으로 임하는 모습을 보여준다. 팀을 짜는 과정에서도 주도적으로 팀을 짜면서 새 관계를
-          만들어가는 모습을 보여준다. 가끔씩 감정에 매몰되는 모습을 보임.
-        </p>
-      </section>
+      <div class="mbtiInfo_wrap">
+        <section class="mbtiInfo">
+          <p class="mbtiInfo_summary">현실세계에서 당신은?</p>
+          <ul class="mbtiInfo_text">
+            <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
+          </ul>
+        </section>
+      </div>
+      <div class="mbtiInfo2_wrap">
+        <section class="mbtiInfo2">
+          <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
+          <ul class="mbtiInfo2_text">
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
+          </ul>
+        </section>
+      </div>
       <section class="typeMatch" v-if="!firstTest">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
@@ -51,8 +46,54 @@
       <section v-if="!firstTest">
         <LinkShare :resultLink="resultLink" :homeLink="homeLink"></LinkShare>
         <div class="footerBTN">
-          <button class="allResultBTN" @click="showResult">결과 전체보기</button>
-          <button class="testRestart" @click="testRestart">테스트 다시하기</button>
+          <button class="allResultBTN" @click="showResult">
+            결과 전체보기
+            <svg
+              width="7"
+              height="11"
+              viewBox="0 0 7 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 0.5L6 5.5L1 10.5"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="testRestart" @click="testRestart">
+            테스트 다시하기
+            <svg
+              width="10"
+              height="13"
+              viewBox="0 0 10 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_98_158"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="2"
+                width="10"
+                height="11"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.96521 2.56897H4.9997V7.53449H0.0341797V12.5H9.96521V2.56897Z"
+                  fill="#C4C4C4"
+                />
+              </mask>
+              <g mask="url(#mask0_98_158)">
+                <circle cx="4.9997" cy="7.53449" r="4.46552" stroke="white" />
+              </g>
+              <path d="M7.15463 0.5L4.67188 3.39655L7.15463 6.2931" stroke="white" />
+            </svg>
+          </button>
         </div>
       </section>
       <article v-else>
@@ -81,6 +122,21 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      mbtiInfo_text: [
+        "책임감이 강하고 헌신적이다.",
+        "치밀성과 반복을 요하는 일을 끝까지 하는 인내력이 높다.",
+        "온순하고 차분하다.",
+        "신중하고 꼼꼼하고 섬세하며 생각이 많다.",
+        "돈. 시간. 감정 등의 쓸모없는 낭비를 싫어한다.",
+        "상대에게 상처를 주지 않으므로 대인관계가 원만하다.",
+        "배려, 겸손 예의를 중시한다.",
+        "상대방의 이야기를 경청하고 공감해주지만 본인의 깊은 고민과 이야기는 잘 말하지 않는다. ",
+      ],
+      mbtiInfo2_text: [
+        "성기훈의 어머니로서 아버지의 의무를 다하지 못하고 있는 성기훈을 나무라지 않고 끝까지 인내하고 참는 모습을 보인다.",
+        "몸이 힘들어도 티 내지 않고 열심히 책임감 있게 일하는 모습을 보여준다.",
+        "성기훈의 모습이 탐탁치 않지만 그에게 상처를 주지 않고 차분하게 그를 대하는 모습이 나타난다.",
+      ],
     };
   },
   components: {
