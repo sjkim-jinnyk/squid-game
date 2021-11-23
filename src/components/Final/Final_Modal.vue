@@ -189,7 +189,7 @@ export default {
       this.$emit("closeModal", !this.close);
     },
     typeLink(type) {
-      this.$router.push({ name: `Final_${type}` });
+      this.$router.push({ name: `Final_${type}`, params: { firstTest: true } });
     },
   },
 };
@@ -233,6 +233,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .charInfo {
   width: 150px;
