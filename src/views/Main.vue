@@ -39,11 +39,14 @@
         </button>
       </div>
     </footer>
+    <ImgLoading></ImgLoading>
   </div>
 </template>
 
 <script>
 import 오징어게임_로고 from "../../public/image/오징어게임_로고 1.png";
+import ImgLoading from "../components/ImgLoading.vue";
+
 export default {
   name: "MainPage",
   props: {
@@ -55,6 +58,9 @@ export default {
       logoImg: 오징어게임_로고,
       homeLink: window.location.href,
     };
+  },
+  components: {
+    ImgLoading,
   },
   methods: {
     urlLink() {
