@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hideImg">
     <img src="image/0_tutorial.png" />
     <img src="image/1_question.png" />
     <img src="image/2_question.png" />
@@ -38,7 +38,7 @@ export default {};
 </script>
 
 <style scoped>
-img {
+.hideImg img {
   width: 0;
   height: 0;
 }
