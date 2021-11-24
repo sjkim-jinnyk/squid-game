@@ -43,14 +43,8 @@
       </section>
     </main>
     <footer>
-      <article v-if="!firstTest">
-        <p class="share_box">공유하기</p>
-        <div class="share_btn">
-          <img src="/image/share_btn.svg" />
-          <img src="/image/kakao.svg" />
-          <img src="/image/facebook.svg" />
-          <img src="/image/twitter.svg" />
-        </div>
+      <section v-if="!firstTest">
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -101,7 +95,7 @@
             </svg>
           </button>
         </div>
-      </article>
+      </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">결과로 돌아가기</button>
       </article>
@@ -113,6 +107,7 @@
 
 <script>
 import Final_Modal from "./Final_Modal.vue";
+import LinkShare from "../LinkShare.vue";
 
 export default {
   name: "Final_ISTJ",
@@ -125,6 +120,9 @@ export default {
   data() {
     return {
       showModal: false,
+      resultLink: window.location.href,
+      homeLink: window.location.origin,
+      mbti: "ISTJ",
       mbtiInfo_text: [
         "궁금한 것은 목숨이 걸려도 직접 체험하고 경험하는 도전적인 성격이다.",
         "한번 시작한 일은 끝까지 성실하게 해내는 성격이다.",
@@ -141,6 +139,7 @@ export default {
   },
   components: {
     Final_Modal,
+    LinkShare,
   },
   methods: {
     showResult() {

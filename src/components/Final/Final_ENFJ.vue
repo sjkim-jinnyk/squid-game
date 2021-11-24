@@ -43,14 +43,8 @@
       </section>
     </main>
     <footer>
-      <article v-if="!firstTest">
-        <p class="share_box">공유하기</p>
-        <div class="share_btn">
-          <img src="/image/share_btn.svg" />
-          <img src="/image/kakao.svg" />
-          <img src="/image/facebook.svg" />
-          <img src="/image/twitter.svg" />
-        </div>
+      <section v-if="!firstTest">
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -101,7 +95,7 @@
             </svg>
           </button>
         </div>
-      </article>
+      </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">결과로 돌아가기</button>
       </article>
@@ -115,6 +109,7 @@
 import Final_Modal from "./Final_Modal.vue";
 import { defineComponent, computed, reactive } from "vue";
 import { useHead } from "@vueuse/head";
+import LinkShare from "../LinkShare.vue";
 
 export default defineComponent({
   name: "Final_ENFJ",
@@ -123,27 +118,30 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    setup() {
-      const siteData = reactive({
-        title: "My website",
-        description: "My beautiful website",
-        image: "/image/meta/metaimg_결과공유_알리압둘.png",
-      });
-      useHead({
-        // Can be static or computed
-        title: computed(() => siteData.title),
-        meta: [
-          {
-            property: "og:image",
-            content: computed(() => siteData.image),
-          },
-        ],
-      });
-    },
+  },
+  setup() {
+    const siteData = reactive({
+      title: "My website",
+      description: "My beautiful website",
+      image: "/image/meta/metaimg_결과공유_알리압둘.png",
+    });
+    useHead({
+      // Can be static or computed
+      title: computed(() => siteData.title),
+      meta: [
+        {
+          property: "og:image",
+          content: computed(() => siteData.image),
+        },
+      ],
+    });
   },
   data() {
     return {
       showModal: false,
+      resultLink: window.location.href,
+      homeLink: window.location.origin,
+      mbti: "ENFJ",
       mbtiInfo_text: [
         "인생을 따듯하게 바라보며, 동정심과 동료애가 많고 친절하다.",
         "참을성이 많고 성실하다.",
@@ -164,9 +162,7 @@ export default defineComponent({
   },
   components: {
     Final_Modal,
-  },
-  created() {
-    console.log(this.firstTest);
+    LinkShare,
   },
   methods: {
     showResult() {

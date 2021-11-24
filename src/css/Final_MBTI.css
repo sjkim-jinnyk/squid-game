@@ -33,7 +33,7 @@ p {
     width: 191px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 .mbtiIMG {
     width: 200px;
@@ -127,6 +127,9 @@ p {
 .GoodBad {
     display: flex;
     justify-content: space-evenly;
+}
+.typeGood, .typeBad {
+    cursor: pointer;
 }
 .share_box {
     width: 66px;
