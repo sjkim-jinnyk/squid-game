@@ -1,5 +1,5 @@
 <template>
-  <div id="timer" :class="{ pause: timerStop, disable: timerStop }"></div>
+  <div id="timer" :class="{ pause: timerStop, disable: timerStop, halfTime: halfTime }"></div>
 </template>
 
 <script>
@@ -7,6 +7,7 @@ export default {
   name: "timeOut",
   props: {
     timerStop: Boolean,
+    halfTime: Boolean,
   },
 };
 </script>
@@ -58,6 +59,17 @@ export default {
   border-radius: 60px;
   box-sizing: border-box;
 }
+#timer.halfTime::before {
+  content: "";
+  position: absolute;
+  width: 300.68px;
+  background-color: white;
+  display: block;
+  height: 16px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  animation: timerHalf 8s 1;
+}
 @keyframes timer {
   0% {
     width: 100%;
@@ -76,7 +88,18 @@ export default {
     background-color: red;
   }
   100% {
-    width: 2%;
+    width: 0%;
+  }
+}
+@keyframes timerHalf {
+  0% {
+    width: 50%;
+    background-color: #ff8080;
+  }
+
+  100% {
+    width: 0%;
+    background-color: #ff8080;
   }
 }
 </style>

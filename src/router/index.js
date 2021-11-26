@@ -3,6 +3,7 @@ import Main from "../views/Main.vue";
 import Tutorial from "../views/Tutorial.vue";
 import Questions from "../views/Questions.vue";
 import Loading from "../views/TestLoading.vue";
+import EventPage from "../views/EventPage.vue";
 import Final_ENFJ from "../components/Final/Final_ENFJ.vue";
 import Final_ENFP from "../components/Final/Final_ENFP.vue";
 import Final_ENTJ from "../components/Final/Final_ENTJ.vue";
@@ -25,6 +26,7 @@ const routes = [
   { path: "/tutorial", name: "Tutorial", component: Tutorial, props: true },
   { path: "/questions", name: "Questions", component: Questions },
   { path: "/loading", name: "Loading", component: Loading, props: true },
+  { path: "/eventpage", name: "EventPage", component: EventPage, props: true },
 
   { path: "/questions/result/ENFJ", name: "Final_ENFJ", component: Final_ENFJ, props: true },
   { path: "/questions/result/ENFP", name: "Final_ENFP", component: Final_ENFP, props: true },
