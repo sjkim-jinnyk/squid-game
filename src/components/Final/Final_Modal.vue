@@ -89,7 +89,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ISFJ')">
             <img
-              src="/image/final/성기훈어머니_ISFJ.png"
+              src="/image/final/성기훈어머니_ISFJ_200.png"
               alt="성기훈어머니 이미지"
               class="typeImg"
             />
@@ -101,16 +101,6 @@
               <p class="charSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
             </section>
           </article>
-          <article class="mbtiType" @click="typeLink('ENTP')">
-            <img src="/image/final/의문남_ENTP_200.png" alt="의문남 이미지" class="typeImg" />
-            <section class="charInfo">
-              <section class="typeInfo">
-                <p class="charName">의문의 남자</p>
-                <p class="charType">ENTP</p>
-              </section>
-              <p class="charSummary">자신감과 에너지가 넘치는 <br />현실적인 인물</p>
-            </section>
-          </article>
           <article class="mbtiType" @click="typeLink('ESTJ')">
             <img src="/image/final/VIP_ESTJ_200.png" alt="VIPS 이미지" class="typeImg" />
             <section class="charInfo">
@@ -119,6 +109,16 @@
                 <p class="charType">ESTJ</p>
               </section>
               <p class="charSummary">계획하는 능력이 뛰어난 <br />사업가형 인물</p>
+            </section>
+          </article>
+          <article class="mbtiType" @click="typeLink('ENTP')">
+            <img src="/image/final/의문남_ENTP_200.png" alt="의문남 이미지" class="typeImg" />
+            <section class="charInfo">
+              <section class="typeInfo">
+                <p class="charName">의문의 남자</p>
+                <p class="charType">ENTP</p>
+              </section>
+              <p class="charSummary">자신감과 에너지가 넘치는 <br />현실적인 인물</p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ENFJ')">
@@ -189,7 +189,7 @@ export default {
       this.$emit("closeModal", !this.close);
     },
     typeLink(type) {
-      this.$router.push({ name: `Final_${type}` });
+      this.$router.push({ name: `Final_${type}`, params: { firstTest: true } });
     },
   },
 };
@@ -202,7 +202,6 @@ export default {
   left: 0;
   right: 0;
   height: 100%;
-
   transition: opacity 0.3s ease;
   overflow: auto;
 }
@@ -210,6 +209,10 @@ export default {
   vertical-align: middle;
 }
 .modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: black;
   transition: all 0.3s ease;
   color: white;
@@ -233,6 +236,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .charInfo {
   width: 150px;

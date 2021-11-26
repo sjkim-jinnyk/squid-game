@@ -1,8 +1,8 @@
 <template>
-  <div class="Final_MBTI">
+  <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
-      <img src="/image/final/성기훈어머니_ISFJ.png" alt="성기훈어머니 이미지" class="mbtiIMG" />
+      <img src="/image/final/성기훈어머니_ISFJ_200.png" alt="성기훈어머니 이미지" class="mbtiIMG" />
       <p class="mbti">ISFJ</p>
       <p class="charName">성기훈의 어머니</p>
       <p class="mbtiSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>

@@ -1,5 +1,5 @@
 <template>
-  <div class="Final_MBTI">
+  <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img src="/image/final/황준호_ISTJ_200.png" alt="황준호 이미지" class="mbtiIMG" />
