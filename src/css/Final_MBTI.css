@@ -71,6 +71,9 @@ p {
     line-height: 22.4px;
     list-style: inside;
     color: white;
+    user-select: none; 
+    -webkit-user-select: none;
+
 }
 .mbtiInfo_text li, .mbtiInfo2_text li{
     text-indent: -20px;
