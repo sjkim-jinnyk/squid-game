@@ -20,7 +20,17 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
+            <LinkShare
+              :resultLink="resultLink"
+              :homeLink="homeLink"
+              :mbti="mbti"
+              :middle="true"
+              v-on:blurClass="blurResult"
+              v-if="!firstTest"
+            ></LinkShare>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
+              {{ text }}
+            </li>
           </ul>
         </section>
       </div>
@@ -35,8 +45,8 @@
           </section>
           <section class="typeBad" @click="typeLink('ISFJ')">
             <p class="typeTitle">BAD</p>
-            <img src="/image/final/병기_ISFJ_100.png" alt="ENTJ와 잘맞는 유형" />
-            <p class="typeCharName">병기</p>
+            <img src="/image/final/성기훈어머니_ISFJ_100.png" alt="ENTJ와 잘맞는 유형" />
+            <p class="typeCharName">성기훈의 어머니</p>
             <p class="typeCharInfo">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
           </section>
         </div>
@@ -122,6 +132,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      blurClass: true,
       mbti: "ENTJ",
       mbtiInfo_text: [
         "다소 내향적이고 합리적이며 이성적인 판단을 잘 한다.",
@@ -160,6 +171,9 @@ export default {
     },
     returnResult() {
       this.$router.go(-1);
+    },
+    blurResult() {
+      this.blurClass = false;
     },
   },
 };

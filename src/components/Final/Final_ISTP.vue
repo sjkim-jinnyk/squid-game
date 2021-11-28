@@ -20,7 +20,17 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
+            <LinkShare
+              :resultLink="resultLink"
+              :homeLink="homeLink"
+              :mbti="mbti"
+              :middle="true"
+              v-on:blurClass="blurResult"
+              v-if="!firstTest"
+            ></LinkShare>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
+              {{ text }}
+            </li>
           </ul>
         </section>
       </div>
@@ -122,6 +132,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      blurClass: true,
       mbti: "ISTP",
       mbtiInfo_text: [
         "조용하고 말이 없어서 처음에는 차가운 인상이지만 알고 보면 따듯한 사람.",
@@ -159,6 +170,9 @@ export default {
     },
     returnResult() {
       this.$router.go(-1);
+    },
+    blurResult() {
+      this.blurClass = false;
     },
   },
 };
