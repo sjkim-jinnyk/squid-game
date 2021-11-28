@@ -156,6 +156,11 @@ export default {
     Final_Modal,
     LinkShare,
   },
+  created() {
+    if (this.firstTest) {
+      this.blurClass = false;
+    }
+  },
   methods: {
     showResult() {
       this.showModal = !this.showModal;

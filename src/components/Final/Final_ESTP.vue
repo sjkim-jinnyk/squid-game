@@ -156,7 +156,9 @@ export default {
     LinkShare,
   },
   created() {
-    console.log(this.firstTest);
+    if (this.firstTest) {
+      this.blurClass = false;
+    }
   },
   methods: {
     showResult() {

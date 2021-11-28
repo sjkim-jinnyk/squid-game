@@ -74,7 +74,7 @@ p {
     margin-bottom: 12px;
     line-height: 22.4px;
 }
-.mbtiInfo2_text .blurList:nth-child(2)~li {
+.mbtiInfo2_text .blurList {
     filter: blur(2px);
     background: #3A0F1F80;
     opacity: 50%;

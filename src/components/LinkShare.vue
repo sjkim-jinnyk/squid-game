@@ -97,7 +97,7 @@ export default {
   top: 50%;
   left: 50%;
   z-index: 999;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
 }
 .share_box {
   width: 66px;
