@@ -10,7 +10,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
           </ul>
@@ -18,7 +18,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo2_text">
             <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
           </ul>
@@ -125,14 +125,14 @@ export default {
   data() {
     return {
       showModal: false,
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "궁금한 것은 목숨이 걸려도 직접 체험하고 경험하는 도전적인 성격이다.",
         "한번 시작한 일은 끝까지 성실하게 해내는 성격이다.",
         "현실적, 실용적, 철저하고 체계적이다.",
         "열심히 일하고 세부적인 절차에 세심하다.",
         "자신만의 기준이 있고 그 기준에 따라 판단을 한다.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "도봉 경찰서 소속 경찰인 황준호는 형의 고시원 방에서 수상한 명함을 발견한 후에 사라진 형을 찾아 오징어 게임이 열리는 섬까지 가는 철저한 계획을 망설임없이 실행하는 모습을 보여준다.",
         "위험한 오징어 게임 내부에도 직접 들어가서 형의 실종에 관한 비밀을 풀기 위해 목숨 걸고 수사를 하는 모습을 통해 그의 도전적인 성격을 보여준다.",
         "수사중에도 뛰어난 관찰력과 분석력을 통해 오징어 게임의 비밀을 파헤쳐 나간다. ",
