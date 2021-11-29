@@ -3,9 +3,9 @@
     <main>
       <div class="count_box">
         <svg
-          width="208"
+          width="260"
           height="16"
-          viewBox="0 0 208 16"
+          viewBox="0 0 260 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -21,6 +21,8 @@
           <circle cx="165.5" cy="6.5" r="6.5" fill="#E73E7E" />
           <path d="M184 0L190.928 12H177.072L184 0Z" fill="#E73E7E" />
           <rect x="196" width="12" height="12" fill="#E73E7E" />
+          <circle cx="218.5" cy="6.5" r="6.5" fill="#E73E7E" />
+          <path d="M237 0L243.9282 12H230.0718L237 0Z" fill="#E73E7E" />
         </svg>
       </div>
       <img src="image/0_tutorial.png" />

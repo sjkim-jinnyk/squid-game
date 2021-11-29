@@ -22,8 +22,21 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo2_text">
+
             <li v-for="(text, i) in mbtiInfo2_text" :key="i">
               <span>{{ text }}</span>
+
+            <LinkShare
+              :resultLink="resultLink"
+              :homeLink="homeLink"
+              :mbti="mbti"
+              :middle="true"
+              v-on:blurClass="blurResult"
+              v-if="!firstTest"
+            ></LinkShare>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
+              {{ text }}
+
             </li>
           </ul>
         </section>
@@ -47,14 +60,8 @@
       </section>
     </main>
     <footer>
-      <article v-if="!firstTest">
-        <p class="share_box">공유하기</p>
-        <div class="share_btn">
-          <img src="/image/share_btn.svg" />
-          <img src="/image/kakao.svg" />
-          <img src="/image/facebook.svg" />
-          <img src="/image/twitter.svg" />
-        </div>
+      <section v-if="!firstTest">
+        <LinkShare :resultLink="resultLink" :homeLink="homeLink" :mbti="mbti"></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
             결과 전체보기
@@ -105,7 +112,7 @@
             </svg>
           </button>
         </div>
-      </article>
+      </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">결과로 돌아가기</button>
       </article>
@@ -117,6 +124,7 @@
 
 <script>
 import Final_Modal from "./Final_Modal.vue";
+import LinkShare from "../LinkShare.vue";
 
 export default {
   name: "Final_ENFP",
@@ -129,7 +137,15 @@ export default {
   data() {
     return {
       showModal: false,
+
       mbtiInfo2_text: [
+
+      resultLink: window.location.href,
+      homeLink: window.location.origin,
+      blurClass: true,
+      mbti: "ENFP",
+      mbtiInfo_text: [
+
         "열성적이며 활발하고 창의적이다.",
         "철저한 계획을 세우기 보다는 자기 스타일대로 한다.",
         "열정적으로 새 관계를 만들어가며 사람들과 자유롭게 어울리는 것을 즐긴다.",
@@ -152,6 +168,12 @@ export default {
   },
   components: {
     Final_Modal,
+    LinkShare,
+  },
+  created() {
+    if (this.firstTest) {
+      this.blurClass = false;
+    }
   },
   methods: {
     showResult() {
@@ -168,6 +190,9 @@ export default {
     },
     returnResult() {
       this.$router.go(-1);
+    },
+    blurResult() {
+      this.blurClass = false;
     },
   },
 };
