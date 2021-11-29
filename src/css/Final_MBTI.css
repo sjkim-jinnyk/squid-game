@@ -44,7 +44,7 @@ p {
     width: 200px;
     height: 200px;
 }
-.mbtiInfo2_wrap {
+.mbtiInfo_wrap {
     width: 300px;
     height: auto;
     line-height: 22.4px;
@@ -90,7 +90,7 @@ p {
     background: #09252980;
     opacity: 50%;
 }
-.mbtiInfo_wrap {
+.mbtiInfo2_wrap {
     width: 300px;
     height: auto;
     line-height: 22.4px;
