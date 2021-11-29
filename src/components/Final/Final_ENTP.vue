@@ -20,7 +20,17 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
+            <LinkShare
+              :resultLink="resultLink"
+              :homeLink="homeLink"
+              :mbti="mbti"
+              :middle="true"
+              v-on:blurClass="blurResult"
+              v-if="!firstTest"
+            ></LinkShare>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
+              {{ text }}
+            </li>
           </ul>
         </section>
       </div>
@@ -122,6 +132,7 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
+      blurClass: true,
       mbti: "ENTP",
       mbtiInfo_text: [
         "독창적인 혁신가이여 창의력이 풍부해서 새로운 시도를 즐기는 성격이다.",
@@ -141,6 +152,11 @@ export default {
     Final_Modal,
     LinkShare,
   },
+  created() {
+    if (this.firstTest) {
+      this.blurClass = false;
+    }
+  },
   methods: {
     showResult() {
       this.showModal = !this.showModal;
@@ -156,6 +172,9 @@ export default {
     },
     returnResult() {
       this.$router.go(-1);
+    },
+    blurResult() {
+      this.blurClass = false;
     },
   },
 };
