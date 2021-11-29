@@ -22,10 +22,6 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i">
-              <span>{{ text }}</span>
-
             <LinkShare
               :resultLink="resultLink"
               :homeLink="homeLink"
@@ -35,8 +31,7 @@
               v-if="!firstTest"
             ></LinkShare>
             <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
-              {{ text }}
-
+              <span>{{ text }}</span>
             </li>
           </ul>
         </section>
@@ -137,15 +132,11 @@ export default {
   data() {
     return {
       showModal: false,
-
-      mbtiInfo2_text: [
-
       resultLink: window.location.href,
       homeLink: window.location.origin,
       blurClass: true,
       mbti: "INTP",
-      mbtiInfo_text: [
-
+      mbtiInfo2_text: [
         "조용하고 과묵하지만 관심 있는 분야에서는 말을 잘한다.",
         "분석적이고 논리적이며 객관적 비평을 잘해서 진지충이라는 소리를 자주 듣는다.",
         "큰일에 잘 개입하지 않는다.",

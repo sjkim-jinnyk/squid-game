@@ -22,10 +22,6 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i">
-              <span>{{ text }}</span>
-
             <LinkShare
               :resultLink="resultLink"
               :homeLink="homeLink"
@@ -35,8 +31,7 @@
               v-if="!firstTest"
             ></LinkShare>
             <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
-              {{ text }}
-
+              <span>{{ text }}</span>
             </li>
           </ul>
         </section>
@@ -157,14 +152,11 @@ export default defineComponent({
     return {
       showModal: false,
 
-      mbtiInfo2_text: [
-
       resultLink: window.location.href,
       homeLink: window.location.origin,
       blurClass: true,
       mbti: "ENFJ",
-      mbtiInfo_text: [
-
+      mbtiInfo2_text: [
         "인생을 따듯하게 바라보며, 동정심과 동료애가 많고 친절하다.",
         "참을성이 많고 성실하다.",
         "언변이 능숙하고 사람을 좋아해서 함께 추구해야 할 목표를 설정해 사람들을 이끈다.",
