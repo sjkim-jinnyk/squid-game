@@ -132,7 +132,6 @@ export default {
   data() {
     return {
       showModal: false,
-
       resultLink: window.location.href,
       homeLink: window.location.origin,
       blurClass: true,
