@@ -98,14 +98,14 @@ export default {
       }, 13000);
     },
   },
-  // created() {
-  //   const _this = this;
-  //   this.timeOutWorker = setTimeout(function () {
-  //     if (!_this.option_0 && !_this.option_1) {
-  //       _this.questfunc(3, false);
-  //     }
-  //   }, 13000);
-  // },
+  created() {
+    const _this = this;
+    this.timeOutWorker = setTimeout(function () {
+      if (!_this.option_0 && !_this.option_1) {
+        _this.questfunc(3, false);
+      }
+    }, 13000);
+  },
   computed: {
     questions() {
       return questionList;
