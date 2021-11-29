@@ -106,7 +106,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .share_btn {
   width: 196px;
