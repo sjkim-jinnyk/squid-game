@@ -10,15 +10,17 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo_text">
-            <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
+            <li v-for="(text, i) in mbtiInfo_text" :key="i">
+              <span>{{ text }}</span>
+            </li>
           </ul>
         </section>
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               :resultLink="resultLink"
@@ -134,7 +136,7 @@ export default {
       homeLink: window.location.origin,
       blurClass: true,
       mbti: "ISTP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "조용하고 말이 없어서 처음에는 차가운 인상이지만 알고 보면 따듯한 사람.",
         "절제된 호기심으로 인생을 관찰하고 상황파악이 빠르다.",
         "자기 자신을 필요 이상으로 드러내지 않는다. ",
@@ -143,7 +145,7 @@ export default {
         "자기만의 시간과 공간을 중요시하는 개인주의적 성향으로 인해 타인과 감정을 공유하지 않는다.",
         "쉽게 감정 공유를 하지 않아 남들이 다가가기에 쉽지 않다.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "오징어게임의 진행을 총괄적으로 관리하는 인물로, 논리적이고 객관적으로 상황을 관찰하는 모습을 보여준다.",
         "감정 표현도 없이 차가운 인상을 보여주며 냉정하게 오징어 게임을 운영해 나간다. ",
         "친동생이 자신을 찾으러 왔지만 큰 동요 없이 그를 내치는 모습을 보여준다. ",

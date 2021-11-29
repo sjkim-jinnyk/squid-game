@@ -44,15 +44,15 @@ p {
     width: 200px;
     height: 200px;
 }
-.mbtiInfo_wrap {
+.mbtiInfo2_wrap {
     width: 300px;
     height: auto;
     line-height: 22.4px;
     font-size: 14px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #2596a5;
     margin-bottom: 60px;
+    border: 1px solid #2596a5;
     border-radius: 20px;
     background: rgba(37, 150, 165, 0.25);
 }
@@ -90,7 +90,7 @@ p {
     background: #09252980;
     opacity: 50%;
 }
-.mbtiInfo2_wrap {
+.mbtiInfo_wrap {
     width: 300px;
     height: auto;
     line-height: 22.4px;
@@ -113,7 +113,7 @@ p {
     font-size: 18px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-bottom: 40px;
 }
 .typeTitle {
     width: 39px;
@@ -176,7 +176,6 @@ p {
 
 }
 .returnResult {
-    margin-top: 12px;
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
