@@ -12,7 +12,9 @@
         <section class="mbtiInfo">
           <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo_text">
-            <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
+            <li v-for="(text, i) in mbtiInfo_text" :key="i">
+              <span>{{ text }}</span>
+            </li>
           </ul>
         </section>
       </div>
@@ -20,7 +22,9 @@
         <section class="mbtiInfo2">
           <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i">
+              <span>{{ text }}</span>
+            </li>
           </ul>
         </section>
       </div>
