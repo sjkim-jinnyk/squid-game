@@ -4,9 +4,9 @@
       <main>
         <div class="count_box">
           <svg
-            width="208"
+            width="260"
             height="16"
-            viewBox="0 0 208 16"
+            viewBox="0 0 260 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -22,6 +22,8 @@
             <circle cx="165.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[9])" />
             <path d="M184 0L190.928 12H177.072L184 0Z" :fill="getCounterColor(counterList[10])" />
             <rect x="196" width="12" height="12" :fill="getCounterColor(counterList[11])" />
+            <circle cx="218.5" cy="6.5" r="6.5" :fill="getCounterColor(counterList[12])" />
+            <path d="M237 0L243.9282 12H230.0718L237 0Z" :fill="getCounterColor(counterList[13])" />
           </svg>
         </div>
         <img :src="`image/${questions[count].id}_question.png`" />
@@ -82,15 +84,15 @@ export default {
   name: "QuestionsPage",
   watch: {
     count: function (val) {
-      if (val >= 11) {
+      if (val >= 13) {
         this.testDone = true;
       }
       const _this = this;
       clearTimeout(this.timeOutWorker);
       this.timeOutWorker = setTimeout(function () {
-        if (!_this.option_0 && !_this.option_1 && _this.count < 11) {
+        if (!_this.option_0 && !_this.option_1 && _this.count < 13) {
           _this.questfunc(3, false);
-        } else if (!_this.option_0 && !_this.option_1 && _this.count >= 11) {
+        } else if (!_this.option_0 && !_this.option_1 && _this.count >= 13) {
           _this.questfunc(3, _this.choice);
         }
       }, 13000);
@@ -116,7 +118,6 @@ export default {
     },
     questfunc: function (option_num, choice) {
       if (option_num == 3) option_num = Math.round(Math.random());
-
       if (!this.option_0 && !this.option_1) {
         this.toUserChoice(option_num);
         this.clickAnimation(option_num);
@@ -124,13 +125,21 @@ export default {
       }
     },
     toUserChoice: function (option_num) {
-      if (this.count > 12) return 0;
+      if (this.count > 14) return 0;
       let mbti_value = this.questions[this.count].option_mbti[option_num];
       this.choice[mbti_value] += 1;
     },
     getResult: function (choice) {
       for (let i in choice) {
-        if (this.mbti.length < 4) {
+        if (i === "E") {
+          if (choice[i] >= 3) {
+            this.mbti += i;
+          }
+        } else if (i === "I") {
+          if (choice[i] >= 3) {
+            this.mbti += i;
+          }
+        } else {
           if (choice[i] >= 2) {
             this.mbti += i;
           }
@@ -144,7 +153,7 @@ export default {
       if (option_num == 0) this.option_0 = true;
       else if (option_num == 1) this.option_1 = true;
       setTimeout(() => {
-        if (this.count < 11) this.count += 1;
+        if (this.count < 13) this.count += 1;
         this.show = false;
         this.counterList.unshift(1);
         this.counterList.pop();
@@ -167,7 +176,7 @@ export default {
   },
   data() {
     return {
-      counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      counterList: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       count: 0,
       choice: new Object({ E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, P: 0, J: 0 }),
       mbti: "",
@@ -179,7 +188,6 @@ export default {
       timeOutWorker: setTimeout(() => {}),
     };
   },
-  props: {},
   components: {
     TimeOut,
   },
