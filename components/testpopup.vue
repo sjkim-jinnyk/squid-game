@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>팝업 창</h1>
+    <h1>팝업 창 s</h1>
   </div>
 </template>
 
