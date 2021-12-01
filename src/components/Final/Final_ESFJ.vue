@@ -1,5 +1,5 @@
 <template>
-  <div class="Final_MBTI" :class="{ notScroll: showModal }">
+  <div class="Final_MBTI">
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img src="/image/final/조상우맘_ESFJ_200.png" alt="조상우맘 이미지" class="mbtiIMG" />
@@ -10,29 +10,17 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo_text">
-            <li v-for="(text, i) in mbtiInfo_text" :key="i">
-              <span>{{ text }}</span>
-            </li>
+            <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
           </ul>
         </section>
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <LinkShare
-              :resultLink="resultLink"
-              :homeLink="homeLink"
-              :mbti="mbti"
-              :middle="true"
-              v-on:blurClass="blurResult"
-              v-if="!firstTest"
-            ></LinkShare>
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
-              <span>{{ text }}</span>
-            </li>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
           </ul>
         </section>
       </div>
@@ -134,9 +122,8 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
-      blurClass: true,
       mbti: "ESFJ",
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "항상 웃으면서 동정심과 동료애가 많다.",
         "양심적이고 정리정돈을 잘한다.",
         "참을성이 많고 남을 잘 돕는다.",
@@ -144,7 +131,7 @@ export default {
         "성격이 급하고 활발하고 계획을 잘 세운다.",
         "사람들과 대화할 때 리액션을 잘한다. ",
       ],
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "힘들게 가게를 운영하고 있는 현실에도 친절하고 재치가 있으며 다른 사람들에게 관심을 쏟는다. ",
         "안타까운 상황에 처해있는 성기훈을 보고 안타까워하며 걱정을 한다. ",
         "아들의 자랑을 하는 모습에서 남들의 인정을 좋아하는 성격임을 볼 수 있다. ",
@@ -155,11 +142,6 @@ export default {
   components: {
     Final_Modal,
     LinkShare,
-  },
-  created() {
-    if (this.firstTest) {
-      this.blurClass = false;
-    }
   },
   methods: {
     showResult() {
@@ -176,9 +158,6 @@ export default {
     },
     returnResult() {
       this.$router.go(-1);
-    },
-    blurResult() {
-      this.blurClass = false;
     },
   },
 };

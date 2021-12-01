@@ -1,19 +1,17 @@
 <template>
-  <article :class="{ container_share_middle: middle, share_hide: shareHide }">
-    <p class="share_box_middle" v-if="middle">결과 공유하고 확인하기</p>
-    <p class="share_box" v-else>공유하기</p>
-
+  <article>
+    <p class="share_box">공유하기</p>
     <div class="share_btn">
-      <button @click="[urlLink(resultLink), blurEffect()]">
+      <button @click="urlLink(resultLink)">
         <img src="/image/linkshare_btn.svg" />
       </button>
-      <button @click="[kakaoLink(resultLink, homeLink), blurEffect()]">
+      <button @click="kakaoLink(resultLink, homeLink)">
         <img src="/image/kakao.svg" />
       </button>
-      <button @click="[facebookLink(mbti), blurEffect()]">
+      <button @click="facebookLink(mbti)">
         <img src="/image/facebook.svg" />
       </button>
-      <button class="twitter-share-button" @click="[twitterLink(resultLink), blurEffect()]">
+      <button class="twitter-share-button" @click="twitterLink(resultLink)">
         <img src="/image/twitter.svg" />
       </button>
     </div>
@@ -22,13 +20,7 @@
 
 <script>
 export default {
-  props: ["resultLink", "homeLink", "mbti", "middle"],
-  data() {
-    return {
-      middleShare: this.middle,
-      shareHide: false,
-    };
-  },
+  props: ["resultLink", "homeLink", "mbti"],
   methods: {
     urlLink(link) {
       this.$copyText(link).then(function () {
@@ -83,47 +75,8 @@ export default {
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
     },
-    blurEffect() {
-      this.$emit("blurClass");
-      this.shareHide = true;
-    },
   },
 };
 </script>
 
-<style scoped>
-.container_share_middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 999;
-  transform: translate(-50%, -50%);
-}
-.share_box {
-  width: 66px;
-  font-weight: 700;
-  font-size: 18px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-top: 60px;
-}
-.share_btn {
-  width: 196px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
-}
-.share_box_middle {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-  text-align: center;
-  padding-bottom: 12px;
-}
-.share_hide {
-  display: none;
-}
-</style>
+<style></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="Final_MBTI" :class="{ notScroll: showModal }">
+  <div class="Final_MBTI">
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img src="/image/final/알리_ENFJ_200.png" alt="알리압둘 이미지" class="mbtiIMG" />
@@ -10,29 +10,17 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo_text">
-            <li v-for="(text, i) in mbtiInfo_text" :key="i">
-              <span>{{ text }}</span>
-            </li>
+            <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
           </ul>
         </section>
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <LinkShare
-              :resultLink="resultLink"
-              :homeLink="homeLink"
-              :mbti="mbti"
-              :middle="true"
-              v-on:blurClass="blurResult"
-              v-if="!firstTest"
-            ></LinkShare>
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
-              <span>{{ text }}</span>
-            </li>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
           </ul>
         </section>
       </div>
@@ -153,9 +141,8 @@ export default defineComponent({
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
-      blurClass: true,
       mbti: "ENFJ",
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "인생을 따듯하게 바라보며, 동정심과 동료애가 많고 친절하다.",
         "참을성이 많고 성실하다.",
         "언변이 능숙하고 사람을 좋아해서 함께 추구해야 할 목표를 설정해 사람들을 이끈다.",
@@ -164,7 +151,7 @@ export default defineComponent({
         "연민과 동정 이해심이 많다.",
         "자기 반성은 잘하지만 남을 비판하는 데 능숙하지는 않다. ",
       ],
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "파키스탄에서 온 외국인 노동자로 게임 중에도 남을 구하기 위해 위험을 무릎 쓰는 모습을 보여준다.",
         "마음이 착하고 동료애가 많아서 주변 사람들과 갈등이 생길 때 항상 말리며 싸움을 싫어하는 모습을 보여준다.",
         "한국인이 아니어도 한국어 구사능력이 좋고 게임 규칙에도 금방 적응하며 학습 속도가 빠르다.",
@@ -176,11 +163,6 @@ export default defineComponent({
   components: {
     Final_Modal,
     LinkShare,
-  },
-  created() {
-    if (this.firstTest) {
-      this.blurClass = false;
-    }
   },
   methods: {
     showResult() {
@@ -197,9 +179,6 @@ export default defineComponent({
     },
     returnResult() {
       this.$router.go(-1);
-    },
-    blurResult() {
-      this.blurClass = false;
     },
   },
 });

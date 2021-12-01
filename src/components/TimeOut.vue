@@ -46,7 +46,7 @@ export default {
   height: 16px;
   border-radius: 60px;
   box-sizing: border-box;
-  animation: timer 13s 1;
+  animation: timer 15s 1;
 }
 #timer.disable::before {
   content: "";

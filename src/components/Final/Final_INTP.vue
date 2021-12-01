@@ -1,5 +1,5 @@
 <template>
-  <div class="Final_MBTI" :class="{ notScroll: showModal }">
+  <div class="Final_MBTI">
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img src="/image/final/진행요원_INTP_200.png" alt="진행요원 이미지" class="mbtiIMG" />
@@ -10,29 +10,17 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">현실세계에서 당신은?</p>
           <ul class="mbtiInfo_text">
-            <li v-for="(text, i) in mbtiInfo_text" :key="i">
-              <span>{{ text }}</span>
-            </li>
+            <li v-for="(text, i) in mbtiInfo_text" :key="i">{{ text }}</li>
           </ul>
         </section>
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">오징어 게임에서 당신은?</p>
           <ul class="mbtiInfo2_text">
-            <LinkShare
-              :resultLink="resultLink"
-              :homeLink="homeLink"
-              :mbti="mbti"
-              :middle="true"
-              v-on:blurClass="blurResult"
-              v-if="!firstTest"
-            ></LinkShare>
-            <li v-for="(text, i) in mbtiInfo2_text" :key="i" :class="{ blurList: blurClass }">
-              <span>{{ text }}</span>
-            </li>
+            <li v-for="(text, i) in mbtiInfo2_text" :key="i">{{ text }}</li>
           </ul>
         </section>
       </div>
@@ -134,9 +122,8 @@ export default {
       showModal: false,
       resultLink: window.location.href,
       homeLink: window.location.origin,
-      blurClass: true,
       mbti: "INTP",
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "조용하고 과묵하지만 관심 있는 분야에서는 말을 잘한다.",
         "분석적이고 논리적이며 객관적 비평을 잘해서 진지충이라는 소리를 자주 듣는다.",
         "큰일에 잘 개입하지 않는다.",
@@ -144,7 +131,7 @@ export default {
         "이해가 빠르고 통찰력이 뛰어나고 지적 관심이 많다.",
         "무뚝뚝하면 잡담 같은 것도 잘 못하고 싫어한다.",
       ],
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "무뚝뚝하게 가면만 쓰고 오징어 게임 진행을 도우는 인물이다.",
         "조용하고 과묵하게 자기가 맡은 일을 열심히 한다.",
         "남을 설득하지 않고 논리적으로 생각을 하고 판단하는 모습을 보여준다. ",
@@ -154,11 +141,6 @@ export default {
   components: {
     Final_Modal,
     LinkShare,
-  },
-  created() {
-    if (this.firstTest) {
-      this.blurClass = false;
-    }
   },
   methods: {
     showResult() {
@@ -175,9 +157,6 @@ export default {
     },
     returnResult() {
       this.$router.go(-1);
-    },
-    blurResult() {
-      this.blurClass = false;
     },
   },
 };

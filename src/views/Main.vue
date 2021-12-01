@@ -183,7 +183,6 @@ footer {
 
 .share_box {
   margin-top: 40px;
-  margin-bottom: 20px;
   font-family: Noto Sans CJK KR;
   font-style: normal;
   font-weight: bold;

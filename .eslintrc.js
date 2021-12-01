@@ -1,18 +1,32 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
+    node: true,
   },
-  extends: ["eslint:recommended", "plugin:vue/essential", "plugin:prettier/recommended"],
   parserOptions: {
-    ecmaVersion: 6,
-    sourceType: "module",
+    parser: "@babel/eslint-parser",
+    requireConfigFile: false,
   },
-  plugins: ["vue"],
+  extends: ["@nuxtjs", "plugin:nuxt/recommended", "prettier"],
+  plugins: ["prettier"],
+  // add your custom rules here
   rules: {
-    indent: ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
-    semi: ["error", "always"],
-    "prettier/prettier": "error",
+    "no-console": "off",
+    camelcase: "off",
+    "prettier/prettier": [
+      "error",
+      {
+        singleQuote: false,
+        doubleQuote: true,
+        semi: true,
+        useTabs: false,
+        tabWidth: 2,
+        trailingComma: "all",
+        printWidth: 80,
+        bracketSpacing: true,
+        arrowParens: "avoid",
+      },
+    ],
   },
 };
