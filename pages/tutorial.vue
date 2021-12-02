@@ -46,6 +46,7 @@
       </button>
       <!-- </router-link> -->
     </div>
+    <ImgLoading />
   </div>
 </template>
 <script>

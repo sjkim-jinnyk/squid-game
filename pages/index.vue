@@ -38,7 +38,6 @@
         </button>
       </div>
     </footer>
-    <!-- <ImgLoading /> -->
   </div>
 </template>
 
@@ -52,13 +51,6 @@ export default {
     };
   },
   methods: {
-    // urlLink() {
-    //   this.pop = window.open(
-    //     "./popup/popup",
-    //     "pop01",
-    //     "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no",
-    //   );
-    // },
     urlLink() {
       this.$copyText(this.homeLink).then(function () {
         alert("복사되었습니다.");
