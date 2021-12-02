@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/지영_ISFP_200.png"
+        src="~/assets/image/final/지영_ISFP_200.png"
         alt="지영 이미지"
         class="mbtiIMG"
       />
@@ -49,7 +49,10 @@
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ESTJ')">
             <p class="typeTitle">GOOD</p>
-            <img src="/image/final/VIP_ESTJ_100.png" alt="ISFP와 잘맞는 유형" />
+            <img
+              src="~/assets/image/final/VIP_ESTJ_100.png"
+              alt="ISFP와 잘맞는 유형"
+            />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
               계획하는 능력이 뛰어난 <br />사업가형 인물
@@ -58,7 +61,7 @@
           <section class="typeBad" @click="typeLink('ENTP')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/의문남_ENTP_100.png"
+              src="~/assets/image/final/의문남_ENTP_100.png"
               alt="ISFP와 잘맞는 유형"
             />
             <p class="typeCharName">의문의 남자</p>

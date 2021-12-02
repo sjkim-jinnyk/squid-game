@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/성기훈어머니_ISFJ_200.png"
+        src="~/assets/image/final/성기훈어머니_ISFJ_200.png"
         alt="성기훈어머니 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('INFJ')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/오일남_INFJ_100.png"
+              src="~/assets/image/final/오일남_INFJ_100.png"
               alt="ISFJ와 잘맞는 유형"
             />
             <p class="typeCharName">오일남</p>
@@ -61,7 +61,7 @@
           <section class="typeBad" @click="typeLink('ENTJ')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/조상우_ENTJ_100.png"
+              src="~/assets/image/final/조상우_ENTJ_100.png"
               alt="ISFJ와 잘맞는 유형"
             />
             <p class="typeCharName">조상우</p>

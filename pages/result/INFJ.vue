@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/오일남_INFJ_200.png"
+        src="~/assets/image/final/오일남_INFJ_200.png"
         alt="오일남 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('ESTP')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/장덕수_ESTP_100.png"
+              src="~/assets/image/final/장덕수_ESTP_100.png"
               alt="INFJ와 잘맞는 유형"
             />
             <p class="typeCharName">장덕수</p>
@@ -60,7 +60,10 @@
           </section>
           <section class="typeBad" @click="typeLink('ESTJ')">
             <p class="typeTitle">BAD</p>
-            <img src="/image/final/VIP_ESTJ_100.png" alt="INFJ와 잘맞는 유형" />
+            <img
+              src="~/assets/image/final/VIP_ESTJ_100.png"
+              alt="INFJ와 잘맞는 유형"
+            />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
               계획하는 능력이 뛰어난 <br />사업가형 인물
