@@ -156,12 +156,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -191,10 +185,12 @@ export default {
         "아들의 자랑을 하는 모습에서 남들의 인정을 좋아하는 성격임을 볼 수 있다. ",
         "끝까지 아들을 믿는 모습에서 그녀의 아들에 대한 관심과 사랑을 엿볼 수 있다. ",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -206,7 +202,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

@@ -158,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -195,10 +189,12 @@ export default {
         "다리게임에서 앞사람을 밀고 강새벽을 잔인하게 죽이고 구슬게임에서 알리압둘을 속이듯이 어떤 상황에서도 사람과 감정보다 실리와 효율적인 선택을 한다.",
         "게임 도중에 팀워크가 필요할 때는 직접 나서서 전략가로서 빛을 발하기도 한다. ",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -210,7 +206,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

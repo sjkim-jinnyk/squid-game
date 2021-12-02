@@ -158,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -194,10 +188,12 @@ export default {
         "몸이 힘들어도 티 내지 않고 열심히 책임감 있게 일하는 모습을 보여준다.",
         "성기훈의 모습이 탐탁치 않지만 그에게 상처를 주지 않고 차분하게 그를 대하는 모습이 나타난다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -209,7 +205,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

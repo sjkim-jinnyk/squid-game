@@ -280,8 +280,7 @@ export default {
     },
     typeLink(type) {
       this.$router.push({
-        name: `Final-Final_${type}`,
-        params: { firstTest: true },
+        path: `${type}?firstTest=true`,
       });
     },
   },
