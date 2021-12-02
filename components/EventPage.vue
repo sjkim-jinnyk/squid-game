@@ -31,7 +31,7 @@
           :class="{ event_option2Active: option2 }"
           @click="option2Click"
         >
-          다가간다
+          맞서 싸운다
         </button>
       </div>
     </article>
