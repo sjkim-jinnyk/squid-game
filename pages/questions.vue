@@ -153,11 +153,9 @@ export default {
     count(val) {
       console.log(this.count, this.test_done);
       const _this = this;
-      if (val === 2) {
+      if (val === 8) {
         this.event_show = true;
         this.timerStop = true;
-        // clearTimeout(this.time_out_worker);
-        // this.timer_seconds = 26000;
       }
       // test 끝난 여부
       if (val >= 14) {
