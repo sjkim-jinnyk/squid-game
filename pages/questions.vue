@@ -1,7 +1,12 @@
 <template>
   <div>
     <TestLoading v-if="test_done" class="container" />
-    <div v-for="question in question_list.slice().reverse()" :key="question.id">
+    <EventPage v-if="event_show" @event_close="event_close" />
+    <div
+      v-for="question in question_list.slice().reverse()"
+      v-else
+      :key="question.id"
+    >
       <transition name="fade">
         <div v-if="!counter_list[question.id]" class="container">
           <main>
@@ -118,11 +123,13 @@
 <script>
 import questionList from "../assets/questions.json";
 import TimeOut from "../components/TimeOut.vue";
+import EventPage from "../components/EventPage.vue";
 
 export default {
   name: "QuestionsPage",
   components: {
     TimeOut,
+    EventPage,
   },
   transition: "fade",
   data() {
@@ -139,13 +146,19 @@ export default {
       question_list: [],
       test_done: false,
       timer_seconds: 15000,
+      event_show: false,
     };
   },
   watch: {
     count(val) {
       console.log(this.count, this.test_done);
       const _this = this;
-
+      if (val === 2) {
+        this.event_show = true;
+        this.timerStop = true;
+        // clearTimeout(this.time_out_worker);
+        // this.timer_seconds = 26000;
+      }
       // test 끝난 여부
       if (val >= 14) {
         this.test_done = true;
@@ -184,7 +197,6 @@ export default {
       // count 부정 방지
       if (this.count > 14) return 0;
       if (this.timerStop) return 0;
-
       // 버튼 여부
       if (option_num === 0) this.option_0 = true;
       else if (option_num === 1) this.option_1 = true;
@@ -237,6 +249,17 @@ export default {
       }
       console.log(this.mbti);
     },
+    event_close() {
+      this.event_show = false;
+      this.timerStop = false;
+      clearTimeout(this.time_out_worker);
+      const _this = this;
+      this.time_out_worker = setTimeout(function () {
+        if (!_this.option_0 && !_this.option_1 && !_this.timerStop) {
+          _this.timeOutRandomChoice();
+        }
+      }, _this.timer_seconds);
+    },
   },
 };
 </script>
@@ -276,15 +299,6 @@ main .QuestionText {
   margin-right: auto;
   margin-left: auto;
 }
-
-@keyframes move {
-  from {
-    transform: translateX(300px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
 .option1 {
   margin-top: 10px;
   height: 45px;
@@ -305,12 +319,10 @@ main .QuestionText {
 
 .option1Active {
   background-color: #e73e7e;
-  /* animation: move 0.7s ease 0.7s !important; */
 }
 
 .option2Active {
   background-color: #2596a5;
-  /* animation: move 0.7s ease 0.7s !important; */
 }
 
 .fade-enter-active,
