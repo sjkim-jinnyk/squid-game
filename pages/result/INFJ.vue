@@ -156,10 +156,10 @@ export default {
     LinkShare,
   },
   props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
+    // firstTest: {
+    //   type: Boolean,
+    //   default: false,
+    // },
   },
   data() {
     return {
@@ -191,10 +191,12 @@ export default {
         "달고나 게임과 줄다리기 게임을 할 때 남다른 창의력과 독창력을 발휘하여 팀원들의 무사한 통과를 도와줄 수 있게 끔 한다.",
         "구슬게임에서 자신이 이겼음에도 불구하고 '우린 깐부자나'라는 말과 함께 성기훈에게 양보하는 따듯한 모습도 보여준다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -206,7 +208,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

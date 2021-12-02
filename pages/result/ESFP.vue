@@ -157,12 +157,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -196,10 +190,12 @@ export default {
         "두뇌회전이 빠르고 상황판단이 뛰어나서 게임 속 난관들을 해결해 나간다.",
         "마지막 다리 건너기 게임에서 장덕수를 잡고 자살하는 모습에서 한미녀의 충동적인 모습을 볼 수 있다. ",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -211,7 +207,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

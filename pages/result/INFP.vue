@@ -156,12 +156,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -192,10 +186,12 @@ export default {
         "구슬게임에서 지영이가 자신을 위해 희생할 때 눈물을 보이는 정 많은 모습을 보이기도 한다.",
         "자신이 믿고 친해지는 사람들은 잘 챙기는 모습이 자주 나온다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -207,7 +203,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

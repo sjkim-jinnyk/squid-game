@@ -160,29 +160,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  // setup() {
-  //   const siteData = reactive({
-  //     title: 'My website',
-  //     description: 'My beautiful website',
-  //     image: '/image/meta/metaimg_결과공유_알리압둘.png',
-  //   });
-  //   useHead({
-  //     // Can be static or computed
-  //     title: computed(() => siteData.title),
-  //     meta: [
-  //       {
-  //         property: 'og:image',
-  //         content: computed(() => siteData.image),
-  //       },
-  //     ],
-  //   });
-  // },
   data() {
     return {
       showModal: false,
@@ -214,10 +191,12 @@ export default {
         "게임이 진행되는 동안 팀원들을 배려하고 도와주는 모습을 계속 보여준다.",
         "힘든 상황에서 다른 팀원들을 다독이며 이끄는 모습을 보여준다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -230,8 +209,7 @@ export default {
     },
     typeLink(type) {
       this.$router.push({
-        path: `${type}`,
-        params: { firstTest: true },
+        path: `${type}?firstTest=true`,
       });
     },
     testRestart() {

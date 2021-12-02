@@ -158,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -198,10 +192,12 @@ export default {
         "팀을 짜는 과정에서도 주도적으로 팀을 짜면서 새 관계를 만들어가는 모습을 보여준다.",
         "가끔씩 감정에 매몰되는 모습을 보임.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -213,7 +209,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

@@ -156,12 +156,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -193,10 +187,12 @@ export default {
         "뇌종양으로 시한부 인생을 살아가는 와중에도 자신이 주최하는 게임에 직접 참여를 하면서 열정을 다하는 기묘함을 보여준다.",
         "드라마 내에서 치밀한 일처리가 강점이고 많은 경험과 연룬 덕분에 타인을 손쉽게 조정하는 능력을 보여준다. ",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -208,7 +204,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });
