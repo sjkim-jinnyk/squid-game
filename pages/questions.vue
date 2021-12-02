@@ -156,6 +156,7 @@ export default {
       if (val === 2) {
         this.event_show = true;
         this.timerStop = true;
+        // clearTimeout(this.time_out_worker);
         // this.timer_seconds = 26000;
       }
       // test 끝난 여부
@@ -251,7 +252,13 @@ export default {
     event_close() {
       this.event_show = false;
       this.timerStop = false;
-      this.timer_seconds = 15000;
+      clearTimeout(this.time_out_worker);
+      const _this = this;
+      this.time_out_worker = setTimeout(function () {
+        if (!_this.option_0 && !_this.option_1 && !_this.timerStop) {
+          _this.timeOutRandomChoice();
+        }
+      }, _this.timer_seconds);
     },
   },
 };
