@@ -76,6 +76,11 @@ export default {
       }
     }, 11000);
   },
+  mounted() {
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate([200, 100, 200]);
+    }
+  },
   methods: {
     option1Click() {
       this.timerStop = true;
