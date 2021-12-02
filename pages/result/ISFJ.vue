@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/성기훈어머니_ISFJ_200.png"
+        src="~/assets/image/final/성기훈어머니_ISFJ_200.png"
         alt="성기훈어머니 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('INFJ')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/오일남_INFJ_100.png"
+              src="~/assets/image/final/오일남_INFJ_100.png"
               alt="ISFJ와 잘맞는 유형"
             />
             <p class="typeCharName">오일남</p>
@@ -61,7 +61,7 @@
           <section class="typeBad" @click="typeLink('ENTJ')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/조상우_ENTJ_100.png"
+              src="~/assets/image/final/조상우_ENTJ_100.png"
               alt="ISFJ와 잘맞는 유형"
             />
             <p class="typeCharName">조상우</p>
@@ -158,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -194,10 +188,12 @@ export default {
         "몸이 힘들어도 티 내지 않고 열심히 책임감 있게 일하는 모습을 보여준다.",
         "성기훈의 모습이 탐탁치 않지만 그에게 상처를 주지 않고 차분하게 그를 대하는 모습이 나타난다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
   },
@@ -209,7 +205,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });
