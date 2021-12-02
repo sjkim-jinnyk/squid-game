@@ -166,36 +166,21 @@ export default {
       default: false,
     },
   },
-  // setup() {
-  //   const siteData = reactive({
-  //     title: 'My website',
-  //     description: 'My beautiful website',
-  //     image: '/image/meta/metaimg_결과공유_알리압둘.png',
-  //   });
-  //   useHead({
-  //     // Can be static or computed
-  //     title: computed(() => siteData.title),
-  //     meta: [
-  //       {
-  //         property: 'og:image',
-  //         content: computed(() => siteData.image),
-  //       },
-  //     ],
-  //   });
-  // },
   data() {
     return {
       showModal: false,
-      resultLink: () => {
+      resultLinkResult: () => {
         if (process.browser) {
           return window.location.href;
         }
       },
-      homeLink: () => {
+      homeLinkResult: () => {
         if (process.browser) {
           return window.location.origin;
         }
       },
+      homeLink: null,
+      resultLink: null,
       blurClass: true,
       mbti: "ENFJ",
       mbtiInfo2_text: [
@@ -220,6 +205,8 @@ export default {
     if (this.firstTest) {
       this.blurClass = false;
     }
+    this.resultLink = this.resultLinkResult();
+    this.homeLink = this.homeLinkResult();
   },
   methods: {
     showResult() {
