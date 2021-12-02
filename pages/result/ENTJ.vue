@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/조상우_ENTJ_200.png"
+        src="~/assets/image/final/조상우_ENTJ_200.png"
         alt="조상우 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('INFP')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/강새벽_INFP_100.png"
+              src="~/assets/image/final/강새벽_INFP_100.png"
               alt="ENTJ와 잘맞는 유형"
             />
             <p class="typeCharName">강새벽</p>
@@ -61,7 +61,7 @@
           <section class="typeBad" @click="typeLink('ISFJ')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/성기훈어머니_ISFJ_100.png"
+              src="~/assets/image/final/성기훈어머니_ISFJ_100.png"
               alt="ENTJ와 잘맞는 유형"
             />
             <p class="typeCharName">성기훈의 어머니</p>
@@ -158,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -197,10 +191,12 @@ export default {
         "다리게임에서 앞사람을 밀고 강새벽을 잔인하게 죽이고 구슬게임에서 알리압둘을 속이듯이 어떤 상황에서도 사람과 감정보다 실리와 효율적인 선택을 한다.",
         "게임 도중에 팀워크가 필요할 때는 직접 나서서 전략가로서 빛을 발하기도 한다. ",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
     this.resultLink = this.resultLinkResult();
@@ -214,7 +210,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

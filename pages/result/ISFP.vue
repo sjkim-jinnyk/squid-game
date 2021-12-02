@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/지영_ISFP_200.png"
+        src="~/assets/image/final/지영_ISFP_200.png"
         alt="지영 이미지"
         class="mbtiIMG"
       />
@@ -49,7 +49,10 @@
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ESTJ')">
             <p class="typeTitle">GOOD</p>
-            <img src="/image/final/VIP_ESTJ_100.png" alt="ISFP와 잘맞는 유형" />
+            <img
+              src="~/assets/image/final/VIP_ESTJ_100.png"
+              alt="ISFP와 잘맞는 유형"
+            />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
               계획하는 능력이 뛰어난 <br />사업가형 인물
@@ -58,7 +61,7 @@
           <section class="typeBad" @click="typeLink('ENTP')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/의문남_ENTP_100.png"
+              src="~/assets/image/final/의문남_ENTP_100.png"
               alt="ISFP와 잘맞는 유형"
             />
             <p class="typeCharName">의문의 남자</p>
@@ -155,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -192,10 +189,12 @@ export default {
         "강새벽과 친해지기 전에 남에게 쉽게 정을 주지 않고 혼자 있는 모습이 자주 나타난다.",
         "강새벽과 대화 후 뛰어난 공감능력을 바탕으로 동질감을 느끼고 그녀에게 마음의 문을 열면서 따듯함을 나타낸다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
     this.resultLink = this.resultLinkResult();
@@ -209,7 +208,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

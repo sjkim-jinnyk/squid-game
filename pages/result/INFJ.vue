@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/오일남_INFJ_200.png"
+        src="~/assets/image/final/오일남_INFJ_200.png"
         alt="오일남 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('ESTP')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/장덕수_ESTP_100.png"
+              src="~/assets/image/final/장덕수_ESTP_100.png"
               alt="INFJ와 잘맞는 유형"
             />
             <p class="typeCharName">장덕수</p>
@@ -60,7 +60,10 @@
           </section>
           <section class="typeBad" @click="typeLink('ESTJ')">
             <p class="typeTitle">BAD</p>
-            <img src="/image/final/VIP_ESTJ_100.png" alt="INFJ와 잘맞는 유형" />
+            <img
+              src="~/assets/image/final/VIP_ESTJ_100.png"
+              alt="INFJ와 잘맞는 유형"
+            />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
               계획하는 능력이 뛰어난 <br />사업가형 인물
@@ -156,10 +159,10 @@ export default {
     LinkShare,
   },
   props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
+    // firstTest: {
+    //   type: Boolean,
+    //   default: false,
+    // },
   },
   data() {
     return {
@@ -193,10 +196,12 @@ export default {
         "달고나 게임과 줄다리기 게임을 할 때 남다른 창의력과 독창력을 발휘하여 팀원들의 무사한 통과를 도와줄 수 있게 끔 한다.",
         "구슬게임에서 자신이 이겼음에도 불구하고 '우린 깐부자나'라는 말과 함께 성기훈에게 양보하는 따듯한 모습도 보여준다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
     this.resultLink = this.resultLinkResult();
@@ -210,7 +215,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

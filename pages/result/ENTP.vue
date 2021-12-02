@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/의문남_ENTP_200.png"
+        src="~/assets/image/final/의문남_ENTP_200.png"
         alt="의문남 이미지"
         class="mbtiIMG"
       />
@@ -50,10 +50,10 @@
           <section class="typeGood" @click="typeLink('ISFJ')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/병기_ISFJ_100.png"
+              src="~/assets/image/final/성기훈어머니_ISFJ_100.png"
               alt="ENTP와 잘맞는 유형"
             />
-            <p class="typeCharName">병기</p>
+            <p class="typeCharName">성기훈의 어머니</p>
             <p class="typeCharInfo">
               책임강이 강하고 헌신적인 <br />인내심 많은 인물
             </p>
@@ -61,7 +61,7 @@
           <section class="typeBad" @click="typeLink('ISFP')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/지영_ISFP_100.png"
+              src="~/assets/image/final/지영_ISFP_100.png"
               alt="ENTP와 잘맞는 유형"
             />
             <p class="typeCharName">지영</p>
@@ -158,12 +158,6 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
@@ -193,10 +187,12 @@ export default {
         "오징어 게임 참가자들과 딱지치기를 하여 10만원 내기를 하는 인물로서 자신감과 에너지가 넘친다.",
         "경쟁심이 강해서 성기훈과의 딱지치기에서도 연속적으로 승리한다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
     this.resultLink = this.resultLinkResult();
@@ -210,7 +206,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });
