@@ -46,13 +46,22 @@ export default {
       },
     ],
     script: [
-      { src: "https://developers.kakao.com/sdk/js/kakao.js" },
+      {
+        src: "https://developers.kakao.com/sdk/js/kakao.js",
+      },
+      {
+        innerHTML: `Kakao.init("cb2664fbff03c5475516f65e8ef2bb13")`,
+      },
+      {
+        innerHTML: `Kakao.isInitialized()`,
+      },
       {
         crossorigin: "anonymous",
         src: "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0",
         nonce: "e16MXXou",
       },
     ],
+    __dangerouslyDisableSanitizers: ["script"],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

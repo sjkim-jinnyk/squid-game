@@ -50,6 +50,9 @@ export default {
       homeLink: "",
     };
   },
+  mounted() {
+    this.homeLink = window.location.origin;
+  },
   methods: {
     urlLink() {
       this.$copyText(this.homeLink).then(function () {
@@ -89,7 +92,7 @@ export default {
         window.open(
           "https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site&src=sdkpreparse",
           "pop01",
-          "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no",
+          "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );
       }
     },
@@ -99,7 +102,7 @@ export default {
         window.open(
           `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}`,
           "pop02",
-          "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no",
+          "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );
       }
     },
