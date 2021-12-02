@@ -21,71 +21,71 @@
                 <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
                 <path
                   d="M25 0L31.9282 12H18.0718L25 0Z"
-                  :fill="getCounterColor(counter_list[1])"
+                  :fill="getCounterColor(counter_list[0])"
                 />
                 <rect
                   x="37"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[2])"
+                  :fill="getCounterColor(counter_list[1])"
                 />
                 <circle
                   cx="59.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[3])"
+                  :fill="getCounterColor(counter_list[2])"
                 />
                 <path
                   d="M78 0L84.9282 12H71.0718L78 0Z"
-                  :fill="getCounterColor(counter_list[4])"
+                  :fill="getCounterColor(counter_list[3])"
                 />
                 <rect
                   x="90"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[5])"
+                  :fill="getCounterColor(counter_list[4])"
                 />
                 <circle
                   cx="112.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[6])"
+                  :fill="getCounterColor(counter_list[5])"
                 />
                 <path
                   d="M131 0L137.928 12H124.072L131 0Z"
-                  :fill="getCounterColor(counter_list[7])"
+                  :fill="getCounterColor(counter_list[6])"
                 />
                 <rect
                   x="143"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[8])"
+                  :fill="getCounterColor(counter_list[7])"
                 />
                 <circle
                   cx="165.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[9])"
+                  :fill="getCounterColor(counter_list[8])"
                 />
                 <path
                   d="M184 0L190.928 12H177.072L184 0Z"
-                  :fill="getCounterColor(counter_list[10])"
+                  :fill="getCounterColor(counter_list[9])"
                 />
                 <rect
                   x="196"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[11])"
+                  :fill="getCounterColor(counter_list[10])"
                 />
                 <circle
                   cx="218.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[12])"
+                  :fill="getCounterColor(counter_list[11])"
                 />
                 <path
                   d="M237 0L243.9282 12H230.0718L237 0Z"
-                  :fill="getCounterColor(counter_list[13])"
+                  :fill="getCounterColor(counter_list[12])"
                 />
               </svg>
             </div>
