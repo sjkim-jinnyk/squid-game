@@ -78,7 +78,7 @@ export default {
   },
   mounted() {
     if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate([200, 100, 200]);
+      navigator.vibrate([2000, 100, 200]);
     }
   },
   methods: {
