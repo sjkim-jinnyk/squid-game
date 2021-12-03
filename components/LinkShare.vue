@@ -107,7 +107,6 @@ export default {
   transform: translate(-50%, -50%);
 }
 .share_box {
-  width: 66px;
   font-weight: 700;
   font-size: 18px;
   margin-left: auto;

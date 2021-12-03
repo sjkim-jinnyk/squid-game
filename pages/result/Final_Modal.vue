@@ -6,7 +6,7 @@
           <p class="headerText">전체 결과보기</p>
           <i class="fas fa-times" @click="closeModal()"></i>
         </div>
-        <main>
+        <main class="finalModal">
           <article class="mbtiType" @click="typeLink('ENFP')">
             <img
               src="~/assets/image/final/성기훈_ENFP_200.png"
@@ -321,7 +321,6 @@ export default {
 .modal-default-button {
   float: right;
 }
-
 .mbtiType {
   display: flex;
   width: 275px;
@@ -331,15 +330,15 @@ export default {
   cursor: pointer;
 }
 .charInfo {
-  width: 150px;
   font-size: 14px;
   text-align: left;
 }
 .charSummary {
+  letter-spacing: -0.02em;
+  font-weight: 400;
   line-height: 21px;
 }
 .typeInfo {
-  /* width: 90px; */
   display: flex;
   margin-bottom: 8px;
 }

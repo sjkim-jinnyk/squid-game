@@ -44,6 +44,10 @@ export default {
           "sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm",
         crossorigin: "anonymous",
       },
+      {
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap",
+        rel: "stylesheet",
+      },
     ],
     script: [
       {

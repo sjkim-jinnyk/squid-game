@@ -9,7 +9,7 @@
     >
       <transition name="fade">
         <div v-if="!counter_list[question.id]" class="container">
-          <main>
+          <main class="question_main">
             <div class="count_box">
               <svg
                 width="260"
@@ -268,15 +268,15 @@ export default {
   transform: translateX(-50%);
 }
 
-main {
+.question_main {
   height: 419px;
 }
 
-main img {
+.question_main img {
   margin: 40px 26px 0px 26px;
 }
 
-main .QuestionText {
+.question_main .QuestionText {
   margin-top: 32px;
   line-height: 26.64px;
   font-size: 18px;

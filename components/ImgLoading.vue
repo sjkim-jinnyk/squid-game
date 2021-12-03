@@ -16,6 +16,7 @@
     <img src="~/assets/image/12_question.png" />
     <img src="~/assets/image/13_question.png" />
     <img src="~/assets/image/lodingLogo.png" />
+    <img src="~/assets/image/event_img.png" />
     <img src="~/assets/image/final/알리_ENFJ_200.png" />
     <img src="~/assets/image/final/강새벽_INFP_200.png" />
     <img src="~/assets/image/final/성기훈_ENFP_200.png" />

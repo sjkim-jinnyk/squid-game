@@ -1,193 +1,160 @@
-body{
-    background-color: black;
-}
-
-p {
-    color: white;
-}
-
 .Final_MBTI {
-    margin: 60px auto;
+  margin-top: 60px;
+  margin-bottom: 122px;
+  color: white;
+  font-weight: 700;
+}
+.Final_MBTI main {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .notScroll {
-    overflow: hidden;
-    position: fixed;
-    height: 100%;
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
 }
 .testTitle {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .mbti {
-    font-weight: 700;
-    font-size: 14px;
-    color: #e73e7e;
-    margin-top: 20px;
-    margin-bottom: 12px;
+  font-size: 14px;
+  color: #e73e7e;
+  margin-top: 20px;
+  margin-bottom: 12px;
 }
 .charName {
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 12px;
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 .mbtiSummary {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26.64px;
-    width: 191px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-}
-.mbtiIMG {
-    width: 200px;
-    height: 200px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26.64px;
+  margin-bottom: 60px;
 }
 .mbtiInfo2_wrap {
-    width: 300px;
-    height: auto;
-    line-height: 22.4px;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    border: 1px solid #2596a5;
-    border-radius: 20px;
-    background: rgba(37, 150, 165, 0.25);
+  height: auto;
+  line-height: 22.4px;
+  font-size: 14px;
+  margin-bottom: 60px;
+  border: 1px solid #2596a5;
+  border-radius: 20px;
+  background: rgba(37, 150, 165, 0.25);
 }
-.mbtiInfo, .mbtiInfo2 {
-    text-align: left;
-    padding: 20px 31.41px;
+.mbtiInfo,
+.mbtiInfo2 {
+  text-align: left;
+  padding: 20px 31.41px;
 }
-.mbtiInfo_summary, .mbtiInfo2_summary {
-    padding-bottom: 20px;
-    font-weight: 700;
-    font-size: 18px;
+.mbtiInfo_summary,
+.mbtiInfo2_summary {
+  padding-bottom: 20px;
+  font-size: 18px;
 }
-.mbtiInfo_text, .mbtiInfo2_text {
-    position: relative;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22.4px;
-    list-style: inside;
-    color: white;
-    user-select: none; 
-    -webkit-user-select: none;
+.mbtiInfo_text,
+.mbtiInfo2_text {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  list-style: inside;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.mbtiInfo_text li, .mbtiInfo2_text li{
-    text-indent: -20px;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    line-height: 22.4px;
+.mbtiInfo_text li,
+.mbtiInfo2_text li {
+  letter-spacing: -0.04em;
+  text-indent: -20px;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  line-height: 22.4px;
 }
-.mbtiInfo_text li span, .mbtiInfo2_text li span {
-    position: relative;
-    left: -7.17px
+.mbtiInfo_text li span,
+.mbtiInfo2_text li span {
+  position: relative;
+  left: -7.17px;
 }
 .mbtiInfo2_text .blurList {
-    filter: blur(2px);
-    background: #09252980;
-    opacity: 50%;
+  filter: blur(2px);
+  background: #09252980;
+  opacity: 50%;
 }
 .mbtiInfo_wrap {
-    width: 300px;
-    height: auto;
-    line-height: 22.4px;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #e73e7e;
-    margin-bottom: 40px;
-    border-radius: 20px;
-    background: rgba(231, 62, 126, 0.25);
+  height: auto;
+  line-height: 22.4px;
+  font-size: 14px;
+  border: 1px solid #e73e7e;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  background: rgba(231, 62, 126, 0.25);
 }
-.typeMatch {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.title {
-    width: 86px;
-    font-weight: 700;
-    font-size: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+.typeMatch .title {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 .typeTitle {
-    width: 39px;
-    font-weight: 700;
-    font-size: 14px;
-    color: #e73e7e;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 8px;
+  font-size: 14px;
+  color: #e73e7e;
+  margin-bottom: 8px;
 }
 .typeCharName {
-    font-weight: 700;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 .typeCharInfo {
-    width: 127px;
-    line-height: 14.8px;
-    font-weight: 400;
-    font-size: 12px;
-    color: #cccccc;
-    margin-left: auto;
-    margin-right: auto;
+  line-height: 14.8px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #cccccc;
 }
-.GoodBad {
-    display: flex;
-    justify-content: space-evenly;
+.typeGood,
+.typeBad {
+  cursor: pointer;
+  display: inline-block;
 }
-.typeGood, .typeBad {
-    cursor: pointer;
+.typeGood {
+  margin-right: 40px;
 }
 .footerBTN {
-    display: flex;
-    flex-direction: column;
-    width: 234px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 500;
-    font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 234px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 14px;
 }
 .allResultBTN {
-    height: 45px;
-    background-color: #555555;
-    border-radius: 60px;
-    color: white;
-    margin-bottom: 12px;
-    position: relative;
+  height: 45px;
+  background-color: #555555;
+  border-radius: 60px;
+  margin-bottom: 12px;
+  position: relative;
 }
-.allResultBTN svg, .testRestart svg {
-    margin-left: 12px;
+.allResultBTN svg,
+.testRestart svg {
+  margin-left: 12px;
 }
 .testRestart {
-    height: 45px;
-    background-color: #e73e7e;
-    border-radius: 60px;
-    color: white;
-    position: relative;
-
+  height: 45px;
+  background-color: #e73e7e;
+  border-radius: 60px;
+  position: relative;
 }
 .returnResult {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 21px;
-    color: white;
-    position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  position: relative;
 }
 .returnResult::after {
-    content: '';
-    background-image: url("../image/returnArrow.svg");
-    width: 9.93px;
-    height: 13px;
-    bottom: 5px;
-    right: -20px;
-    position: absolute;
+  content: "";
+  background-image: url("../image/returnArrow.svg");
+  width: 9.93px;
+  height: 13px;
+  bottom: 5px;
+  right: -20px;
+  position: absolute;
 }

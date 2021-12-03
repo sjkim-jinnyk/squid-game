@@ -1,29 +1,23 @@
 <template>
-  <div class="container">
-    <header>
-      <!-- <div class="header"> -->
-      <img src="~/assets/image/오징어게임_로고 1.png" />
-      <h2 class="subtitle">나는 오징어게임에서 어떤 인물일까?</h2>
-      <!-- </div> -->
-    </header>
+  <main class="container">
+    <img class="logoImg" src="~/assets/image/오징어게임_로고 1.png" />
+    <h2 class="subtitle">나는 오징어게임에서 어떤 인물일까?</h2>
 
-    <div class="main">
-      <img src="~/assets/image/main_pig.png" />
-    </div>
+    <img class="mainImg" src="~/assets/image/main.png" />
 
-    <footer>
-      <router-link :to="{ name: 'tutorial' }">
-        <button id="start_btn" type="button">
-          테스트하기
-          <svg class="svg-icon-angle" viewBox="0 0 1024 1024" version="1.1">
-            <path
-              d="M383.291616 808.954249c-5.175883 0-10.353812-1.950422-14.338566-5.862521-8.064676-7.919367-8.182356-20.877493-0.26299-28.942169l273.602402-278.620695L368.69006 216.907145c-7.919367-8.064676-7.801686-21.022803 0.26299-28.942169 8.065699-7.918343 21.022803-7.80271 28.942169 0.26299l287.685141 292.960285c7.818059 7.961322 7.818059 20.717857 0 28.67918L397.895219 802.826692C393.887952 806.907637 388.591319 808.954249 383.291616 808.954249z"
-            />
-          </svg>
-        </button>
-      </router-link>
-      <h2 class="share_box">공유하기</h2>
-      <div class="share_btn">
+    <router-link :to="{ name: 'tutorial' }">
+      <button id="start_btn" type="button">
+        테스트하기
+        <svg class="svg-icon-angle" viewBox="0 0 1024 1024" version="1.1">
+          <path
+            d="M383.291616 808.954249c-5.175883 0-10.353812-1.950422-14.338566-5.862521-8.064676-7.919367-8.182356-20.877493-0.26299-28.942169l273.602402-278.620695L368.69006 216.907145c-7.919367-8.064676-7.801686-21.022803 0.26299-28.942169 8.065699-7.918343 21.022803-7.80271 28.942169 0.26299l287.685141 292.960285c7.818059 7.961322 7.818059 20.717857 0 28.67918L397.895219 802.826692C393.887952 806.907637 388.591319 808.954249 383.291616 808.954249z"
+          />
+        </svg>
+      </button>
+    </router-link>
+    <article>
+      <p class="share_box">공유하기</p>
+      <article class="share_btn">
         <button @click="urlLink">
           <img src="~/assets/image/linkshare_btn.svg" />
         </button>
@@ -36,9 +30,13 @@
         <button class="twitter-share-button" @click="twitterLink">
           <img src="~/assets/image/twitter.svg" />
         </button>
-      </div>
+      </article>
+    </article>
+    <footer class="email">
+      <small>Feedback</small>
+      <small>ddusi.developer@gmail.com</small>
     </footer>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -112,64 +110,31 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-header {
-  height: 197px;
-  /* width: 360px; */
-}
-
-header > img {
+.logoImg {
   height: 60px;
-  width: 219px;
-  margin: 60px 70px 0px 70px;
+  margin-top: 60px;
 }
-
 .subtitle {
   margin-top: 20px;
-  margin-bottom: 0px;
-  font-family: Noto Sans CJK KR;
-  font-style: normal;
-  font-weight: bold;
+  margin-bottom: 30px;
+  font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  text-align: center;
   letter-spacing: -0.02em;
 }
-
-.main {
-  height: 440px;
-  /* width: 360px; */
-}
-
-.main > img {
-  height: 440px;
-  width: 360px;
-}
-
-footer {
-  height: 252px;
-}
-
 #start_btn {
   position: static;
   margin-top: 20px;
   width: 200px;
   height: 45px;
   background: #e73e7e;
-  border-radius: 60px;
-
   color: white;
-  font-family: Noto Sans CJK KR;
-  font-style: normal;
+  border-radius: 60px;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  /* identical to box height */
-
-  text-align: center;
-  /* align-items: center; */
   letter-spacing: -0.02em;
 }
-
 .svg-icon-angle {
   width: 1em;
   height: 1em;
@@ -177,24 +142,30 @@ footer {
   fill: currentColor;
   overflow: hidden;
 }
-
 .share_box {
   margin-top: 40px;
   margin-bottom: 20px;
-  font-family: Noto Sans CJK KR;
-  font-style: normal;
-  font-weight: bold;
   font-size: 18px;
   line-height: 27px;
-  text-align: center;
   letter-spacing: -0.02em;
+  font-weight: 700;
 }
-
 .share_btn {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   margin: auto;
   width: 196px;
+}
+.email {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  color: #888888;
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.email small:nth-child(1) {
+  margin-right: 8px;
 }
 </style>
