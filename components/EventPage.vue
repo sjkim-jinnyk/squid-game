@@ -2,7 +2,7 @@
   <section class="event_container">
     <h2 class="ir">event 화면</h2>
     <!-- <audio src="~/assets/muteSound.mp3" muted autoplay></audio> -->
-    <audio src="/gunSound.mp3" autoplay></audio>
+    <!-- <audio src="/gunSound.mp3" autoplay></audio> -->
     <article v-if="questionShow" class="event_cont">
       <p class="event_text" :class="{ event_textOut: textOut }">
         어둠 속에서 <br />
@@ -31,7 +31,7 @@
           :class="{ event_option2Active: option2 }"
           @click="option2Click"
         >
-          다가간다
+          맞서 싸운다
         </button>
       </div>
     </article>
@@ -60,6 +60,7 @@ export default {
   created() {
     setTimeout(() => {
       this.imgShow = true;
+      this.playSound();
     }, 500);
     setTimeout(() => {
       this.imgShow = false;
@@ -100,10 +101,11 @@ export default {
       if (num === 0) this.option1Click();
       else this.option2Click();
     },
-    // playSound() {
-    //   const audio = new Audio("~/assets/gunSound.mp3");
-    //   audio.play();
-    // },
+    playSound() {
+      const audio = new Audio("/gunSound.mp3");
+      audio.volume = 0.2;
+      audio.play();
+    },
   },
 };
 </script>
