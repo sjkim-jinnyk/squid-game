@@ -32,6 +32,10 @@
         </button>
       </article>
     </article>
+    <footer class="email">
+      <small>Feedback</small>
+      <small>ddusi.developer@gmail.com</small>
+    </footer>
   </main>
 </template>
 
@@ -118,7 +122,6 @@ export default {
   line-height: 27px;
   letter-spacing: -0.02em;
 }
-
 #start_btn {
   position: static;
   margin-top: 20px;
@@ -132,7 +135,6 @@ export default {
   line-height: 21px;
   letter-spacing: -0.02em;
 }
-
 .svg-icon-angle {
   width: 1em;
   height: 1em;
@@ -140,7 +142,6 @@ export default {
   fill: currentColor;
   overflow: hidden;
 }
-
 .share_box {
   margin-top: 40px;
   margin-bottom: 20px;
@@ -149,11 +150,22 @@ export default {
   letter-spacing: -0.02em;
   font-weight: 700;
 }
-
 .share_btn {
   display: flex;
   justify-content: space-between;
   margin: auto;
   width: 196px;
+}
+.email {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  color: #888888;
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.email small:nth-child(1) {
+  margin-right: 8px;
 }
 </style>
