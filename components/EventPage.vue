@@ -1,8 +1,6 @@
 <template>
   <section class="event_container">
     <h2 class="ir">event 화면</h2>
-    <!-- <audio src="~/assets/muteSound.mp3" muted autoplay></audio> -->
-    <!-- <audio src="/gunSound.mp3" autoplay></audio> -->
     <article v-if="questionShow" class="event_cont">
       <p class="event_text" :class="{ event_textOut: textOut }">
         어둠 속에서 <br />
@@ -55,12 +53,18 @@ export default {
       option1: false,
       option2: false,
       option_num: "",
+      vibrateEffect: () => {
+        if (window.navigator && window.navigator.vibrate) {
+          navigator.vibrate(800);
+        }
+      },
     };
   },
   created() {
     setTimeout(() => {
       this.imgShow = true;
       this.playSound();
+      this.vibrateEffect();
     }, 500);
     setTimeout(() => {
       this.imgShow = false;
@@ -76,11 +80,6 @@ export default {
         this.clickBtn(this.option_num);
       }
     }, 11000);
-  },
-  mounted() {
-    if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate([2000, 100, 200]);
-    }
   },
   methods: {
     option1Click() {
