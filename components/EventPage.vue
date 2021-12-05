@@ -102,8 +102,11 @@ export default {
     },
     playSound() {
       const audio = new Audio("/gunSound.mp3");
-      audio.volume = 0.2;
+      audio.volume = 0.3;
       audio.play();
+      if (window.navigator && window.navigator.vibrate) {
+        navigator.vibrate([2000, 100, 200]);
+      }
     },
   },
 };
