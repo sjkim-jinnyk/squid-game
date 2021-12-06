@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/강새벽_INFP_200.png"
+        src="~/assets/image/final/강새벽_INFP_200.png"
         alt="강새벽 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('ENFJ')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/알리_ENFJ_100.png"
+              src="~/assets/image/final/알리_ENFJ_100.png"
               alt="INFP와 잘맞는 유형"
             />
             <p class="typeCharName">알리압둘</p>
@@ -59,7 +59,7 @@
           <section class="typeBad" @click="typeLink('ESTP')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/장덕수_ESTP_100.png"
+              src="~/assets/image/final/장덕수_ESTP_100.png"
               alt="INFP와 잘맞는 유형"
             />
             <p class="typeCharName">장덕수</p>
@@ -156,25 +156,21 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
-      resultLink: () => {
+      resultLinkResult: () => {
         if (process.browser) {
           return window.location.href;
         }
       },
-      homeLink: () => {
+      homeLinkResult: () => {
         if (process.browser) {
           return window.location.origin;
         }
       },
+      homeLink: null,
+      resultLink: null,
       blurClass: true,
       mbti: "INFP",
       mbtiInfo2_text: [
@@ -192,12 +188,16 @@ export default {
         "구슬게임에서 지영이가 자신을 위해 희생할 때 눈물을 보이는 정 많은 모습을 보이기도 한다.",
         "자신이 믿고 친해지는 사람들은 잘 챙기는 모습이 자주 나온다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
+    this.resultLink = this.resultLinkResult();
+    this.homeLink = this.homeLinkResult();
   },
   methods: {
     showResult() {
@@ -207,7 +207,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

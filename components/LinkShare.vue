@@ -39,43 +39,45 @@ export default {
       });
     },
     kakaoLink(resultLink, homeLink) {
-      window.Kakao.Link.sendDefault({
-        objectType: "feed",
-        content: {
-          title: "저랑 게임 하나 하시겠습니까? ",
-          description: "나는 오징어 게임에서 어떤 캐릭터일까?",
-          imageUrl:
-            "https://www.squid-games.site/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
-          imageWidth: 800,
-          imageHeight: 400,
-          link: {
-            mobileWebUrl: homeLink,
-            webUrl: homeLink,
-          },
-        },
-        buttons: [
-          {
-            title: "결과보기",
-            link: {
-              mobileWebUrl: resultLink,
-              webUrl: resultLink,
-            },
-          },
-          {
-            title: "테스트하기",
+      if (process.browser) {
+        window.Kakao.Link.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "저랑 게임 하나 하시겠습니까? ",
+            description: "나는 오징어 게임에서 어떤 캐릭터일까?",
+            imageUrl:
+              "https://www.squid-games.site/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
+            imageWidth: 800,
+            imageHeight: 400,
             link: {
               mobileWebUrl: homeLink,
               webUrl: homeLink,
             },
           },
-        ],
-      });
+          buttons: [
+            {
+              title: "결과보기",
+              link: {
+                mobileWebUrl: resultLink,
+                webUrl: resultLink,
+              },
+            },
+            {
+              title: "테스트하기",
+              link: {
+                mobileWebUrl: homeLink,
+                webUrl: homeLink,
+              },
+            },
+          ],
+        });
+      }
     },
     facebookLink(mbti) {
       window.open(
         `https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site/questions/result/${mbti}&src=sdkpreparse`,
         "pop01",
-        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
     },
     twitterLink(resultLink) {
@@ -83,7 +85,7 @@ export default {
       window.open(
         `https://twitter.com/intent/tweet?text=${text}&url=${resultLink}`,
         "pop02",
-        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no",
+        "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
     },
     blurEffect() {
@@ -105,7 +107,6 @@ export default {
   transform: translate(-50%, -50%);
 }
 .share_box {
-  width: 66px;
   font-weight: 700;
   font-size: 18px;
   margin-left: auto;

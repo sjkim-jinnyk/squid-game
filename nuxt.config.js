@@ -44,15 +44,28 @@ export default {
           "sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm",
         crossorigin: "anonymous",
       },
+      {
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap",
+        rel: "stylesheet",
+      },
     ],
     script: [
-      { src: "https://developers.kakao.com/sdk/js/kakao.js" },
+      {
+        src: "https://developers.kakao.com/sdk/js/kakao.js",
+      },
+      {
+        innerHTML: `Kakao.init("cb2664fbff03c5475516f65e8ef2bb13")`,
+      },
+      {
+        innerHTML: `Kakao.isInitialized()`,
+      },
       {
         crossorigin: "anonymous",
         src: "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0",
         nonce: "e16MXXou",
       },
     ],
+    __dangerouslyDisableSanitizers: ["script"],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -87,5 +100,15 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+        },
+      });
+    },
+  },
 };

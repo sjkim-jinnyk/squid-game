@@ -1,10 +1,15 @@
 <template>
   <div>
     <TestLoading v-if="test_done" class="container" />
-    <div v-for="question in question_list.slice().reverse()" :key="question.id">
+    <EventPage v-if="event_show" @event_close="event_close" />
+    <div
+      v-for="question in question_list.slice().reverse()"
+      v-else
+      :key="question.id"
+    >
       <transition name="fade">
         <div v-if="!counter_list[question.id]" class="container">
-          <main>
+          <main class="question_main">
             <div class="count_box">
               <svg
                 width="260"
@@ -16,71 +21,71 @@
                 <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
                 <path
                   d="M25 0L31.9282 12H18.0718L25 0Z"
-                  :fill="getCounterColor(counter_list[1])"
+                  :fill="getCounterColor(counter_list[0])"
                 />
                 <rect
                   x="37"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[2])"
+                  :fill="getCounterColor(counter_list[1])"
                 />
                 <circle
                   cx="59.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[3])"
+                  :fill="getCounterColor(counter_list[2])"
                 />
                 <path
                   d="M78 0L84.9282 12H71.0718L78 0Z"
-                  :fill="getCounterColor(counter_list[4])"
+                  :fill="getCounterColor(counter_list[3])"
                 />
                 <rect
                   x="90"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[5])"
+                  :fill="getCounterColor(counter_list[4])"
                 />
                 <circle
                   cx="112.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[6])"
+                  :fill="getCounterColor(counter_list[5])"
                 />
                 <path
                   d="M131 0L137.928 12H124.072L131 0Z"
-                  :fill="getCounterColor(counter_list[7])"
+                  :fill="getCounterColor(counter_list[6])"
                 />
                 <rect
                   x="143"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[8])"
+                  :fill="getCounterColor(counter_list[7])"
                 />
                 <circle
                   cx="165.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[9])"
+                  :fill="getCounterColor(counter_list[8])"
                 />
                 <path
                   d="M184 0L190.928 12H177.072L184 0Z"
-                  :fill="getCounterColor(counter_list[10])"
+                  :fill="getCounterColor(counter_list[9])"
                 />
                 <rect
                   x="196"
                   width="12"
                   height="12"
-                  :fill="getCounterColor(counter_list[11])"
+                  :fill="getCounterColor(counter_list[10])"
                 />
                 <circle
                   cx="218.5"
                   cy="6.5"
                   r="6.5"
-                  :fill="getCounterColor(counter_list[12])"
+                  :fill="getCounterColor(counter_list[11])"
                 />
                 <path
                   d="M237 0L243.9282 12H230.0718L237 0Z"
-                  :fill="getCounterColor(counter_list[13])"
+                  :fill="getCounterColor(counter_list[12])"
                 />
               </svg>
             </div>
@@ -118,11 +123,13 @@
 <script>
 import questionList from "../assets/questions.json";
 import TimeOut from "../components/TimeOut.vue";
+import EventPage from "../components/EventPage.vue";
 
 export default {
   name: "QuestionsPage",
   components: {
     TimeOut,
+    EventPage,
   },
   transition: "fade",
   data() {
@@ -139,13 +146,17 @@ export default {
       question_list: [],
       test_done: false,
       timer_seconds: 15000,
+      event_show: false,
     };
   },
   watch: {
     count(val) {
       console.log(this.count, this.test_done);
       const _this = this;
-
+      if (val === 8) {
+        this.event_show = true;
+        this.timerStop = true;
+      }
       // test 끝난 여부
       if (val >= 14) {
         this.test_done = true;
@@ -184,7 +195,6 @@ export default {
       // count 부정 방지
       if (this.count > 14) return 0;
       if (this.timerStop) return 0;
-
       // 버튼 여부
       if (option_num === 0) this.option_0 = true;
       else if (option_num === 1) this.option_1 = true;
@@ -237,6 +247,17 @@ export default {
       }
       console.log(this.mbti);
     },
+    event_close() {
+      this.event_show = false;
+      this.timerStop = false;
+      clearTimeout(this.time_out_worker);
+      const _this = this;
+      this.time_out_worker = setTimeout(function () {
+        if (!_this.option_0 && !_this.option_1 && !_this.timerStop) {
+          _this.timeOutRandomChoice();
+        }
+      }, _this.timer_seconds);
+    },
   },
 };
 </script>
@@ -247,15 +268,15 @@ export default {
   transform: translateX(-50%);
 }
 
-main {
+.question_main {
   height: 419px;
 }
 
-main img {
+.question_main img {
   margin: 40px 26px 0px 26px;
 }
 
-main .QuestionText {
+.question_main .QuestionText {
   margin-top: 32px;
   line-height: 26.64px;
   font-size: 18px;
@@ -275,15 +296,6 @@ main .QuestionText {
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-}
-
-@keyframes move {
-  from {
-    transform: translateX(300px);
-  }
-  to {
-    transform: translateX(0px);
-  }
 }
 .option1 {
   margin-top: 10px;
@@ -305,12 +317,10 @@ main .QuestionText {
 
 .option1Active {
   background-color: #e73e7e;
-  /* animation: move 0.7s ease 0.7s !important; */
 }
 
 .option2Active {
   background-color: #2596a5;
-  /* animation: move 0.7s ease 0.7s !important; */
 }
 
 .fade-enter-active,

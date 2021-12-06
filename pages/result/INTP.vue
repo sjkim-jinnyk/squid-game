@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/진행요원_INTP_200.png"
+        src="~/assets/image/final/진행요원_INTP_200.png"
         alt="진행요원 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('ENFJ')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/알리_ENFJ_100.png"
+              src="~/assets/image/final/알리_ENFJ_100.png"
               alt="INTP와 잘맞는 유형"
             />
             <p class="typeCharName">알리압둘</p>
@@ -59,7 +59,7 @@
           <section class="typeBad" @click="typeLink('ENFP')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/성기훈_ENFP_100.png"
+              src="~/assets/image/final/성기훈_ENFP_100.png"
               alt="INTP와 잘맞는 유형"
             />
             <p class="typeCharName">성기훈</p>
@@ -156,25 +156,21 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
-      resultLink: () => {
+      resultLinkResult: () => {
         if (process.browser) {
           return window.location.href;
         }
       },
-      homeLink: () => {
+      homeLinkResult: () => {
         if (process.browser) {
           return window.location.origin;
         }
       },
+      homeLink: null,
+      resultLink: null,
       blurClass: true,
       mbti: "INTP",
       mbtiInfo2_text: [
@@ -190,12 +186,16 @@ export default {
         "조용하고 과묵하게 자기가 맡은 일을 열심히 한다.",
         "남을 설득하지 않고 논리적으로 생각을 하고 판단하는 모습을 보여준다. ",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
+    this.resultLink = this.resultLinkResult();
+    this.homeLink = this.homeLinkResult();
   },
   methods: {
     showResult() {
@@ -205,7 +205,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

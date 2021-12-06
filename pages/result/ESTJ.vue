@@ -3,7 +3,7 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="/image/final/VIP_ESTJ_200.png"
+        src="~/assets/image/final/VIP_ESTJ_200.png"
         alt="VIP 이미지"
         class="mbtiIMG"
       />
@@ -50,7 +50,7 @@
           <section class="typeGood" @click="typeLink('ISFP')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="/image/final/지영_ISFP_100.png"
+              src="~/assets/image/final/지영_ISFP_100.png"
               alt="ESTJ와 잘맞는 유형"
             />
             <p class="typeCharName">지영</p>
@@ -61,7 +61,7 @@
           <section class="typeBad" @click="typeLink('INFJ')">
             <p class="typeTitle">BAD</p>
             <img
-              src="/image/final/오일남_INFJ_100.png"
+              src="~/assets/image/final/오일남_INFJ_100.png"
               alt="ESTJ와 잘맞는 유형"
             />
             <p class="typeCharName">오일남</p>
@@ -158,25 +158,21 @@ export default {
     Final_Modal,
     LinkShare,
   },
-  props: {
-    firstTest: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
       showModal: false,
-      resultLink: () => {
+      resultLinkResult: () => {
         if (process.browser) {
           return window.location.href;
         }
       },
-      homeLink: () => {
+      homeLinkResult: () => {
         if (process.browser) {
           return window.location.origin;
         }
       },
+      homeLink: null,
+      resultLink: null,
       blurClass: true,
       mbti: "ESTJ",
       mbtiInfo2_text: [
@@ -192,12 +188,16 @@ export default {
         "힘들고 물러날 곳 없는 인생을 사는 사람들이 처절하게 살기 위해 발버둥 치는 모습을 즐기면서 보는 기묘한 성격의 보유자들.",
         "사업가로서 게임을 관전하는 중에도, 권위적이고 규칙을 중시하는 모습을 보여준다.",
       ],
+      firstTest: null,
     };
   },
   created() {
-    if (this.firstTest) {
+    if (this.$route.query.firstTest) {
+      this.firstTest = this.$route.query.firstTest;
       this.blurClass = false;
     }
+    this.resultLink = this.resultLinkResult();
+    this.homeLink = this.homeLinkResult();
   },
   methods: {
     showResult() {
@@ -207,7 +207,9 @@ export default {
       this.showModal = show;
     },
     typeLink(type) {
-      this.$router.push({ path: `${type}`, params: { firstTest: true } });
+      this.$router.push({
+        path: `${type}?firstTest=true`,
+      });
     },
     testRestart() {
       this.$router.push({ name: "index" });

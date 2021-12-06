@@ -6,10 +6,10 @@
           <p class="headerText">전체 결과보기</p>
           <i class="fas fa-times" @click="closeModal()"></i>
         </div>
-        <main>
+        <main class="finalModal">
           <article class="mbtiType" @click="typeLink('ENFP')">
             <img
-              src="/image/final/성기훈_ENFP_200.png"
+              src="~/assets/image/final/성기훈_ENFP_200.png"
               alt="성기훈 이미지"
               class="typeImg"
             />
@@ -25,7 +25,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('INFJ')">
             <img
-              src="/image/final/오일남_INFJ_200.png"
+              src="~/assets/image/final/오일남_INFJ_200.png"
               alt="오일남 이미지"
               class="typeImg"
             />
@@ -41,7 +41,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ENTJ')">
             <img
-              src="/image/final/조상우_ENTJ_200.png"
+              src="~/assets/image/final/조상우_ENTJ_200.png"
               alt="조상우 이미지"
               class="typeImg"
             />
@@ -57,7 +57,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ESTP')">
             <img
-              src="/image/final/장덕수_ESTP_200.png"
+              src="~/assets/image/final/장덕수_ESTP_200.png"
               alt="장덕수 이미지"
               class="typeImg"
             />
@@ -73,7 +73,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('INFP')">
             <img
-              src="/image/final/강새벽_INFP_200.png"
+              src="~/assets/image/final/강새벽_INFP_200.png"
               alt="강새벽 이미지"
               class="typeImg"
             />
@@ -89,7 +89,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ESFP')">
             <img
-              src="/image/final/한미녀_ESFP_200.png"
+              src="~/assets/image/final/한미녀_ESFP_200.png"
               alt="한미녀 이미지"
               class="typeImg"
             />
@@ -103,7 +103,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ISTJ')">
             <img
-              src="/image/final/황준호_ISTJ_200.png"
+              src="~/assets/image/final/황준호_ISTJ_200.png"
               alt="황준호 이미지"
               class="typeImg"
             />
@@ -119,7 +119,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ISTP')">
             <img
-              src="/image/final/프런트맨_ISTP_200.png"
+              src="~/assets/image/final/프런트맨_ISTP_200.png"
               alt="프런트맨 이미지"
               class="typeImg"
             />
@@ -135,7 +135,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ISFJ')">
             <img
-              src="/image/final/성기훈어머니_ISFJ_200.png"
+              src="~/assets/image/final/성기훈어머니_ISFJ_200.png"
               alt="성기훈어머니 이미지"
               class="typeImg"
             />
@@ -151,7 +151,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ESTJ')">
             <img
-              src="/image/final/VIP_ESTJ_200.png"
+              src="~/assets/image/final/VIP_ESTJ_200.png"
               alt="VIPS 이미지"
               class="typeImg"
             />
@@ -167,7 +167,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ENTP')">
             <img
-              src="/image/final/의문남_ENTP_200.png"
+              src="~/assets/image/final/의문남_ENTP_200.png"
               alt="의문남 이미지"
               class="typeImg"
             />
@@ -183,7 +183,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ENFJ')">
             <img
-              src="/image/final/알리_ENFJ_200.png"
+              src="~/assets/image/final/알리_ENFJ_200.png"
               alt="알리 이미지"
               class="typeImg"
             />
@@ -199,7 +199,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ISFP')">
             <img
-              src="/image/final/지영_ISFP_200.png"
+              src="~/assets/image/final/지영_ISFP_200.png"
               alt="지영 이미지"
               class="typeImg"
             />
@@ -215,7 +215,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('INTP')">
             <img
-              src="/image/final/진행요원_INTP_200.png"
+              src="~/assets/image/final/진행요원_INTP_200.png"
               alt="진행요원 이미지"
               class="typeImg"
             />
@@ -231,7 +231,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('ESFJ')">
             <img
-              src="/image/final/조상우맘_ESFJ_200.png"
+              src="~/assets/image/final/조상우맘_ESFJ_200.png"
               alt="조상우맘 이미지"
               class="typeImg"
             />
@@ -247,7 +247,7 @@
           </article>
           <article class="mbtiType" @click="typeLink('INTJ')">
             <img
-              src="/image/final/주최자_INTJ_200.png"
+              src="~/assets/image/final/주최자_INTJ_200.png"
               alt="주최자 이미지"
               class="typeImg"
             />
@@ -280,8 +280,7 @@ export default {
     },
     typeLink(type) {
       this.$router.push({
-        name: `Final-Final_${type}`,
-        params: { firstTest: true },
+        path: `${type}?firstTest=true`,
       });
     },
   },
@@ -322,7 +321,6 @@ export default {
 .modal-default-button {
   float: right;
 }
-
 .mbtiType {
   display: flex;
   width: 275px;
@@ -332,15 +330,15 @@ export default {
   cursor: pointer;
 }
 .charInfo {
-  width: 150px;
   font-size: 14px;
   text-align: left;
 }
 .charSummary {
+  letter-spacing: -0.02em;
+  font-weight: 400;
   line-height: 21px;
 }
 .typeInfo {
-  /* width: 90px; */
   display: flex;
   margin-bottom: 8px;
 }
