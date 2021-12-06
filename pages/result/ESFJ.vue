@@ -190,6 +190,45 @@ export default {
       firstTest: null,
     };
   },
+  head() {
+    return {
+      title: "당신은 오징어게임에서 조상우의 어머니 ESFJ",
+      meta: [
+        {
+          hid: "title",
+          name: "og:title",
+          content: "당신은 오징어게임에서 조상우의 어머니 ESFJ",
+        },
+        {
+          hid: "description",
+          name: "og:description",
+          content: "내가 오징어게임 주인공이라면?",
+        },
+        {
+          hid: "image",
+          name: "og:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_조상우의어머니.png`,
+        },
+        // Twitter Open Graph
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "당신은 오징어게임에서 조상우의 어머니 ESFJ",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: "내가 오징어게임 주인공이라면?",
+        },
+
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_조상우의어머니.png`,
+        },
+      ],
+    };
+  },
   created() {
     if (this.$route.query.firstTest) {
       this.firstTest = this.$route.query.firstTest;
