@@ -49,10 +49,8 @@ export default {
       data: null,
     };
   },
-  created() {
-    this.$store.commit("clearTime");
-  },
   mounted() {
+    this.$store.commit("clearTimer");
     this.homeLink = window.location.origin;
   },
   methods: {

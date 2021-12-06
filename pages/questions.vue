@@ -151,13 +151,11 @@ export default {
   },
   watch: {
     count(val) {
-      console.log(this.count, this.test_done);
       const _this = this;
       if (val === 8) {
         this.event_show = true;
         this.timerStop = true;
       }
-      // test 끝난 여부
       if (val >= 14) {
         this.test_done = true;
         setTimeout(function () {
@@ -166,14 +164,13 @@ export default {
       }
 
       this.time_out_worker = setTimeout(function () {
-        // 테스트가 끝날 경우,1. 결과 조합하기
         if (!_this.option_0 && !_this.option_1 && !_this.timerStop) {
           _this.timeOutRandomChoice();
         }
       }, _this.timer_seconds);
     },
   },
-  created() {
+  mounted() {
     this.question_list = questionList;
     const _this = this;
     this.time_out_worker = setTimeout(function () {
@@ -181,7 +178,7 @@ export default {
         _this.timeOutRandomChoice();
       }
     }, _this.timer_seconds);
-    this.$store.commit("setTime", this.time_out_worker);
+    this.$store.commit("setTimer", this.time_out_worker);
   },
   methods: {
     getCounterColor(num) {
@@ -193,23 +190,18 @@ export default {
       this.toUserChoice(option_num);
     },
     toUserChoice(option_num) {
-      // count 부정 방지
       if (this.count > 14) return 0;
       if (this.timerStop) return 0;
-      // 버튼 여부
       if (option_num === 0) this.option_0 = true;
       else if (option_num === 1) this.option_1 = true;
 
-      // 버튼의 정보
       const mbti_value = this.question_list[this.count].option_mbti[option_num];
       this.choice[mbti_value] += 1;
 
-      // 타이머 랜덤 선택 알고리즘 && 타이머 초기화
       clearTimeout(this.time_out_worker);
 
       this.clickAnimation().then(() => {
         if (this.count < 14) this.count += 1;
-        // 버튼 초기화
         this.timerStop = false;
         this.option_0 = false;
         this.option_1 = false;
@@ -226,7 +218,6 @@ export default {
       });
     },
     getResult(choice) {
-      console.log("choice", this.choice);
       for (const i in choice) {
         if (i === "E") {
           if (choice[i] >= 3) {
