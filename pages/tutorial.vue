@@ -67,12 +67,13 @@ export default {
     return {
       clickClass: false,
       timerStop: false,
+      autoTime: setTimeout(() => {}),
     };
   },
   created() {
-    setTimeout(() => {
-      this.$router.push({ name: "questions" });
-    }, 15000);
+    clearTimeout(this.$store.state.autoTime2);
+    this.autoClick();
+    this.$store.commit("setTime", this.autoTime);
   },
   methods: {
     click() {
@@ -81,6 +82,11 @@ export default {
       }, 800);
       this.clickClass = true;
       this.timerStop = true;
+    },
+    autoClick() {
+      this.autoTime = setTimeout(() => {
+        this.click();
+      }, 15000);
     },
   },
 };
@@ -158,7 +164,7 @@ main > .tutorialText {
   height: 16px;
   border-radius: 60px;
   box-sizing: border-box;
-  animation: timer 13s 1;
+  animation: timer 15s 1;
   animation-play-state: running;
 }
 @keyframes timer {

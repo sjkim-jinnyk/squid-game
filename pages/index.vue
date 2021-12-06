@@ -46,7 +46,12 @@ export default {
   data() {
     return {
       homeLink: "",
+      data: null,
     };
+  },
+  created() {
+    clearTimeout(this.$store.state.autoTime);
+    clearTimeout(this.$store.state.autoTime2);
   },
   mounted() {
     this.homeLink = window.location.origin;
