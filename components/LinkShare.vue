@@ -45,8 +45,7 @@ export default {
           content: {
             title: "저랑 게임 하나 하시겠습니까? ",
             description: "나는 오징어 게임에서 어떤 캐릭터일까?",
-            imageUrl:
-              "https://www.squid-games.site/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
+            imageUrl: `https://www.squid-games.site/image/meta/metaimg_${this.mbti}.png`,
             imageWidth: 800,
             imageHeight: 400,
             link: {

@@ -69,11 +69,13 @@ export default {
   },
   methods: {
     click() {
-      setTimeout(() => {
-        this.$router.push({ name: "questions" });
-      }, 800);
       this.clickClass = true;
       this.timerStop = true;
+      setTimeout(() => {
+        this.$router.push({
+          path: `questions`,
+        });
+      }, 800);
     },
     autoClick() {
       this.autoTime = setTimeout(() => {

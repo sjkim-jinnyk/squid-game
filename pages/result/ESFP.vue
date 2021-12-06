@@ -212,7 +212,7 @@ export default {
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_한미녀.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ESFP.png`,
         },
         // Twitter Open Graph
         {
@@ -229,7 +229,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_한미녀.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ESFP.png`,
         },
       ],
     };

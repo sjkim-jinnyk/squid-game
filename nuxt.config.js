@@ -81,6 +81,10 @@ export default {
       script: [
         { src: "https://developers.kakao.com/sdk/js/kakao.js" },
         {
+          type: "text/javascript",
+          innerHTML: `window.Kakao.init("${process.env.KAKAO_KEY}")`,
+        },
+        {
           crossorigin: "anonymous",
           src: "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0",
           nonce: "e16MXXou",
@@ -103,6 +107,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     "@nuxtjs/eslint-module",
+    "@nuxtjs/dotenv",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

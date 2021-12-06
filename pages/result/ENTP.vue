@@ -207,7 +207,7 @@ export default {
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_의문의남자.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ENTP.png`,
         },
         // Twitter Open Graph
         {
@@ -224,7 +224,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_의문의남자.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ENTP.png`,
         },
       ],
     };
