@@ -71,7 +71,7 @@ export default {
     };
   },
   created() {
-    clearTimeout(this.$store.state.autoTime);
+    this.$store.commit("clearTime");
     this.autoClick();
     this.$store.commit("setTime", this.autoTime);
   },
