@@ -210,7 +210,7 @@ export default {
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_성기훈의어머니.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ISFJ.png`,
         },
         // Twitter Open Graph
         {
@@ -227,7 +227,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_성기훈의어머니.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ISFJ.png`,
         },
       ],
     };

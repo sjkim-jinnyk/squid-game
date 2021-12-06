@@ -64,10 +64,10 @@ export default {
         window.Kakao.Link.sendDefault({
           objectType: "feed",
           content: {
-            title: "저랑 게임 하나 하시겠습니까? ",
+            title: "저랑 게임 하나 하시겠습니까?",
             description: "나는 오징어 게임에서 어떤 캐릭터일까?",
             imageUrl:
-              "https://www.squid-games.site/assets/image/meta/metaimg_%EB%A9%94%EC%9D%B8%EA%B3%B5%EC%9C%A0.png",
+              "https://www.squid-games.site/image/meta/metaimg_main.png",
             imageWidth: 800,
             imageHeight: 400,
             link: {
@@ -97,7 +97,8 @@ export default {
       }
     },
     twitterLink() {
-      const text = "저랑 게임 한판 하실래요?";
+      const text =
+        "저랑 게임 하나 하시겠습니까? %23심리테스트 %23오징어게임테스트";
       if (process.browser) {
         window.open(
           `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}`,
