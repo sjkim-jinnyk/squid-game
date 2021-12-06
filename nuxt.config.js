@@ -42,6 +42,7 @@ export default {
           content: "오징어게임 MBTI 테스트",
         },
         {
+          hid: "description",
           name: "og:description",
           content: "나는 오징어게임에서 어떤 인물일까?",
         },
@@ -50,13 +51,19 @@ export default {
 
         // Twitter Open Graph
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "오징어게임 MBTI 테스트" },
         {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "오징어게임 MBTI 테스트",
+        },
+        {
+          hid: "twitter:description",
           name: "twitter:description",
           content: "나는 오징어게임에서 어떤 인물일까?",
         },
         { name: "twitter:url", content: "https://squid-games.site" },
         {
+          hid: "twitter:image",
           name: "twitter:image",
           content: `${process.env.baseURL}/image/meta/metaimg_main.png`,
         },

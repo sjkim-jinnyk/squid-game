@@ -195,6 +195,45 @@ export default {
       firstTest: null,
     };
   },
+  head() {
+    return {
+      title: "당신은 오징어게임에서 한미녀 ESFP",
+      meta: [
+        {
+          hid: "title",
+          name: "og:title",
+          content: "당신은 오징어게임에서 한미녀 ESFP",
+        },
+        {
+          hid: "description",
+          name: "og:description",
+          content: "내가 오징어게임 주인공이라면?",
+        },
+        {
+          hid: "image",
+          name: "og:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_한미녀.png`,
+        },
+        // Twitter Open Graph
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "당신은 오징어게임에서 한미녀 ESFP",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: "내가 오징어게임 주인공이라면?",
+        },
+
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_한미녀.png`,
+        },
+      ],
+    };
+  },
   created() {
     if (this.$route.query.firstTest) {
       this.firstTest = this.$route.query.firstTest;
