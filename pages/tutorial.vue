@@ -32,11 +32,8 @@
         게임에 참가하시겠습니까?
       </p>
     </main>
-
     <div class="option_box">
-      <!-- <TimeOut /> -->
       <div class="timer" :class="{ pause: timerStop }"></div>
-      <!-- <router-link to="/questions" active-class="active"> -->
       <button
         class="option1"
         :class="{ option1Active: clickClass }"
@@ -44,19 +41,13 @@
       >
         네
       </button>
-      <!-- </router-link> -->
     </div>
     <ImgLoading />
   </div>
 </template>
 <script>
-// import TimeOut from "../components/TimeOut.vue";
-
 export default {
   name: "TutorialPage",
-  components: {
-    // TimeOut,
-  },
   props: {
     testStart: {
       type: Boolean,
@@ -67,12 +58,14 @@ export default {
     return {
       clickClass: false,
       timerStop: false,
+      autoTime: setTimeout(() => {}),
+      timer: null,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.$router.push({ name: "questions" });
-    }, 15000);
+  mounted() {
+    this.$store.commit("clearTimer");
+    this.autoClick();
+    this.$store.commit("setTimer", this.autoTime);
   },
   methods: {
     click() {
@@ -81,6 +74,11 @@ export default {
       }, 800);
       this.clickClass = true;
       this.timerStop = true;
+    },
+    autoClick() {
+      this.autoTime = setTimeout(() => {
+        this.click();
+      }, 15000);
     },
   },
 };
@@ -158,7 +156,7 @@ main > .tutorialText {
   height: 16px;
   border-radius: 60px;
   box-sizing: border-box;
-  animation: timer 13s 1;
+  animation: timer 15s 1;
   animation-play-state: running;
 }
 @keyframes timer {

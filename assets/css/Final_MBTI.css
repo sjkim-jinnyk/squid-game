@@ -78,7 +78,6 @@
 }
 .mbtiInfo2_text .blurList {
   filter: blur(2px);
-  background: #09252980;
   opacity: 50%;
 }
 .mbtiInfo_wrap {

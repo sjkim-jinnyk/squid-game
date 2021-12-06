@@ -46,9 +46,11 @@ export default {
   data() {
     return {
       homeLink: "",
+      data: null,
     };
   },
   mounted() {
+    this.$store.commit("clearTimer");
     this.homeLink = window.location.origin;
   },
   methods: {

@@ -149,8 +149,6 @@
 </template>
 
 <script>
-// import { defineComponent, computed, reactive } from 'vue';
-// import { useHead } from '@vueuse/head';
 import LinkShare from "../../components/LinkShare.vue";
 import Final_Modal from "./Final_Modal.vue";
 
@@ -194,6 +192,45 @@ export default {
         "힘든 상황에서 다른 팀원들을 다독이며 이끄는 모습을 보여준다.",
       ],
       firstTest: null,
+    };
+  },
+  head() {
+    return {
+      title: "당신은 오징어게임에서 알리압둘 ENFJ",
+      meta: [
+        {
+          hid: "title",
+          name: "og:title",
+          content: "당신은 오징어게임에서 알리압둘 ENFJ",
+        },
+        {
+          hid: "description",
+          name: "og:description",
+          content: "내가 오징어게임 주인공이라면?",
+        },
+        {
+          hid: "image",
+          name: "og:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_알리압둘.png`,
+        },
+        // Twitter Open Graph
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "당신은 오징어게임에서 알리압둘 ENFJ",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: "내가 오징어게임 주인공이라면?",
+        },
+
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_결과공유_알리압둘.png`,
+        },
+      ],
     };
   },
   created() {
