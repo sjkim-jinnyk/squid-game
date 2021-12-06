@@ -181,7 +181,7 @@ export default {
         _this.timeOutRandomChoice();
       }
     }, _this.timer_seconds);
-    this.$store.commit("setTime2", this.time_out_worker);
+    this.$store.commit("setTime", this.time_out_worker);
   },
   methods: {
     getCounterColor(num) {
