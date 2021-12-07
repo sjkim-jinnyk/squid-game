@@ -5,19 +5,19 @@
 
     <div class="share_btn">
       <button @click="[urlLink(resultLink), blurEffect()]">
-        <img src="/image/linkshare_btn.svg" />
+        <img src="~/assets/image/linkshare_btn.svg" />
       </button>
       <button @click="[kakaoLink(resultLink, homeLink), blurEffect()]">
-        <img src="/image/kakao.svg" />
+        <img src="~/assets/image/kakao.svg" />
       </button>
       <button @click="[facebookLink(mbti), blurEffect()]">
-        <img src="/image/facebook.svg" />
+        <img src="~/assets/image/facebook.svg" />
       </button>
       <button
         class="twitter-share-button"
         @click="[twitterLink(resultLink), blurEffect()]"
       >
-        <img src="/image/twitter.svg" />
+        <img src="~/assets/image/twitter.svg" />
       </button>
     </div>
   </article>
