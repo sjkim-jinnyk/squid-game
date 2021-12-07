@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: "server",
   env: {
     baseURL: process.env.BASE_URL || "https://www.squid-games.site",
     dev: process.env.NODE_ENV !== "production",
