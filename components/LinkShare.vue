@@ -74,7 +74,7 @@ export default {
     },
     facebookLink(mbti) {
       window.open(
-        `https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site/questions/result/${mbti}&src=sdkpreparse`,
+        `https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site/result/${mbti}&src=sdkpreparse`,
         "pop01",
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
