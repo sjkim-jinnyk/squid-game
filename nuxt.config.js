@@ -95,6 +95,17 @@ export default {
           src: "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0",
           nonce: "e16MXXou",
         },
+        {
+          type: "text/javascript",
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-214707755-1');`,
+        },
+        {
+          src: "https://www.googletagmanager.com/gtag/js?id=UA-214707755-1",
+          async: true,
+        },
       ],
       __dangerouslyDisableSanitizers: ["script"],
     };
