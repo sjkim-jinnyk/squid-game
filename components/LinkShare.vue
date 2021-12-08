@@ -82,7 +82,7 @@ export default {
     twitterLink(resultLink) {
       const text = "저랑 게임 한판 하실래요?";
       window.open(
-        `https://twitter.com/intent/tweet?text=${text}&url=${resultLink}`,
+        `https://twitter.com/intent/tweet?text=${text}&url=${resultLink}&hashtags=오징어게임,심리테스트`,
         "pop02",
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );
