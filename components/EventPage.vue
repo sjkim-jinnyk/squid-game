@@ -94,13 +94,20 @@ export default {
       if (num === 0) this.option1Click();
       else this.option2Click();
     },
+    delay(t, v) {
+      return new Promise(function (resolve) {
+        setTimeout(resolve.bind(null, v), t);
+      });
+    },
     playSound() {
       const audio = new Audio("/gunSound.mp3");
       audio.volume = 0.3;
       audio.play();
-      if (window.navigator && window.navigator.vibrate) {
-        navigator.vibrate(800);
-      }
+      this.delay(200).then(() => {
+        if (window.navigator && window.navigator.vibrate) {
+          navigator.vibrate(800);
+        }
+      });
     },
   },
 };
