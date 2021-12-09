@@ -136,11 +136,16 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     // simple usage
-    "nuxt-clipboard",
     // with options
     ["nuxt-clipboard", { autoSetContainer: true }],
+    "@nuxtjs/sitemap",
   ],
-
+  sitemap: {
+    hostname: "https://www.squid-games.site",
+    lastmod: "2021-12-09",
+    gzip: true,
+    exclude: ["/result/Final_Modal"],
+  },
   clipboard: {
     autoSetContainer: true,
   },
