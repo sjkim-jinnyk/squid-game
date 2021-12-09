@@ -53,18 +53,12 @@ export default {
       option1: false,
       option2: false,
       option_num: "",
-      vibrateEffect: () => {
-        if (window.navigator && window.navigator.vibrate) {
-          navigator.vibrate(800);
-        }
-      },
     };
   },
   created() {
     setTimeout(() => {
-      this.imgShow = true;
       this.playSound();
-      this.vibrateEffect();
+      this.imgShow = true;
     }, 500);
     setTimeout(() => {
       this.imgShow = false;
@@ -105,7 +99,7 @@ export default {
       audio.volume = 0.3;
       audio.play();
       if (window.navigator && window.navigator.vibrate) {
-        navigator.vibrate([2000, 100, 200]);
+        navigator.vibrate(800);
       }
     },
   },

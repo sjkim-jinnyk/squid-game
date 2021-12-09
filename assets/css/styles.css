@@ -8,6 +8,7 @@ body {
   color: white;
   width: 360px;
   margin: auto;
+  touch-action: pan-y;
 }
 
 /* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
