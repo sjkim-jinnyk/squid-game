@@ -97,11 +97,10 @@ export default {
       }
     },
     twitterLink() {
-      const text =
-        "저랑 게임 하나 하시겠습니까? %23심리테스트 %23오징어게임테스트";
+      const text = "저랑 게임 하나 하시겠습니까?";
       if (process.browser) {
         window.open(
-          `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}`,
+          `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}&hashtags=오징어게임,심리테스트`,
           "pop02",
           "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );

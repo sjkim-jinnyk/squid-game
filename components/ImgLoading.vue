@@ -33,6 +33,7 @@
     <img src="~/assets/image/final/한미녀_ESFP_200.png" />
     <img src="~/assets/image/final/황준호_ISTJ_200.png" />
     <img src="~/assets/image/final/VIP_ESTJ_200.png" />
+    <audio src="/gunSound.mp3" muted></audio>
   </div>
 </template>
 
