@@ -59,13 +59,11 @@ export default {
   mounted() {
     let locale = navigator.language || navigator.userLanguage;
     locale = locale.substring(0, 2);
-    console.log(locale);
     if (locale === "ko") {
       this.$router.push({
         path: `ko`,
       });
     }
-    // this.$i18n.locale = locale;
     this.$store.commit("clearTimer");
     this.homeLink = window.location.origin;
   },
