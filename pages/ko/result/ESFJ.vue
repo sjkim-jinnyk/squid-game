@@ -3,13 +3,13 @@
     <div class="testMBTI">
       <p class="testTitle">당신은 오징어게임에서</p>
       <img
-        src="~/assets/image/final/진행요원_INTP_200.png"
-        alt="진행요원 이미지"
+        src="~/assets/image/final/조상우맘_ESFJ_200.png"
+        alt="조상우맘 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">INTP</p>
-      <p class="charName">진행요원</p>
-      <p class="mbtiSummary">이해가 빠르고 통찰력 있는 <br />아이디어형 인물</p>
+      <p class="mbti">ESFJ</p>
+      <p class="charName">조상우의 어머니</p>
+      <p class="mbtiSummary">동정심과 참을성이 많은 <br />양심적인 인물</p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
@@ -47,25 +47,25 @@
       <section v-if="!firstTest" class="typeMatch">
         <p class="title">유형별 궁합</p>
         <div class="GoodBad">
-          <section class="typeGood" @click="typeLink('ENFJ')">
+          <section class="typeGood" @click="typeLink('INTP')">
             <p class="typeTitle">GOOD</p>
             <img
-              src="~/assets/image/final/알리_ENFJ_100.png"
-              alt="INTP와 잘맞는 유형"
+              src="~/assets/image/final/진행요원_INTP_100.png"
+              alt="ESFJ와 잘맞는 유형"
             />
-            <p class="typeCharName">알리압둘</p>
-            <p class="typeCharInfo">주변을 행복하게 만드는 <br />친절한 인물</p>
+            <p class="typeCharName">진행요원</p>
+            <p class="typeCharInfo">
+              이해가 빠르고 통찰력 있는 <br />아이디어형 인물
+            </p>
           </section>
-          <section class="typeBad" @click="typeLink('ENFP')">
+          <section class="typeBad" @click="typeLink('INTJ')">
             <p class="typeTitle">BAD</p>
             <img
-              src="~/assets/image/final/성기훈_ENFP_100.png"
-              alt="INTP와 잘맞는 유형"
+              src="~/assets/image/final/주최자_INTJ_100.png"
+              alt="ESFJ와 잘맞는 유형"
             />
-            <p class="typeCharName">성기훈</p>
-            <p class="typeCharInfo">
-              풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물
-            </p>
+            <p class="typeCharName">주최자</p>
+            <p class="typeCharInfo">행동과 사고가 단호한 <br />독립적인 인물</p>
           </section>
         </div>
       </section>
@@ -151,7 +151,7 @@ import Final_Modal from "./Final_Modal.vue";
 import LinkShare from "~/components/LinkShare.vue";
 
 export default {
-  name: "FinalINTP",
+  name: "FinalESFJ",
   components: {
     Final_Modal,
     LinkShare,
@@ -172,31 +172,32 @@ export default {
       homeLink: null,
       resultLink: null,
       blurClass: true,
-      mbti: "INTP",
+      mbti: "ESFJ",
       mbtiInfo2_text: [
-        "조용하고 과묵하지만 관심 있는 분야에서는 말을 잘한다.",
-        "분석적이고 논리적이며 객관적 비평을 잘해서 진지충이라는 소리를 자주 듣는다.",
-        "큰일에 잘 개입하지 않는다.",
-        "남을 설득하는 일이 거의 없다.",
-        "이해가 빠르고 통찰력이 뛰어나고 지적 관심이 많다.",
-        "무뚝뚝하면 잡담 같은 것도 잘 못하고 싫어한다.",
+        "항상 웃으면서 동정심과 동료애가 많다.",
+        "양심적이고 정리정돈을 잘한다.",
+        "참을성이 많고 남을 잘 돕는다.",
+        "다른 이들의 무관심에는 민감하고 남들이 인정해주면 엄청 좋아함.",
+        "성격이 급하고 활발하고 계획을 잘 세운다.",
+        "사람들과 대화할 때 리액션을 잘한다. ",
       ],
       mbtiInfo_text: [
-        "무뚝뚝하게 가면만 쓰고 오징어 게임 진행을 도우는 인물이다.",
-        "조용하고 과묵하게 자기가 맡은 일을 열심히 한다.",
-        "남을 설득하지 않고 논리적으로 생각을 하고 판단하는 모습을 보여준다. ",
+        "힘들게 가게를 운영하고 있는 현실에도 친절하고 재치가 있으며 다른 사람들에게 관심을 쏟는다. ",
+        "안타까운 상황에 처해있는 성기훈을 보고 안타까워하며 걱정을 한다. ",
+        "아들의 자랑을 하는 모습에서 남들의 인정을 좋아하는 성격임을 볼 수 있다. ",
+        "끝까지 아들을 믿는 모습에서 그녀의 아들에 대한 관심과 사랑을 엿볼 수 있다. ",
       ],
       firstTest: null,
     };
   },
   head() {
     return {
-      title: "당신은 오징어게임에서 진행요원 INTP",
+      title: "당신은 오징어게임에서 조상우의 어머니 ESFJ",
       meta: [
         {
           hid: "title",
           name: "og:title",
-          content: "당신은 오징어게임에서 진행요원 INTP",
+          content: "당신은 오징어게임에서 조상우의 어머니 ESFJ",
         },
         {
           hid: "description",
@@ -206,13 +207,13 @@ export default {
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_INTP.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ESFJ.png`,
         },
         // Twitter Open Graph
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "당신은 오징어게임에서 진행요원 INTP",
+          content: "당신은 오징어게임에서 조상우의 어머니 ESFJ",
         },
         {
           hid: "twitter:description",
@@ -223,7 +224,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_INTP.png`,
+          content: `${process.env.baseURL}/image/meta/metaimg_ESFJ.png`,
         },
       ],
     };

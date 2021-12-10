@@ -3,8 +3,8 @@
     <h2 class="ir">event 화면</h2>
     <article v-if="questionShow" class="event_cont">
       <p class="event_text" :class="{ event_textOut: textOut }">
-        어둠 속에서 <br />
-        갑자기 총소리가 들렸다.
+        {{ lang_en ? "Suddenly a gunshot" : "어둠속에서" }}<br />
+        {{ lang_en ? "was heard in the dark" : "갑자기 총소리가 들렸다." }}
       </p>
       <img
         v-if="imgShow"
@@ -14,7 +14,9 @@
       />
     </article>
     <article v-else class="event_question">
-      <p class="question_text">곧 죽을지도 모른다.</p>
+      <p class="question_text">
+        {{ lang_en ? "You might die soon." : "곧 죽을지도 모른다." }}
+      </p>
       <TimeOut :half-time="halfTime" :timer-stop="timerStop"></TimeOut>
       <div class="question_btn">
         <button
@@ -22,14 +24,14 @@
           :class="{ event_option1Active: option1 }"
           @click="option1Click"
         >
-          도망친다
+          {{ lang_en ? "Run!!" : "도망친다" }}
         </button>
         <button
           class="event_option2"
           :class="{ event_option2Active: option2 }"
           @click="option2Click"
         >
-          맞서 싸운다
+          {{ lang_en ? "try to steal the gun." : "맞서 싸운다" }}
         </button>
       </div>
     </article>
@@ -42,6 +44,9 @@ import TimeOut from "./TimeOut.vue";
 export default {
   components: {
     TimeOut,
+  },
+  props: {
+    lang_en: Boolean,
   },
   data() {
     return {

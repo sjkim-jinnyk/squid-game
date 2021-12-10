@@ -1,14 +1,19 @@
 <template>
   <main class="loadingMain">
-    <p class="loadingTitle">결과 로딩중</p>
-    <img src="../assets/image/lodingLogo.png" alt="결과로딩 이미지" />
-    <p class="loadingText">당신은 오징어게임에서...</p>
+    <p class="loadingTitle">{{ lang_en ? "Loading" : "결과 로딩중" }}</p>
+    <img src="~/assets/image/lodingLogo.png" alt="결과로딩 이미지" />
+    <p class="loadingText">
+      {{ lang_en ? "You Are..." : "당신은 오징어게임에서..." }}
+    </p>
   </main>
 </template>
 
 <script>
 export default {
   name: "TestLoading",
+  props: {
+    lang_en: Boolean,
+  },
 };
 </script>
 
