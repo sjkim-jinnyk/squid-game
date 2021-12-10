@@ -27,9 +27,10 @@
       </div>
       <img src="~/assets/image/tutorial.png" />
       <p class="tutorialText">
-        12개의 상황마다 <br />
-        시간제한이 있습니다. <br />
-        게임에 참가하시겠습니까?
+        In every 12 situations, <br />
+        There's a time limit. <br />
+        Do you want to participate <br />
+        in the game?
       </p>
     </main>
     <div class="option_box">
@@ -39,7 +40,7 @@
         :class="{ option1Active: clickClass }"
         @click="click"
       >
-        네
+        YES
       </button>
     </div>
     <ImgLoading />
@@ -145,7 +146,7 @@ main > .tutorialText {
   line-height: 15px;
 }
 .timer::after {
-  content: "남은 시간";
+  content: "TIME";
   position: relative;
   color: #000;
 }
