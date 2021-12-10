@@ -1,11 +1,7 @@
 <template>
   <div>
-    <TestLoading v-if="test_done" class="container" :lang_en="lang_en" />
-    <EventPage
-      v-if="event_show"
-      :lang_en="lang_en"
-      @event_close="event_close"
-    />
+    <TestLoading v-if="test_done" class="container" />
+    <EventPage v-if="event_show" @event_close="event_close" />
     <div
       v-for="question in question_list.slice().reverse()"
       v-else
@@ -127,7 +123,7 @@
 <script>
 import TimeOut from "~/components/TimeOut.vue";
 import EventPage from "~/components/EventPage.vue";
-import questionList from "~/assets/questions_en.json";
+import questionList from "~/assets/questions.json";
 
 export default {
   name: "QuestionsPage",
@@ -151,7 +147,6 @@ export default {
       test_done: false,
       timer_seconds: 15000,
       event_show: false,
-      lang_en: true,
     };
   },
   watch: {

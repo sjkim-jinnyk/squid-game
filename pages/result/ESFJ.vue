@@ -147,7 +147,7 @@
 </template>
 
 <script>
-import LinkShare from "../../components/LinkShare.vue";
+import LinkShare from "~/components/LinkShare.vue";
 import Final_Modal from "./Final_Modal.vue";
 
 export default {
@@ -263,5 +263,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../../assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI.css";
 </style>

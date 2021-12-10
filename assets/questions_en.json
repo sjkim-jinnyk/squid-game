@@ -1,0 +1,86 @@
+[
+    {
+        "id": 0,
+        "desc": "You are living in debt<br />due to greed<br />What will you do?",
+        "option":["It's too much... (Sigh...)", "Start planning what you can do."],
+        "option_mbti": ["P", "J"]
+    },
+    {
+        "id": 1,
+        "desc": "A stranger comes <br />and talk to you. <br />\"Would you like to play a game <br />and bet 100,000 won?\"",
+        "option":["You have to go down to see it! GO!", "Who is he? Let’s just ignore him..."],
+        "option_mbti": ["E", "I"]
+    },
+    {
+        "id": 2,
+        "desc": "The first game has started. <br />If you fail, you will be shot to death. <br />\"Green Light, Red Light\"",
+        "option":["5 minutes left... let’s go forward", "Watch the others first."],
+        "option_mbti": ["E", "I"]
+    },
+    {
+        "id": 3,
+        "desc": "You found out that your buddy,<br />whom you haven't seen in a long<br />time, is also in the squid game.<br />What do you?",
+        "option":["Long time so see", "It's been too long. Pretend we don't know"],
+        "option_mbti": ["E", "I"]
+    },
+    {
+        "id": 4,
+        "desc": "A fight broke out during the<br />distribution of bread and milk.<br />How do you behave?",
+        "option":["Don't fight, let's talk it out together", "it has nothing to do with me. Just stay quiet"],
+        "option_mbti": ["E", "I"]
+    },
+    {
+        "id": 5,
+        "desc": "After the game is over,<br />the shocked participants<br />will have a vote to stop the game.<br />What is your choice?",
+        "option":["Stop this madness! We are all going to die!", "My actual life is worse. Just continue"],
+        "option_mbti": ["S", "N"]
+    },
+    {
+        "id": 6,
+        "desc": "You found out that the next game was<br />the Cinder Toffee (Dalgona) game.<br />Will you share this<br />with your team members?",
+        "option":["Reducing competitors comes first", "Inform our team members"],
+        "option_mbti": ["T", "F"]
+    },
+    {
+        "id": 7,
+        "desc": "It feels like there's going to be<br />a riot during the night...<br />How do you act<br />when you might get killed?",
+        "option":["Look around and hope it will work out somehow", "Plan for survival with your team members"],
+        "option_mbti": ["P", "J"]
+    },
+    {
+        "id": 8,
+        "desc": "The next game is a team fight. <br />I need a team, <br />but what do I do...",
+        "option":["Gather your team members", "Someone will pick me as their team..."],
+        "option_mbti": ["E", "I"]
+    },
+    {
+        "id": 9,
+        "desc": "While forming a tug-of-war game team,<br />you discover a cheater,<br />player 212, who has been betrayed.<br />I think it will be an advantageous game<br />for adult men... What will you do?",
+        "option":["Pick her just in case", "Still. I choose a man, Player 001"],
+        "option_mbti": ["P", "J"]
+    },
+    {
+        "id": 10,
+        "desc": "The next game is marble.<br />In a pair of two, at least<br />one of the two will be eliminated.<br />You teammate forgot what he said<br />'What did I say...'",
+        "option":["Just take it", "I can never take it"],
+        "option_mbti": ["T", "F"]
+    },
+    {
+        "id": 11,
+        "desc": "In the middle of the stepping stone<br />game, at the last stepping stone,<br />the player in front hesitates and can't<br />go forward. Time is running out...",
+        "option":["Running out of time. Just push him!", "Just give him some more time"],
+        "option_mbti": ["T", "F"]
+    },
+    {
+        "id": 12,
+        "desc": "Only two players are left.<br />Tomorrow is<br /the last game...",
+        "option":["Winning comes first. Let's go to sleep", "Imagine what tomorrow game might be."],
+        "option_mbti": ["S", "N"]
+    },
+    {
+        "id": 13,
+        "desc": "You are going to see your daughter for<br />the first time after winning the game.<br />What do you think about the night<br />before?",
+        "option":["I need to go to bed early and see my daughter tomorrow.", "What should I do when I meet my daughter?"],
+        "option_mbti": ["S", "N"]
+    }
+]
