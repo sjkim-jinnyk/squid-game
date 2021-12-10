@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <img class="logoImg" src="~/assets/image/오징어게임_로고 1.png" />
+    <img class="logoImg" src="~/assets/image/logo_ko.png" />
     <h2 class="subtitle">나는 오징어게임에서 어떤 인물일까?</h2>
 
     <img class="mainImg" src="~/assets/image/main.png" />
