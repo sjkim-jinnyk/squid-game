@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/장덕수_ESTP_200.png"
         alt="장덕수 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">ESTP</p>
-      <p class="charName">장덕수</p>
-      <p class="mbtiSummary">다양한 분야에 관심이 있는 <br />활동적인 인물</p>
+      <p class="charName">Player 101</p>
+      <p class="mbtiSummary">
+        interested in various fields.<br />
+        An active person.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">You</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">Player 101</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -45,7 +47,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('INFJ')">
             <p class="typeTitle">GOOD</p>
@@ -53,9 +55,10 @@
               src="~/assets/image/final/오일남_INFJ_100.png"
               alt="ESTP와 잘맞는 유형"
             />
-            <p class="typeCharName">오일남</p>
+            <p class="typeCharName">Player 001</p>
             <p class="typeCharInfo">
-              창의력과 통찰력이 뛰어난 <br />독창적인 인물
+              creative and insightful.<br />
+              An original character.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('INFP')">
@@ -64,9 +67,10 @@
               src="~/assets/image/final/강새벽_INFP_100.png"
               alt="ESTP와 안맞는 유형"
             />
-            <p class="typeCharName">강새벽</p>
+            <p class="typeCharName">Player 067</p>
             <p class="typeCharInfo">
-              신념과 조화를 중시하는 <br />이상주의자 인물
+              values belief and harmony.<br />
+              An idealist.
             </p>
           </section>
         </div>
@@ -81,7 +85,7 @@
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -98,7 +102,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -135,7 +139,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -175,20 +179,19 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ESTP",
-      mbtiInfo2_text: [
-        "삶을 즐기며, 관대하고 느긋하며 선입견이 없이 개방적인 성격이다.",
-        "갈등이나 긴장이 일어나는 상황을 잘 무마하는 성격이다.",
-        "다양한 분야에 관심이 있고 알고 싶어한다.",
-        "매우 현실적이기 때문에 감정적이거나 우유부단한 사람에 대해 답답해한다.",
-        "가능하면 말을 자제하고 싶어한다.",
-        "스릴을 즐기며 겁이 없고 위험한 행동을 자주 하는 경향이 있다.",
-      ],
       mbtiInfo_text: [
-        "조폭 출신으로 즉흥적으로 자신의 이익을 위해 잔인한 폭력을 저지르는 인물이다.",
-        "오랜 기간 집단 생황을 해서 오징어 게임 내에서도 뛰어난 적응력을 보여준다.",
-        "누구 보다 뛰어난 상황 판단과 잔머리가 뛰어나다.",
-        "자기 팀원이 이득이 안된다고 판단하면 배신하듯이, 현실적인 기준에 벗어나면 쉽게 돌아선다.",
-        "한미녀를 배신할 때도 자신의 생존을 우선시하는 모습을 보였다",
+        "Enjoys life, generous, relaxed, and has an open personality without prejudice.",
+        "Has a personality that is good at dealing with situations where conflict or tension arises.",
+        "Interested in various fields and want to know more.",
+        "Very realistic, so it's frustrating for people who are emotional or indecisive.",
+        "Like to refrain from talking as much as possible.",
+        "Enjoy thrills, fearless, and tend to engage in risky behavior frequently.",
+      ],
+      mbtiInfo2_text: [
+        "He is a gangster who spontaneously commits brutal violence for his own benefit.",
+        "He shows excellent adaptability even in the squid game due to his long life as a gangster.",
+        "In the squid game, he has superior situational judgment and finesse than anyone else.",
+        "Just as he betrays his teammates when he decides that there is no benefit, he easily turns around when it deviates from realistic standards. Even when he betrayed player 212, he showed that he prioritized his own survival.",
       ],
       firstTest: null,
     };

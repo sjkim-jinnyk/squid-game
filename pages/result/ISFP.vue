@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/지영_ISFP_200.png"
         alt="지영 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">ISFP</p>
-      <p class="charName">지영</p>
-      <p class="mbtiSummary">감수성이 풍부하고 <br />독립심이 많은 인물</p>
+      <p class="charName">Player 240</p>
+      <p class="mbtiSummary">
+        very sentimental.<br />
+        A person who is independent.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">You</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">Player 240</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -45,7 +47,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ESTJ')">
             <p class="typeTitle">GOOD</p>
@@ -55,7 +57,8 @@
             />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
-              계획하는 능력이 뛰어난 <br />사업가형 인물
+              so good at planning.<br />
+              A businessman-type person.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('ENTP')">
@@ -64,9 +67,10 @@
               src="~/assets/image/final/의문남_ENTP_100.png"
               alt="ISFP와 잘맞는 유형"
             />
-            <p class="typeCharName">의문의 남자</p>
+            <p class="typeCharName">Salesman</p>
             <p class="typeCharInfo">
-              자신감과 에너지가 넘치는 <br />혁신적인 인물
+              Full of confidence and energy.<br />
+              Innovative person.
             </p>
           </section>
         </div>
@@ -81,7 +85,7 @@
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -98,7 +102,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -135,7 +139,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -175,20 +179,20 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ISFP",
-      mbtiInfo2_text: [
-        "말보다 행동으로 따듯함을 나타낸다.",
-        "감정기복이 심하고 공감능력이 좋다.",
-        "귀찮음이 많고 의욕이 부족한 편이다.",
-        "남 눈치를 많이 봐서 자신만의 시간을 갖는 것을 좋아한다.",
-        "상대방을 잘 알게 될 때까지 따듯함을 잘 드러내지 않는다.",
-        "거절과 부정적 반응을 하기 어렵고 양보를 잘한다.",
-        "감수성이 예민하고 고민거리나 힘든 일을 혼자 해결하려고 한다.",
-      ],
       mbtiInfo_text: [
-        "안타까운 가족사를 갖고 있는 지영은 겉으로는 차가운 인물이지만 구슬게임에서 고의로 져주는 모습애서도 나오듯이 마음이 따듯하고 동정적이다.",
-        "강새벽과 친해지기 전에 남에게 쉽게 정을 주지 않고 혼자 있는 모습이 자주 나타난다.",
-        "강새벽과 대화 후 뛰어난 공감능력을 바탕으로 동질감을 느끼고 그녀에게 마음의 문을 열면서 따듯함을 나타낸다.",
+        "Has great empathy ability and show kindness through action rather than words.",
+        "Has severe mood swings and gets annoyed easily.",
+        "Likes to spend time alone because he/she feels uncomfortable around people.",
+        "Does not express oneself until he/she gets to know someone.",
+        "Difficult to reject someone’s favor.",
+        "Has a sensitive personality and tries to solve one’s problem and worries all by oneself.",
       ],
+      mbtiInfo2_text: [
+        "She is a cold character due to her sad family history. ",
+        "Before she gets to know player 067, she doesn’t open up to anyone easily. However, she is warm hearted and in the end, she sacrifices herself so that player 067 can continue the game.",
+        "After having a long talk with player 067, she finds out that player 067 is no different from herself and finally opens up her heart.",
+      ],
+
       firstTest: null,
     };
   },

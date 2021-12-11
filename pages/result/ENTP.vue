@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/의문남_ENTP_200.png"
         alt="의문남 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">ENTP</p>
-      <p class="charName">의문의 남자</p>
-      <p class="mbtiSummary">자신감과 에너지가 넘치는 <br />혁신적인 인물</p>
+      <p class="charName">Salesman</p>
+      <p class="mbtiSummary">
+        Full of confidence and energy.<br />
+        Innovative person.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">You</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">Salesman</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -45,7 +47,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ISFJ')">
             <p class="typeTitle">GOOD</p>
@@ -53,9 +55,10 @@
               src="~/assets/image/final/성기훈어머니_ISFJ_100.png"
               alt="ENTP와 잘맞는 유형"
             />
-            <p class="typeCharName">성기훈의 어머니</p>
+            <p class="typeCharName">Player 456’ mother</p>
             <p class="typeCharInfo">
-              책임강이 강하고 헌신적인 <br />인내심 많은 인물
+              responsible and dedicated.<br />
+              A patient person.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('ISFP')">
@@ -64,9 +67,10 @@
               src="~/assets/image/final/지영_ISFP_100.png"
               alt="ENTP와 잘맞는 유형"
             />
-            <p class="typeCharName">지영</p>
+            <p class="typeCharName">Player 240</p>
             <p class="typeCharInfo">
-              감수성이 풍부하고 <br />독립심이 많은 인물
+              very sentimental.<br />
+              A person who is independent.
             </p>
           </section>
         </div>
@@ -81,7 +85,7 @@
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -98,7 +102,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -135,7 +139,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -175,18 +179,19 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ENTP",
-      mbtiInfo2_text: [
-        "독창적인 혁신가이여 창의력이 풍부해서 새로운 시도를 즐기는 성격이다.",
-        "다방면에 재능이 있고 자신감과 에너지가 넘친다.",
-        "다른 사람을 판단하기보다 이해하려고 노력한다.",
-        "감정에 솔직하고 표현을 잘한다.",
-        "경쟁심이 강해서 토론이나 논쟁을 좋아한다.	",
-        "자존감이 높고 자신에 대한 확신이 강하다. ",
-      ],
       mbtiInfo_text: [
-        "오징어 게임 참가자들과 딱지치기를 하여 10만원 내기를 하는 인물로서 자신감과 에너지가 넘친다.",
-        "경쟁심이 강해서 성기훈과의 딱지치기에서도 연속적으로 승리한다.",
+        "A creative innovator, and enjoy trying new things.",
+        "A multi-talented person full of confidence and energy.",
+        "Try to understand others rather than judge them.",
+        "Honest with his/her emotions and express oneself well.",
+        "Has a strong competitive spirit and likes to debate and argue.",
+        "Has high self-esteem and strong self-confidence.",
       ],
+      mbtiInfo2_text: [
+        "As the person who bets 100,000 won by playing a game of slap-match with the squid game participants, he is full of confidence and energy as.",
+        "He has a strong competitive spirit, so he wins consecutive fights against player 456.",
+      ],
+
       firstTest: null,
     };
   },

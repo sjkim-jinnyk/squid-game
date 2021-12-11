@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/조상우맘_ESFJ_200.png"
         alt="조상우맘 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">ESFJ</p>
-      <p class="charName">조상우의 어머니</p>
-      <p class="mbtiSummary">동정심과 참을성이 많은 <br />양심적인 인물</p>
+      <p class="charName">Player 218’s Mother</p>
+      <p class="mbtiSummary">
+        sympathetic and patient.<br />
+        Conscientious person.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">You</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">Player 218’s Mother</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -45,7 +47,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('INTP')">
             <p class="typeTitle">GOOD</p>
@@ -53,9 +55,10 @@
               src="~/assets/image/final/진행요원_INTP_100.png"
               alt="ESFJ와 잘맞는 유형"
             />
-            <p class="typeCharName">진행요원</p>
+            <p class="typeCharName">Soldier (ㅁ)</p>
             <p class="typeCharInfo">
-              이해가 빠르고 통찰력 있는 <br />아이디어형 인물
+              quick to understand<br />
+              insightful. Idea-type person.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('INTJ')">
@@ -64,8 +67,11 @@
               src="~/assets/image/final/주최자_INTJ_100.png"
               alt="ESFJ와 잘맞는 유형"
             />
-            <p class="typeCharName">주최자</p>
-            <p class="typeCharInfo">행동과 사고가 단호한 <br />독립적인 인물</p>
+            <p class="typeCharName">Game Host</p>
+            <p class="typeCharInfo">
+              Creative in thinking<br />
+              and behavior.
+            </p>
           </section>
         </div>
       </section>
@@ -79,7 +85,7 @@
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -96,7 +102,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -133,7 +139,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -147,8 +153,8 @@
 </template>
 
 <script>
-import LinkShare from "~/components/LinkShare.vue";
 import Final_Modal from "./Final_Modal.vue";
+import LinkShare from "~/components/LinkShare.vue";
 
 export default {
   name: "FinalESFJ",
@@ -173,20 +179,21 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ESFJ",
-      mbtiInfo2_text: [
-        "항상 웃으면서 동정심과 동료애가 많다.",
-        "양심적이고 정리정돈을 잘한다.",
-        "참을성이 많고 남을 잘 돕는다.",
-        "다른 이들의 무관심에는 민감하고 남들이 인정해주면 엄청 좋아함.",
-        "성격이 급하고 활발하고 계획을 잘 세운다.",
-        "사람들과 대화할 때 리액션을 잘한다. ",
-      ],
       mbtiInfo_text: [
-        "힘들게 가게를 운영하고 있는 현실에도 친절하고 재치가 있으며 다른 사람들에게 관심을 쏟는다. ",
-        "안타까운 상황에 처해있는 성기훈을 보고 안타까워하며 걱정을 한다. ",
-        "아들의 자랑을 하는 모습에서 남들의 인정을 좋아하는 성격임을 볼 수 있다. ",
-        "끝까지 아들을 믿는 모습에서 그녀의 아들에 대한 관심과 사랑을 엿볼 수 있다. ",
+        "Always smiling and full of sympathy and camaraderie",
+        "Conscientious and well organized.",
+        "Always patient and is good at helping others.",
+        "Sensitive to the indifference of others and enjoy it when others acknowledge it.",
+        "Quick-tempered, active, and well-planned.",
+        "Good at reacting when talking to people.",
       ],
+      mbtiInfo2_text: [
+        "Despite the hardships of running a store, she is kind and witty and pays attention to others.",
+        "Seeing player 456 in a sad situation, she is sad and worried.",
+        "From the way she brags about his son, you can see that she likes the approval of others.",
+        "The way she believes in her son until the end shows her interest and love for her son.",
+      ],
+
       firstTest: null,
     };
   },
