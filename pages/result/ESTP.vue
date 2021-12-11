@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 101</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 101</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ESTP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Enjoys life, generous, relaxed, and has an open personality without prejudice.",
         "Has a personality that is good at dealing with situations where conflict or tension arises.",
         "Interested in various fields and want to know more.",
@@ -187,7 +187,7 @@ export default {
         "Like to refrain from talking as much as possible.",
         "Enjoy thrills, fearless, and tend to engage in risky behavior frequently.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "He is a gangster who spontaneously commits brutal violence for his own benefit.",
         "He shows excellent adaptability even in the squid game due to his long life as a gangster.",
         "In the squid game, he has superior situational judgment and finesse than anyone else.",

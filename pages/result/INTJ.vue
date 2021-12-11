@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Game Host</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Game Host</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,14 +179,14 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "INTJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Creative in thinking and behavior.",
         "Has a strong internal belief and vision and is also very stubborn.",
         "Puts in all the time and effort in order to accomplish his/her goal.",
         "Values ability and competence above anything else.",
         "Always the model student and is always trusted by others.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "After gathering people who have no money and have nowhere else to go, hosted the brutal squid game. ",
         "Old but trusted and prominent business man.",
         "After losing all joy of life, he enjoys watching people desperately fight for their lives.",

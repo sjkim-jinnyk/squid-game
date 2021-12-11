@@ -17,7 +17,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 212</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span
@@ -28,7 +28,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 212</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -181,7 +181,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ESFP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Realistic and compromising in any situation.",
         "Tend to pursue entertainment and pleasure.",
         "Open-minded and have few prejudices.",
@@ -192,7 +192,7 @@ export default {
         "Often want to attract attention.",
         "Impulsive and passionate, but gets tired of things easily.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Within the drama player 212 is a fraud who is trusted by no one.",
         "In order to accomplish her goals, she will do anything by any means such as having an affair with player 101. ",
         "She is loud and rough throughout the whole game.",

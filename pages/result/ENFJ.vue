@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 199</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 199</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ENFJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Has a lot of sympathy and fellowship. Kind and thoughtful",
         "Conscientious and patient.",
         "Set a goal and lead people towards that goal as he/she gets along with people well and is very eloquent.",
@@ -187,7 +187,7 @@ export default {
         "Has a hot temper that sometimes leads to hasty decision.",
         "Good at self-reflection but not good at criticizing others.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "He is a foreign worker from Pakistan who shows a warm heart.",
         "He dislikes conflicts and always mediate fights that happen within the Squid Game.",
         "Even though he is not Korean, his Korean is fluent and shows a quick understanding rate of the rules.",

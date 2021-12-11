@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 240</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 240</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ISFP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Has great empathy ability and show kindness through action rather than words.",
         "Has severe mood swings and gets annoyed easily.",
         "Likes to spend time alone because he/she feels uncomfortable around people.",
@@ -187,7 +187,7 @@ export default {
         "Difficult to reject someone’s favor.",
         "Has a sensitive personality and tries to solve one’s problem and worries all by oneself.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "She is a cold character due to her sad family history. ",
         "Before she gets to know player 067, she doesn’t open up to anyone easily. However, she is warm hearted and in the end, she sacrifices herself so that player 067 can continue the game.",
         "After having a long talk with player 067, she finds out that player 067 is no different from herself and finally opens up her heart.",

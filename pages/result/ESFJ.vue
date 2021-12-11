@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 218’s Mother</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 218’s Mother</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ESFJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Always smiling and full of sympathy and camaraderie",
         "Conscientious and well organized.",
         "Always patient and is good at helping others.",
@@ -187,7 +187,7 @@ export default {
         "Quick-tempered, active, and well-planned.",
         "Good at reacting when talking to people.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Despite the hardships of running a store, she is kind and witty and pays attention to others.",
         "Seeing player 456 in a sad situation, she is sad and worried.",
         "From the way she brags about his son, you can see that she likes the approval of others.",

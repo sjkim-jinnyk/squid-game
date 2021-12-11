@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Front Man</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Front Man</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ISTP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "He's quiet and doesn't speak much, so he has a cold impression at first, but when you get to know him, he's a warm person.",
         "He observes life with restrained curiosity and is quick to grasp the situation.",
         "Does not expose oneself more than necessary.",
@@ -188,7 +188,7 @@ export default {
         "Due to his/her individualistic tendency to value his/her own time and space, he/she does not share his/her emotions with others.",
         "It is not easy for others to approach because they do not share their emotions easily.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "As the person who overall manages the progress of the Squid Game, he observes the situation logically and objectively.",
         "Without expressing emotions, he shows a cold impression and calmly runs the Squid Game.",
         "His younger brother comes to look for him, but throws him away without much fuss.",

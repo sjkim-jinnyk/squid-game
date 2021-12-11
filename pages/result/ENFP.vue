@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 456</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 456</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ENFP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Passionate, active and creative.",
         "Prefer doing things by your style rather than sticking to a plan.",
         "Like to make new relationships and hang around with people.",
@@ -190,7 +190,7 @@ export default {
         "Tend to start a new thing without finishing another.",
         "When you need to be cold-headed, you tend to worry.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Player 456 tends to be reckless by gambling away his money despite his huge amount of debt.",
         "Player 456 shows creative abilities such as licking the cinder toffee. ",
         "He shows kindness to others by taking care of player 001 who is old and player 067 who was injured.",

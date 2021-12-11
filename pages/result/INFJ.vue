@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 001</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 001</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "INFJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Excellent creativity and insight.",
         "Strong originality and personal independence.",
         "Has strong convictions and principles.",
@@ -189,7 +189,7 @@ export default {
         "Has various conflicts and complexities within oneself.",
         "Has the ability to move people's hearts through actions and suggestions rather than coercion.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "As the oldest among the 456 people, he is a charming person who stops fights and moves the team members with persuasion.",
         "With a kind personality, he often shows consideration for others, and at the same time, he shows a calm figure that concentrates and strategizes when playing games.",
         "When playing cinder toffee(dalgona) game and tug-of-war game, he shows his extraordinary creativity and ingenuity to help his teammates pass safely.",

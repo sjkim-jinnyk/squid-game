@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Salesman</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Salesman</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ENTP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "A creative innovator, and enjoy trying new things.",
         "A multi-talented person full of confidence and energy.",
         "Try to understand others rather than judge them.",
@@ -187,7 +187,7 @@ export default {
         "Has a strong competitive spirit and likes to debate and argue.",
         "Has high self-esteem and strong self-confidence.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "As the person who bets 100,000 won by playing a game of slap-match with the squid game participants, he is full of confidence and energy as.",
         "He has a strong competitive spirit, so he wins consecutive fights against player 456.",
       ],

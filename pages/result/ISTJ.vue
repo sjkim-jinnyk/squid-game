@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Detective Hwang</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Detective Hwang</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,14 +179,14 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ISTJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Owns a challenging personality that does anything even if it is dangerous. ",
         "Has a personality that diligently finishes anything that he/she started. ",
         "Practical, thorough and systematic.",
         "Hard working and meticulous with detailed procedures.",
         "Have his/her own standards, and make decisions based on those standards.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Hwang Jun-ho, a detective of the Dobong Police Station, finds a suspicious business card in his brother's room, and then executes a thorough plan without hesitation to find his missing brother and go to the island where the squid game is held.",
         "He shows his challenging personality by going directly inside the dangerous squid game and risking his life to investigate the mystery of his brother's disappearance.",
         "Even during the investigation, he uncovers the secrets of the squid game through his excellent observation and analysis skills.",

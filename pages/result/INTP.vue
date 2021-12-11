@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Soldier (ㅁ)</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Soldier (ㅁ)</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "INTP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Quiet and reticent, but speaks well in areas of interest.",
         "He is analytical, logical, and good at objective criticism.",
         "Usually don't get involved in big things.",
@@ -187,7 +187,7 @@ export default {
         "Quick-witted, insightful, and intellectually interested.",
         "Blunt and doesn’t like small talk and gossip. ",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "He is a blunt person who only wears a mask and helps the squid game process.",
         "Quietly, he works hard on his assigned task.",
         "Thinks and judges logically without persuading others.",

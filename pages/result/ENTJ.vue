@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 218</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 218</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,7 +179,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ENTJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Slightly withdrawn but makes rational and reasonable decisions. ",
         "Have an independent personality and prefers to spend time alone.",
         "Kind to other people but personal life comes first.",
@@ -189,7 +189,7 @@ export default {
         "Well-organized and plans ahead.",
         "Logical and analytic when working.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Within the drama, player 218 is smart and talented after graduating Seoul National University top of his class. However, he now has a lot of debt and is on the run after embezzling money from his company.",
         "Despite his troubles, he tends to worry about it all by himself.",
         "He always chooses rationality above human feeling. Such personality shows when he pushes the man in front of him in the stepping stone game, murders player 067 and tricks player 199 in the marble game. ",

@@ -17,7 +17,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">VIPS</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -27,7 +27,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">VIPS</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -180,7 +180,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ESTJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Have outstanding ability in organizing and planning tasks.",
         "Show good decision making in an organized system.",
         "Has the ability to lead a business and organization logically and realistically.",
@@ -188,7 +188,7 @@ export default {
         "Tend to nag to people around oneself.",
         "Has an overly work-centered personality.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Pay massive amount of money in order to watch the Squid Game.",
         "Have a weird personality as they enjoy watching poor and helpless people fight for their lives.",
         "As a business man, they tend to be bossy and rule-focused.",

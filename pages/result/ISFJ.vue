@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 456’ mother</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 456’ mother</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -180,7 +180,7 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "ISFJ",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Have strong responsibility and consider manner, humility and consideration as the most important virtue.",
         "Gentle and calm.",
         "Has a delicate personality and is always careful in every manner.",
@@ -188,7 +188,7 @@ export default {
         "Doesn’t like hurting other people’s feeling.",
         "Good at listening to other people’s story with open mind but doesn’t talk of one’s own worries. ",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         " As player 456’s mother, she endures and does not scold her son for not taking care of his daughter.",
         "Even though it is not easy make a living, she works hard with great responsibility.",
         "Even though she is not satisfied with her son, she deals with her son calmly without hurting his feelings. ",

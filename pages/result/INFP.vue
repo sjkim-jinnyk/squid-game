@@ -16,7 +16,7 @@
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">You</p>
+          <p class="mbtiInfo_summary">Player 067</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -26,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">Player 067</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -179,14 +179,14 @@ export default {
       resultLink: null,
       blurClass: true,
       mbti: "INFP",
-      mbtiInfo_text: [
+      mbtiInfo2_text: [
         "Has a warm heart but doesn’t express oneself to another until they get to know each other.",
         "Has a passionate belief to what he/she pursues.",
         "Prefers to have a harmonious relationship.",
         "Generally shy and has a rational and honest personality.",
         "Like to have time alone and very independent.",
       ],
-      mbtiInfo2_text: [
+      mbtiInfo_text: [
         "Has a hard time getting along with others.",
         "Enjoys solitude. Within the Squid Game she is shown to be staying alone most of the time. ",
         "Even when player 456 tries to approach her, she doesn’t open up to him easily. But after they become friends, she shows the warm side of her personality.",
