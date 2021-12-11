@@ -35,7 +35,7 @@
       <p v-else class="share_box">Share</p>
 
       <div class="share_btn eng">
-        <button @click="[urlLink(resultLink), blurEffect()]">
+        <button @click="[urlLink_eng(resultLink), blurEffect()]">
           <img src="~/assets/image/linkshare_btn.svg" />
         </button>
         <button @click="[facebookLink(mbti), blurEffect()]">
@@ -65,6 +65,11 @@ export default {
     urlLink(link) {
       this.$copyText(link).then(function () {
         alert("복사되었습니다.");
+      });
+    },
+    urlLink_eng(link) {
+      this.$copyText(link).then(function () {
+        alert("Copied Successfully");
       });
     },
     kakaoLink(resultLink, homeLink) {
@@ -109,9 +114,14 @@ export default {
       );
     },
     twitterLink(resultLink) {
-      const text = "저랑 게임 한판 하실래요?";
+      let text = "저랑 게임 한판 하실래요?";
+      let hashtags = "오징어게임,심리테스트";
+      if (this.eng) {
+        text = "Would you like to play a game?";
+        hashtags = "SquidGame,SquidGameTest";
+      }
       window.open(
-        `https://twitter.com/intent/tweet?text=${text}&url=${resultLink}&hashtags=오징어게임,심리테스트`,
+        `https://twitter.com/intent/tweet?text=${text}&url=${resultLink}&hashtags=${hashtags}`,
         "pop02",
         "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
       );

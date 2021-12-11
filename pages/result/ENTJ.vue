@@ -203,39 +203,39 @@ export default {
   },
   head() {
     return {
-      title: "당신은 오징어게임에서 조상우 ENTJ",
+      title: "You are Player 218 in Squid game",
       meta: [
         {
           hid: "title",
           name: "og:title",
-          content: "당신은 오징어게임에서 조상우 ENTJ",
+          content: "You are Player 218 in Squid game",
         },
         {
           hid: "description",
           name: "og:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ENTJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ENTJ.png`,
         },
         // Twitter Open Graph
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "당신은 오징어게임에서 조상우 ENTJ",
+          content: "You are Player 218 in Squid game",
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
 
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ENTJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ENTJ.png`,
         },
       ],
     };
