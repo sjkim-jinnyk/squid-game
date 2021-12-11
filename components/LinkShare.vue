@@ -1,31 +1,60 @@
 <template>
-  <article :class="{ container_share_middle: middle, share_hide: shareHide }">
-    <p v-if="middle" class="share_box_middle">결과 공유하고 확인하기</p>
-    <p v-else class="share_box">공유하기</p>
+  <section>
+    <article
+      v-if="!eng"
+      :class="{ container_share_middle: middle, share_hide: shareHide }"
+    >
+      <p v-if="middle" class="share_box_middle">결과 공유하고 확인하기</p>
+      <p v-else class="share_box">공유하기</p>
 
-    <div class="share_btn">
-      <button @click="[urlLink(resultLink), blurEffect()]">
-        <img src="~/assets/image/linkshare_btn.svg" />
-      </button>
-      <button @click="[kakaoLink(resultLink, homeLink), blurEffect()]">
-        <img src="~/assets/image/kakao.svg" />
-      </button>
-      <button @click="[facebookLink(mbti), blurEffect()]">
-        <img src="~/assets/image/facebook.svg" />
-      </button>
-      <button
-        class="twitter-share-button"
-        @click="[twitterLink(resultLink), blurEffect()]"
-      >
-        <img src="~/assets/image/twitter.svg" />
-      </button>
-    </div>
-  </article>
+      <div class="share_btn">
+        <button @click="[urlLink(resultLink), blurEffect()]">
+          <img src="~/assets/image/linkshare_btn.svg" />
+        </button>
+        <button @click="[kakaoLink(resultLink, homeLink), blurEffect()]">
+          <img src="~/assets/image/kakao.svg" />
+        </button>
+        <button @click="[facebookLink(mbti), blurEffect()]">
+          <img src="~/assets/image/facebook.svg" />
+        </button>
+        <button
+          class="twitter-share-button"
+          @click="[twitterLink(resultLink), blurEffect()]"
+        >
+          <img src="~/assets/image/twitter.svg" />
+        </button>
+      </div>
+    </article>
+    <article
+      v-else
+      :class="{ container_share_middle: middle, share_hide: shareHide }"
+    >
+      <p v-if="middle" class="share_box_middle">
+        Share and check <br />the results
+      </p>
+      <p v-else class="share_box">Share</p>
+
+      <div class="share_btn eng">
+        <button @click="[urlLink(resultLink), blurEffect()]">
+          <img src="~/assets/image/linkshare_btn.svg" />
+        </button>
+        <button @click="[facebookLink(mbti), blurEffect()]">
+          <img src="~/assets/image/facebook.svg" />
+        </button>
+        <button
+          class="twitter-share-button"
+          @click="[twitterLink(resultLink), blurEffect()]"
+        >
+          <img src="~/assets/image/twitter.svg" />
+        </button>
+      </div>
+    </article>
+  </section>
 </template>
 
 <script>
 export default {
-  props: ["resultLink", "homeLink", "mbti", "middle"],
+  props: ["resultLink", "homeLink", "mbti", "middle", "eng"],
   data() {
     return {
       middleShare: this.middle,
@@ -120,6 +149,9 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-bottom: 60px;
+}
+.share_btn.eng {
+  width: 144px;
 }
 .share_box_middle {
   font-size: 14px;

@@ -34,6 +34,7 @@
               :home-link="homeLink"
               :mbti="mbti"
               :middle="true"
+              :eng="true"
               @blurClass="blurResult"
             ></LinkShare>
             <li
@@ -82,6 +83,7 @@
           :result-link="resultLink"
           :home-link="homeLink"
           :mbti="mbti"
+          :eng="true"
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
