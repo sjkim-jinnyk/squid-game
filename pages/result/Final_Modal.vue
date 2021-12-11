@@ -326,15 +326,16 @@ export default {
 }
 .mbtiType {
   display: flex;
-  width: 275px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 32px;
   margin-bottom: 40px;
   cursor: pointer;
 }
 .charInfo {
   font-size: 14px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .charSummary {
   letter-spacing: -0.02em;

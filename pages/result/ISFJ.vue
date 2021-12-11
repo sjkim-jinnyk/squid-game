@@ -5,7 +5,7 @@
       <img
         src="~/assets/image/final/성기훈어머니_ISFJ_200.png"
         alt="성기훈어머니 이미지"
-        class="mbtiIMG"
+        class="mbtiIMG ISFJ"
       />
       <p class="charName">Player 456’ mother</p>
       <p class="mbtiSummary">
@@ -269,5 +269,5 @@ export default {
 </script>
 
 <style scoped>
-@import "~/assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI_EN.css";
 </style>

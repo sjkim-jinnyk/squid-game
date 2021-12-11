@@ -57,7 +57,7 @@
             />
             <p class="typeCharName">Detective Hwang</p>
             <p class="typeCharInfo">
-              do what he started to do until the end.<br />
+              do what he started <br />to do until the end.<br />
               A perfectionist.
             </p>
           </section>
@@ -275,5 +275,5 @@ export default {
 </script>
 
 <style scoped>
-@import "~/assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI_EN.css";
 </style>
