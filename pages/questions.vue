@@ -98,7 +98,7 @@
           </main>
 
           <div class="option_box">
-            <TimeOut :timer-stop="timerStop"></TimeOut>
+            <TimeOut :timer-stop="timerStop" :eng="true"></TimeOut>
             <div class="optionBtn">
               <button
                 id="option1"
@@ -149,7 +149,7 @@ export default {
       time_out_worker: setTimeout(() => {}),
       question_list: [],
       test_done: false,
-      timer_seconds: 15000,
+      timer_seconds: 20000,
       event_show: false,
       lang_en: true,
     };
