@@ -27,9 +27,6 @@
           <button @click="urlLink">
             <img src="~/assets/image/linkshare_btn.svg" />
           </button>
-          <button @click="kakaoLink">
-            <img src="~/assets/image/kakao.svg" />
-          </button>
           <button @click="facebookLink">
             <img src="~/assets/image/facebook.svg" />
           </button>
@@ -70,36 +67,8 @@ export default {
   methods: {
     urlLink() {
       this.$copyText(this.homeLink).then(function () {
-        alert("복사되었습니다.");
+        alert("Copied Successfully");
       });
-    },
-    kakaoLink() {
-      if (process.browser) {
-        window.Kakao.Link.sendDefault({
-          objectType: "feed",
-          content: {
-            title: "저랑 게임 하나 하시겠습니까?",
-            description: "나는 오징어 게임에서 어떤 캐릭터일까?",
-            imageUrl:
-              "https://www.squid-games.site/image/meta/metaimg_main.png",
-            imageWidth: 800,
-            imageHeight: 400,
-            link: {
-              mobileWebUrl: this.homeLink,
-              webUrl: this.homeLink,
-            },
-          },
-          buttons: [
-            {
-              title: "테스트 하기",
-              link: {
-                mobileWebUrl: this.homeLink,
-                webUrl: this.homeLink,
-              },
-            },
-          ],
-        });
-      }
     },
     facebookLink() {
       if (process.browser) {
@@ -111,10 +80,11 @@ export default {
       }
     },
     twitterLink() {
-      const text = "저랑 게임 하나 하시겠습니까?";
+      const text = "Would you like to play a game?";
+      const hashtags = "SquidGame,SquidGameTest";
       if (process.browser) {
         window.open(
-          `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}&hashtags=오징어게임,심리테스트`,
+          `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}&hashtags=${hashtags}`,
           "pop02",
           "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );
@@ -124,7 +94,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .logoImg {
   height: 60px;
@@ -134,21 +103,20 @@ export default {
   margin-top: 20px;
   margin-bottom: 30px;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 23.68px;
   letter-spacing: -0.02em;
 }
 #start_btn {
   position: static;
   margin-top: 20px;
-  width: 200px;
+  width: 164px;
   height: 45px;
   background: #e73e7e;
   color: white;
   border-radius: 60px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 21px;
   letter-spacing: -0.02em;
 }
 .svg-icon-angle {
@@ -170,7 +138,7 @@ export default {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 196px;
+  width: 144px;
 }
 .email {
   margin-top: 80px;

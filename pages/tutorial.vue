@@ -81,7 +81,7 @@ export default {
     autoClick() {
       this.autoTime = setTimeout(() => {
         this.click();
-      }, 15000);
+      }, 20000);
     },
   },
 };
@@ -97,8 +97,9 @@ main > img {
 
 main > .tutorialText {
   margin-top: 32px;
-  line-height: 26.64px;
-  font-size: 18px;
+  line-height: 23.68px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .count_box {
@@ -112,6 +113,8 @@ main > .tutorialText {
 
 .option1 {
   position: static;
+  font-size: 14px;
+  font-weight: 500;
   margin-top: 10px;
   width: 300px;
   height: 45px;
@@ -136,7 +139,6 @@ main > .tutorialText {
   height: 16px;
   background: #333;
   border-radius: 60px;
-
   margin: 0px auto;
   align-content: center;
   font-family: Noto Sans CJK KR;
