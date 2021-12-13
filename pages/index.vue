@@ -49,6 +49,12 @@
 <script>
 export default {
   name: "MainPage",
+  middleware({ req, redirect }) {
+    const locale = req?.headers["accept-language"]?.split(",")[0];
+    if (locale === "ko-KR") {
+      return redirect("/ko");
+    }
+  },
   props: {},
   data() {
     return {
@@ -57,13 +63,6 @@ export default {
     };
   },
   mounted() {
-    let locale = navigator.language || navigator.userLanguage;
-    locale = locale.substring(0, 2);
-    if (locale === "ko") {
-      this.$router.push({
-        path: `ko`,
-      });
-    }
     this.$store.commit("clearTimer");
     this.homeLink = window.location.origin;
   },
