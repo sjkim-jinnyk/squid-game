@@ -73,7 +73,7 @@ export default {
     facebookLink() {
       if (process.browser) {
         window.open(
-          "https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site&src=sdkpreparse",
+          `https://www.facebook.com/sharer/sharer.php?u=${process.env.baseURL}&src=sdkpreparse`,
           "pop01",
           "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );

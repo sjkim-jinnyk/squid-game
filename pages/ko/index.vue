@@ -2,9 +2,7 @@
   <main class="container">
     <img class="logoImg" src="~/assets/image/logo_ko.png" />
     <h2 class="subtitle">나는 오징어게임에서 어떤 인물일까?</h2>
-
     <img class="mainImg" src="~/assets/image/main.png" />
-
     <section>
       <nav>
         <router-link :to="{ path: 'ko/tutorial' }">
@@ -53,6 +51,44 @@ export default {
       data: null,
     };
   },
+  head() {
+    return {
+      meta: [
+        {
+          hid: "title",
+          name: "og:title",
+          content: "오징어게임 MBTI 테스트",
+        },
+        {
+          hid: "description",
+          name: "og:description",
+          content: "나는 오징어게임에서 어떤 인물일까?",
+        },
+        {
+          hid: "image",
+          name: "og:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_main.png`,
+        },
+        // Twitter Open Graph
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "오징어게임 MBTI 테스트",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: "나는 오징어게임에서 어떤 인물일까?",
+        },
+
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.baseURL}/image/meta/metaimg_main.png`,
+        },
+      ],
+    };
+  },
   mounted() {
     this.$store.commit("clearTimer");
     this.homeLink = window.location.origin;
@@ -93,7 +129,7 @@ export default {
     facebookLink() {
       if (process.browser) {
         window.open(
-          "https://www.facebook.com/sharer/sharer.php?u=https://www.squid-games.site&src=sdkpreparse",
+          `https://www.facebook.com/sharer/sharer.php?u=${process.env.baseURL}/ko&src=sdkpreparse`,
           "pop01",
           "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );
@@ -103,7 +139,7 @@ export default {
       const text = "저랑 게임 하나 하시겠습니까?";
       if (process.browser) {
         window.open(
-          `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}&hashtags=오징어게임,심리테스트`,
+          `https://twitter.com/intent/tweet?text=${text}&url=${this.homeLink}/ko&hashtags=오징어게임,심리테스트`,
           "pop02",
           "top=10, left=10, width=460, height=600, status=no, menubar=no, toolbar=no, resizable=no"
         );
