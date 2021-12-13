@@ -86,11 +86,6 @@ export default {
       script: [
         { src: "https://developers.kakao.com/sdk/js/kakao.js" },
         {
-          src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241219194335208",
-          crossorigin: "anonymous",
-          async: true,
-        },
-        {
           type: "text/javascript",
           innerHTML: `window.Kakao.init("${process.env.KAKAO_KEY}")`,
         },
