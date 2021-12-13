@@ -9,7 +9,7 @@
       />
       <p class="charName">Soldier (ㅁ)</p>
       <p class="mbtiSummary">
-        quick to understand<br />
+        Quick to understand<br />
         insightful. Idea-type person.
       </p>
     </div>
@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 199</p>
             <p class="typeCharInfo">
-              makes people happy.<br />
+              Makes people happy.<br />
               A kind person.
             </p>
           </section>

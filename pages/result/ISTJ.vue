@@ -9,7 +9,7 @@
       />
       <p class="charName">Detective Hwang</p>
       <p class="mbtiSummary">
-        do what he started to do<br />
+        Do what he started to do<br />
         until the end. A perfectionist.
       </p>
     </div>
@@ -70,7 +70,7 @@
             />
             <p class="typeCharName">Player 199</p>
             <p class="typeCharInfo">
-              makes people happy.<br />
+              Makes people happy.<br />
               A kind person.
             </p>
           </section>

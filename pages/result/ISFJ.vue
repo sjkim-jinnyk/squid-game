@@ -9,7 +9,7 @@
       />
       <p class="charName">Player 456’ mother</p>
       <p class="mbtiSummary">
-        responsible and dedicated.<br />
+        Responsible and dedicated.<br />
         A patient person.
       </p>
     </div>
@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 001</p>
             <p class="typeCharInfo">
-              creative and insightful.<br />
+              Creative and insightful.<br />
               An original character.
             </p>
           </section>

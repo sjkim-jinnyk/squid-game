@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 456’ mother</p>
             <p class="typeCharInfo">
-              responsible and dedicated.<br />
+              Responsible and dedicated.<br />
               A patient person.
             </p>
           </section>
@@ -70,7 +70,7 @@
             />
             <p class="typeCharName">Player 240</p>
             <p class="typeCharInfo">
-              very sentimental.<br />
+              Very sentimental.<br />
               A person who is independent.
             </p>
           </section>

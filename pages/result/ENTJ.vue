@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 067</p>
             <p class="typeCharInfo">
-              values belief and harmony.<br />
+              Values belief and harmony.<br />
               An idealist.
             </p>
           </section>
@@ -70,7 +70,7 @@
             />
             <p class="typeCharName">Player 456’ mother</p>
             <p class="typeCharInfo">
-              responsible and dedicated.<br />
+              Responsible and dedicated.<br />
               A patient person.
             </p>
           </section>

@@ -9,7 +9,7 @@
       />
       <p class="charName">Player 218’s Mother</p>
       <p class="mbtiSummary">
-        sympathetic and patient.<br />
+        Sympathetic and patient.<br />
         Conscientious person.
       </p>
     </div>
@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Soldier (ㅁ)</p>
             <p class="typeCharInfo">
-              quick to understand<br />
+              Quick to understand<br />
               insightful. Idea-type person.
             </p>
           </section>

@@ -9,7 +9,7 @@
       />
       <p class="charName">Player 001</p>
       <p class="mbtiSummary">
-        creative and insightful.<br />
+        Creative and insightful.<br />
         An original character.
       </p>
     </div>
@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 101</p>
             <p class="typeCharInfo">
-              interested in various fields.<br />
+              Interested in various fields.<br />
               An active person.
             </p>
           </section>
@@ -70,7 +70,7 @@
             />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
-              so good at planning.<br />
+              So good at planning.<br />
               A businessman-type person.
             </p>
           </section>

@@ -177,12 +177,12 @@ export default {
   },
   mounted() {
     this.question_list = questionList;
-    // const _this = this;
-    // this.time_out_worker = setTimeout(function () {
-    //   if (!_this.option_0 && !_this.option_1 && !_this.timerStop) {
-    //     _this.timeOutRandomChoice();
-    //   }
-    // }, _this.timer_seconds);
+    const _this = this;
+    this.time_out_worker = setTimeout(function () {
+      if (!_this.option_0 && !_this.option_1 && !_this.timerStop) {
+        _this.timeOutRandomChoice();
+      }
+    }, _this.timer_seconds);
     this.$store.commit("setTimer", this.time_out_worker);
   },
   methods: {

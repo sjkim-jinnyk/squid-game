@@ -9,7 +9,7 @@
       />
       <p class="charName">Player 240</p>
       <p class="mbtiSummary">
-        very sentimental.<br />
+        Very sentimental.<br />
         A person who is independent.
       </p>
     </div>
@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">VIPS</p>
             <p class="typeCharInfo">
-              so good at planning.<br />
+              So good at planning.<br />
               A businessman-type person.
             </p>
           </section>

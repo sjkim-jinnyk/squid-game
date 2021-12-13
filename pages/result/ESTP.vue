@@ -9,7 +9,7 @@
       />
       <p class="charName">Player 101</p>
       <p class="mbtiSummary">
-        interested in various fields.<br />
+        Interested in various fields.<br />
         An active person.
       </p>
     </div>
@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 001</p>
             <p class="typeCharInfo">
-              creative and insightful.<br />
+              Creative and insightful.<br />
               An original character.
             </p>
           </section>
@@ -70,7 +70,7 @@
             />
             <p class="typeCharName">Player 067</p>
             <p class="typeCharInfo">
-              values belief and harmony.<br />
+              Values belief and harmony.<br />
               An idealist.
             </p>
           </section>

@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Detective Hwang</p>
             <p class="typeCharInfo">
-              do what he started <br />to do until the end.<br />
+              Do what he started <br />to do until the end.<br />
               A perfectionist.
             </p>
           </section>

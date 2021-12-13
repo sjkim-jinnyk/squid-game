@@ -9,7 +9,7 @@
       />
       <p class="charName">VIPS</p>
       <p class="mbtiSummary">
-        so good at planning. <br />
+        So good at planning. <br />
         A businessman-type person.
       </p>
     </div>
@@ -59,7 +59,7 @@
             />
             <p class="typeCharName">Player 240</p>
             <p class="typeCharInfo">
-              very sentimental.<br />
+              Very sentimental.<br />
               A person who is independent.
             </p>
           </section>
@@ -71,7 +71,7 @@
             />
             <p class="typeCharName">Player 001</p>
             <p class="typeCharInfo">
-              creative and insightful.<br />
+              Creative and insightful.<br />
               An original character.
             </p>
           </section>

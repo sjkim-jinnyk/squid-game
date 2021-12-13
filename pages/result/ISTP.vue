@@ -58,7 +58,7 @@
             />
             <p class="typeCharName">Player 218’s Mother</p>
             <p class="typeCharInfo">
-              sympathetic and patient. <br />
+              Sympathetic and patient. <br />
               Conscientious person.
             </p>
           </section>

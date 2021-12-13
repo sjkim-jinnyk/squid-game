@@ -34,7 +34,7 @@
                 <p class="charName">Player 001</p>
               </section>
               <p class="charSummary">
-                creative and insightful.<br />
+                Creative and insightful.<br />
                 An original character.
               </p>
             </section>
@@ -67,7 +67,7 @@
                 <p class="charName">Player 101</p>
               </section>
               <p class="charSummary">
-                interested in various fields.<br />
+                Interested in various fields.<br />
                 An active person.
               </p>
             </section>
@@ -83,7 +83,7 @@
                 <p class="charName">Player 067</p>
               </section>
               <p class="charSummary">
-                values belief<br />
+                Values belief<br />
                 and harmony. An idealist.
               </p>
             </section>
@@ -115,7 +115,7 @@
                 <p class="charName">Detective Hwang</p>
               </section>
               <p class="charSummary">
-                do what he started to do<br />
+                Do what he started to do<br />
                 until the end. A perfectionist.
               </p>
             </section>
@@ -147,7 +147,7 @@
                 <p class="charName">Player 456’ mother</p>
               </section>
               <p class="charSummary">
-                responsible and dedicated.<br />
+                Responsible and dedicated.<br />
                 A patient person.
               </p>
             </section>
@@ -163,7 +163,7 @@
                 <p class="charName">VIPS</p>
               </section>
               <p class="charSummary">
-                so good at planning.<br />
+                So good at planning.<br />
                 A businessman-type person.
               </p>
             </section>
@@ -195,7 +195,7 @@
                 <p class="charName">Player 199</p>
               </section>
               <p class="charSummary">
-                makes people happy.<br />
+                Makes people happy.<br />
                 A kind person.
               </p>
             </section>
@@ -211,7 +211,7 @@
                 <p class="charName">Player 240</p>
               </section>
               <p class="charSummary">
-                very sentimental.<br />
+                Very sentimental.<br />
                 A person who is independent.
               </p>
             </section>
@@ -227,7 +227,7 @@
                 <p class="charName">Soldier (ㅁ)</p>
               </section>
               <p class="charSummary">
-                quick to understand<br />
+                Quick to understand<br />
                 insightful. Idea-type person.
               </p>
             </section>
@@ -243,7 +243,7 @@
                 <p class="charName">Player 218’s Mother</p>
               </section>
               <p class="charSummary">
-                sympathetic and patient. <br />
+                Sympathetic and patient. <br />
                 Conscientious person.
               </p>
             </section>
