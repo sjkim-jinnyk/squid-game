@@ -134,6 +134,7 @@ export default {
     // with options
     ["nuxt-clipboard", { autoSetContainer: true }],
     "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
   sitemap: {
     hostname: "https://www.squid-games.site",
@@ -146,6 +147,8 @@ export default {
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  robots: {
+    UserAgent: "*",
+    Allow: "/",
+  },
 };
