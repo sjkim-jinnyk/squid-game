@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/진행요원_INTP_200.png"
         alt="진행요원 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">INTP</p>
-      <p class="charName">진행요원</p>
-      <p class="mbtiSummary">이해가 빠르고 통찰력 있는 <br />아이디어형 인물</p>
+      <p class="charName">Soldier (ㅁ)</p>
+      <p class="mbtiSummary">
+        Quick to understand<br />
+        insightful. Idea-type person.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">Soldier (ㅁ)</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -32,6 +34,7 @@
               :home-link="homeLink"
               :mbti="mbti"
               :middle="true"
+              :eng="true"
               @blurClass="blurResult"
             ></LinkShare>
             <li
@@ -45,7 +48,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ENFJ')">
             <p class="typeTitle">GOOD</p>
@@ -53,8 +56,11 @@
               src="~/assets/image/final/알리_ENFJ_100.png"
               alt="INTP와 잘맞는 유형"
             />
-            <p class="typeCharName">알리압둘</p>
-            <p class="typeCharInfo">주변을 행복하게 만드는 <br />친절한 인물</p>
+            <p class="typeCharName">Player 199</p>
+            <p class="typeCharInfo">
+              Makes people happy.<br />
+              A kind person.
+            </p>
           </section>
           <section class="typeBad" @click="typeLink('ENFP')">
             <p class="typeTitle">BAD</p>
@@ -62,9 +68,10 @@
               src="~/assets/image/final/성기훈_ENFP_100.png"
               alt="INTP와 잘맞는 유형"
             />
-            <p class="typeCharName">성기훈</p>
+            <p class="typeCharName">Player 456</p>
             <p class="typeCharInfo">
-              풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물
+              Passionate,<br />
+              active and creative.
             </p>
           </section>
         </div>
@@ -76,10 +83,11 @@
           :result-link="resultLink"
           :home-link="homeLink"
           :mbti="mbti"
+          :eng="true"
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -96,7 +104,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -133,7 +141,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -174,56 +182,57 @@ export default {
       blurClass: true,
       mbti: "INTP",
       mbtiInfo2_text: [
-        "조용하고 과묵하지만 관심 있는 분야에서는 말을 잘한다.",
-        "분석적이고 논리적이며 객관적 비평을 잘해서 진지충이라는 소리를 자주 듣는다.",
-        "큰일에 잘 개입하지 않는다.",
-        "남을 설득하는 일이 거의 없다.",
-        "이해가 빠르고 통찰력이 뛰어나고 지적 관심이 많다.",
-        "무뚝뚝하면 잡담 같은 것도 잘 못하고 싫어한다.",
+        "Quiet and reticent, but speaks well in areas of interest.",
+        "He is analytical, logical, and good at objective criticism.",
+        "Usually don't get involved in big things.",
+        "Rarely tries to persuade others.",
+        "Quick-witted, insightful, and intellectually interested.",
+        "Blunt and doesn’t like small talk and gossip. ",
       ],
       mbtiInfo_text: [
-        "무뚝뚝하게 가면만 쓰고 오징어 게임 진행을 도우는 인물이다.",
-        "조용하고 과묵하게 자기가 맡은 일을 열심히 한다.",
-        "남을 설득하지 않고 논리적으로 생각을 하고 판단하는 모습을 보여준다. ",
+        "He is a blunt person who only wears a mask and helps the squid game process.",
+        "Quietly, he works hard on his assigned task.",
+        "Thinks and judges logically without persuading others.",
       ],
+
       firstTest: null,
     };
   },
   head() {
     return {
-      title: "당신은 오징어게임에서 진행요원 INTP",
+      title: "You are Soldier (ㅁ) in Squid game",
       meta: [
         {
           hid: "title",
           name: "og:title",
-          content: "당신은 오징어게임에서 진행요원 INTP",
+          content: "You are Soldier (ㅁ) in Squid game",
         },
         {
           hid: "description",
           name: "og:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_INTP.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_INTP.png`,
         },
         // Twitter Open Graph
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "당신은 오징어게임에서 진행요원 INTP",
+          content: "You are Soldier (ㅁ) in Squid game",
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
 
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_INTP.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_INTP.png`,
         },
       ],
     };
@@ -262,5 +271,5 @@ export default {
 </script>
 
 <style scoped>
-@import "~/assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI_EN.css";
 </style>

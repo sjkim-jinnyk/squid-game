@@ -145,7 +145,7 @@ main > .tutorialText {
   line-height: 15px;
 }
 .timer::after {
-  content: "남은 시간";
+  content: "TIME";
   position: relative;
   color: #000;
 }

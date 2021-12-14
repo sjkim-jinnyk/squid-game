@@ -30,13 +30,13 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "나는 오징어게임에서 어떤 인물일까?",
+          content: "Which squid game character are you?",
         },
         { name: "format-detection", content: "telephone=no" },
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_main.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_main.png`,
         },
         { name: "og:image:width", content: "1200" },
         { name: "og:image:height", content: "630" },
@@ -44,12 +44,12 @@ export default {
         {
           hid: "title",
           name: "og:title",
-          content: "오징어게임 MBTI 테스트",
+          content: "Squid Game Test",
         },
         {
           hid: "description",
           name: "og:description",
-          content: "나는 오징어게임에서 어떤 인물일까?",
+          content: "Which squid game character are you?",
         },
         { name: "og:site_name", content: "Squid game MBTI test" },
         { name: "og:locale", content: "ko_KR" },
@@ -59,18 +59,18 @@ export default {
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "오징어게임 MBTI 테스트",
+          content: "Squid Game Test",
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "나는 오징어게임에서 어떤 인물일까?",
+          content: "Which squid game character are you?",
         },
         { name: "twitter:url", content: "https://squid-games.site" },
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_main.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_main.png`,
         },
       ],
       link: [

@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/황준호_ISTJ_200.png"
         alt="황준호 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">ISTJ</p>
-      <p class="charName">황준호</p>
-      <p class="mbtiSummary">시작한 일은 끝까지 하는 <br />완벽주의자 인물</p>
+      <p class="charName">Detective Hwang</p>
+      <p class="mbtiSummary">
+        Do what he started to do<br />
+        until the end. A perfectionist.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">Detective Hwang</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -32,6 +34,7 @@
               :home-link="homeLink"
               :mbti="mbti"
               :middle="true"
+              :eng="true"
               @blurClass="blurResult"
             ></LinkShare>
             <li
@@ -45,7 +48,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('ENFP')">
             <p class="typeTitle">GOOD</p>
@@ -53,9 +56,10 @@
               src="~/assets/image/final/성기훈_ENFP_100.png"
               alt="ISTJ와 잘맞는 유형"
             />
-            <p class="typeCharName">성기훈</p>
+            <p class="typeCharName">Player 456</p>
             <p class="typeCharInfo">
-              풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물
+              Passionate,<br />
+              active and creative.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('ENFJ')">
@@ -64,8 +68,11 @@
               src="~/assets/image/final/알리_ENFJ_100.png"
               alt="ISTJ와 잘맞는 유형"
             />
-            <p class="typeCharName">알리압둘</p>
-            <p class="typeCharInfo">주변을 행복하게 만드는 <br />친절한 인물</p>
+            <p class="typeCharName">Player 199</p>
+            <p class="typeCharInfo">
+              Makes people happy.<br />
+              A kind person.
+            </p>
           </section>
         </div>
       </section>
@@ -76,10 +83,11 @@
           :result-link="resultLink"
           :home-link="homeLink"
           :mbti="mbti"
+          :eng="true"
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -96,7 +104,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -133,7 +141,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -174,55 +182,56 @@ export default {
       blurClass: true,
       mbti: "ISTJ",
       mbtiInfo2_text: [
-        "궁금한 것은 목숨이 걸려도 직접 체험하고 경험하는 도전적인 성격이다.",
-        "한번 시작한 일은 끝까지 성실하게 해내는 성격이다.",
-        "현실적, 실용적, 철저하고 체계적이다.",
-        "열심히 일하고 세부적인 절차에 세심하다.",
-        "자신만의 기준이 있고 그 기준에 따라 판단을 한다.",
+        "Owns a challenging personality that does anything even if it is dangerous. ",
+        "Has a personality that diligently finishes anything that he/she started. ",
+        "Practical, thorough and systematic.",
+        "Hard working and meticulous with detailed procedures.",
+        "Have his/her own standards, and make decisions based on those standards.",
       ],
       mbtiInfo_text: [
-        "도봉 경찰서 소속 경찰인 황준호는 형의 고시원 방에서 수상한 명함을 발견한 후에 사라진 형을 찾아 오징어 게임이 열리는 섬까지 가는 철저한 계획을 망설임없이 실행하는 모습을 보여준다.",
-        "위험한 오징어 게임 내부에도 직접 들어가서 형의 실종에 관한 비밀을 풀기 위해 목숨 걸고 수사를 하는 모습을 통해 그의 도전적인 성격을 보여준다.",
-        "수사중에도 뛰어난 관찰력과 분석력을 통해 오징어 게임의 비밀을 파헤쳐 나간다. ",
+        "Hwang Jun-ho, a detective of the Dobong Police Station, finds a suspicious business card in his brother's room, and then executes a thorough plan without hesitation to find his missing brother and go to the island where the squid game is held.",
+        "He shows his challenging personality by going directly inside the dangerous squid game and risking his life to investigate the mystery of his brother's disappearance.",
+        "Even during the investigation, he uncovers the secrets of the squid game through his excellent observation and analysis skills.",
       ],
+
       firstTest: null,
     };
   },
   head() {
     return {
-      title: "당신은 오징어게임에서 황준호 ISTJ",
+      title: "You are Detective Hwang in Squid game",
       meta: [
         {
           hid: "title",
           name: "og:title",
-          content: "당신은 오징어게임에서 황준호 ISTJ",
+          content: "You are Detective Hwang in Squid game",
         },
         {
           hid: "description",
           name: "og:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ISTJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ISTJ.png`,
         },
         // Twitter Open Graph
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "당신은 오징어게임에서 황준호 ISTJ",
+          content: "You are Detective Hwang in Squid game",
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
 
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ISTJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ISTJ.png`,
         },
       ],
     };
@@ -261,5 +270,5 @@ export default {
 </script>
 
 <style scoped>
-@import "~/assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI_EN.css";
 </style>
