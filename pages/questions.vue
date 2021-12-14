@@ -98,11 +98,11 @@
           </main>
 
           <div class="option_box">
-            <TimeOut :timer-stop="timerStop"></TimeOut>
+            <TimeOut :timer-stop="timerStop" :eng="true"></TimeOut>
             <div class="optionBtn">
               <button
                 id="option1"
-                class="option1"
+                class="option option1"
                 :class="{ option1Active: option_0, disable: timerStop }"
                 @click="toUserChoice(0)"
               >
@@ -111,7 +111,7 @@
 
               <button
                 id="option2"
-                class="option2"
+                class="option option2"
                 :class="{ option2Active: option_1, disable: timerStop }"
                 @click="toUserChoice(1)"
               >
@@ -149,7 +149,7 @@ export default {
       time_out_worker: setTimeout(() => {}),
       question_list: [],
       test_done: false,
-      timer_seconds: 15000,
+      timer_seconds: 20000,
       event_show: false,
       lang_en: true,
     };
@@ -275,8 +275,9 @@ export default {
 
 .question_main .QuestionText {
   margin-top: 32px;
-  line-height: 26.64px;
-  font-size: 18px;
+  line-height: 23.68px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .count_box {
@@ -294,29 +295,28 @@ export default {
   margin-right: auto;
   margin-left: auto;
 }
-.option1 {
+.option_box .option {
   margin-top: 10px;
   height: 45px;
   color: white;
+  border-radius: 60px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20.72px;
+  letter-spacing: -0.02em;
+}
+.option_box .option1 {
   background-color: rgba(231, 62, 126, 0.25);
   border: 1px solid #e73e7e;
-  border-radius: 60px;
 }
-
-.option2 {
-  margin-top: 10px;
-  height: 45px;
-  color: white;
+.option_box .option2 {
   background: rgba(37, 150, 165, 0.25);
   border: 1px solid #2596a5;
-  border-radius: 60px;
 }
-
-.option1Active {
+.option_box .option1Active {
   background-color: #e73e7e;
 }
-
-.option2Active {
+.option_box .option2Active {
   background-color: #2596a5;
 }
 

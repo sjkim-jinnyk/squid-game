@@ -3,7 +3,7 @@
     <div class="modal-wrapper">
       <div class="modal-container">
         <div class="modal-header">
-          <p class="headerText">전체 결과보기</p>
+          <p class="headerText">All the results</p>
           <i class="fas fa-times" @click="closeModal()"></i>
         </div>
         <main class="finalModal">
@@ -15,11 +15,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">성기훈</p>
-                <p class="charType">ENFP</p>
+                <p class="charName">Player 456</p>
               </section>
               <p class="charSummary">
-                풍부한 열정과 상상력으로 <br />무엇이든 해내는 인물
+                Passionate,<br />
+                active and creative.
               </p>
             </section>
           </article>
@@ -31,11 +31,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">오일남</p>
-                <p class="charType">INFJ</p>
+                <p class="charName">Player 001</p>
               </section>
               <p class="charSummary">
-                창의력과 통찰력이 뛰어난 <br />독창적인 인물
+                Creative and insightful.<br />
+                An original character.
               </p>
             </section>
           </article>
@@ -47,11 +47,12 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">조상우</p>
-                <p class="charType">ENTJ</p>
+                <p class="charName">Player 218</p>
               </section>
               <p class="charSummary">
-                전략가로서 실리를 챙기는 <br />지도자형 인물
+                As a strategist, takes<br />
+                care of practical things.<br />
+                Leader-type person.
               </p>
             </section>
           </article>
@@ -63,11 +64,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">장덕수</p>
-                <p class="charType">ESTP</p>
+                <p class="charName">Player 101</p>
               </section>
               <p class="charSummary">
-                다양한 분야에 관심이 있는 <br />활동적인 인물
+                Interested in various fields.<br />
+                An active person.
               </p>
             </section>
           </article>
@@ -79,11 +80,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">강새벽</p>
-                <p class="charType">INFP</p>
+                <p class="charName">Player 067</p>
               </section>
               <p class="charSummary">
-                신념과 조화를 중시하는 <br />이상주의자 인물
+                Values belief<br />
+                and harmony. An idealist.
               </p>
             </section>
           </article>
@@ -95,10 +96,12 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">한미녀</p>
-                <p class="charType">ESFP</p>
+                <p class="charName">Player 212</p>
               </section>
-              <p class="charSummary">현실적이고 실제적인 <br />사교적인 인물</p>
+              <p class="charSummary">
+                Realistic and practical.<br />
+                A sociable person./p>
+              </p>
             </section>
           </article>
           <article class="mbtiType" @click="typeLink('ISTJ')">
@@ -109,11 +112,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">황준호</p>
-                <p class="charType">ISTJ</p>
+                <p class="charName">Detective Hwang</p>
               </section>
               <p class="charSummary">
-                시작한 일은 끝까지 하는 <br />완벽주의자 인물
+                Do what he started to do<br />
+                until the end. A perfectionist.
               </p>
             </section>
           </article>
@@ -125,11 +128,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">프런트맨</p>
-                <p class="charType">ISTP</p>
+                <p class="charName">Front Man</p>
               </section>
               <p class="charSummary">
-                논리적이고 객관적인 <br />백과사전형 인물
+                Logical and objective.<br />
+                Encyclopedia-type person.
               </p>
             </section>
           </article>
@@ -141,11 +144,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">성기훈의 어머니</p>
-                <p class="charType">ISFJ</p>
+                <p class="charName">Player 456’ mother</p>
               </section>
               <p class="charSummary">
-                책임감이 강하고 헌신적인 <br />인내심 많은 인물
+                Responsible and dedicated.<br />
+                A patient person.
               </p>
             </section>
           </article>
@@ -158,10 +161,10 @@
             <section class="charInfo">
               <section class="typeInfo">
                 <p class="charName">VIPS</p>
-                <p class="charType">ESTJ</p>
               </section>
               <p class="charSummary">
-                계획하는 능력이 뛰어난 <br />사업가형 인물
+                So good at planning.<br />
+                A businessman-type person.
               </p>
             </section>
           </article>
@@ -173,11 +176,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">의문의 남자</p>
-                <p class="charType">ENTP</p>
+                <p class="charName">Salesman</p>
               </section>
               <p class="charSummary">
-                자신감과 에너지가 넘치는 <br />현실적인 인물
+                Full of confidence and energy.<br />
+                Innovative person.
               </p>
             </section>
           </article>
@@ -189,11 +192,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">알리압둘</p>
-                <p class="charType">ENFJ</p>
+                <p class="charName">Player 199</p>
               </section>
               <p class="charSummary">
-                주변을 행복하게 만드는 <br />친절한 인물
+                Makes people happy.<br />
+                A kind person.
               </p>
             </section>
           </article>
@@ -205,11 +208,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">지영</p>
-                <p class="charType">ISFP</p>
+                <p class="charName">Player 240</p>
               </section>
               <p class="charSummary">
-                감수성이 풍부하고 <br />독립심이 많은 인물
+                Very sentimental.<br />
+                A person who is independent.
               </p>
             </section>
           </article>
@@ -221,11 +224,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">진행요원</p>
-                <p class="charType">INTP</p>
+                <p class="charName">Soldier (ㅁ)</p>
               </section>
               <p class="charSummary">
-                이해가 빠르고 통찰력 있는 <br />아이디어형 인물
+                Quick to understand<br />
+                insightful. Idea-type person.
               </p>
             </section>
           </article>
@@ -237,11 +240,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">조상우의 어머니</p>
-                <p class="charType">ESFJ</p>
+                <p class="charName">Player 218’s Mother</p>
               </section>
               <p class="charSummary">
-                동정심과 참을성이 많은 <br />양심적인 인물
+                Sympathetic and patient. <br />
+                Conscientious person.
               </p>
             </section>
           </article>
@@ -253,11 +256,11 @@
             />
             <section class="charInfo">
               <section class="typeInfo">
-                <p class="charName">주최자</p>
-                <p class="charType">INTJ</p>
+                <p class="charName">Game Host</p>
               </section>
               <p class="charSummary">
-                행동과 사고가 단호한 <br />독립적인 인물
+                Creative in thinking<br />
+                and behavior.
               </p>
             </section>
           </article>
@@ -323,15 +326,16 @@ export default {
 }
 .mbtiType {
   display: flex;
-  width: 275px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 32px;
   margin-bottom: 40px;
   cursor: pointer;
 }
 .charInfo {
   font-size: 14px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .charSummary {
   letter-spacing: -0.02em;

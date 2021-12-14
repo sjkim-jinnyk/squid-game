@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/성기훈어머니_ISFJ_200.png"
         alt="성기훈어머니 이미지"
-        class="mbtiIMG"
+        class="mbtiIMG ISFJ"
       />
-      <p class="mbti">ISFJ</p>
-      <p class="charName">성기훈의 어머니</p>
-      <p class="mbtiSummary">책임감이 강하고 헌신적인 <br />인내심 많은 인물</p>
+      <p class="charName">Player 456’ mother</p>
+      <p class="mbtiSummary">
+        Responsible and dedicated.<br />
+        A patient person.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">Player 456’ mother</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -32,6 +34,7 @@
               :home-link="homeLink"
               :mbti="mbti"
               :middle="true"
+              :eng="true"
               @blurClass="blurResult"
             ></LinkShare>
             <li
@@ -45,7 +48,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('INFJ')">
             <p class="typeTitle">GOOD</p>
@@ -53,9 +56,10 @@
               src="~/assets/image/final/오일남_INFJ_100.png"
               alt="ISFJ와 잘맞는 유형"
             />
-            <p class="typeCharName">오일남</p>
+            <p class="typeCharName">Player 001</p>
             <p class="typeCharInfo">
-              창의력과 통찰력이 뛰어난 <br />독창적인 인물
+              Creative and insightful.<br />
+              An original character.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('ENTJ')">
@@ -64,9 +68,11 @@
               src="~/assets/image/final/조상우_ENTJ_100.png"
               alt="ISFJ와 잘맞는 유형"
             />
-            <p class="typeCharName">조상우</p>
+            <p class="typeCharName">Player 218</p>
             <p class="typeCharInfo">
-              전략가로서 실리를 챙기는 <br />지도자형 인물
+              As a strategist, takes<br />
+              care of practical things.<br />
+              Leader-type person.
             </p>
           </section>
         </div>
@@ -78,10 +84,11 @@
           :result-link="resultLink"
           :home-link="homeLink"
           :mbti="mbti"
+          :eng="true"
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -98,7 +105,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -135,7 +142,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -149,8 +156,8 @@
 </template>
 
 <script>
-import LinkShare from "~/components/LinkShare.vue";
 import Final_Modal from "./Final_Modal.vue";
+import LinkShare from "~/components/LinkShare.vue";
 
 export default {
   name: "FinalISFJ",
@@ -176,58 +183,56 @@ export default {
       blurClass: true,
       mbti: "ISFJ",
       mbtiInfo2_text: [
-        "책임감이 강하고 헌신적이다.",
-        "치밀성과 반복을 요하는 일을 끝까지 하는 인내력이 높다.",
-        "온순하고 차분하다.",
-        "신중하고 꼼꼼하고 섬세하며 생각이 많다.",
-        "돈. 시간. 감정 등의 쓸모없는 낭비를 싫어한다.",
-        "상대에게 상처를 주지 않으므로 대인관계가 원만하다.",
-        "배려, 겸손 예의를 중시한다.",
-        "상대방의 이야기를 경청하고 공감해주지만 본인의 깊은 고민과 이야기는 잘 말하지 않는다. ",
+        "Have strong responsibility and consider manner, humility and consideration as the most important virtue.",
+        "Gentle and calm.",
+        "Has a delicate personality and is always careful in every manner.",
+        "Hates wasting money, time and emotion.",
+        "Doesn’t like hurting other people’s feeling.",
+        "Good at listening to other people’s story with open mind but doesn’t talk of one’s own worries. ",
       ],
       mbtiInfo_text: [
-        "성기훈의 어머니로서 아버지의 의무를 다하지 못하고 있는 성기훈을 나무라지 않고 끝까지 인내하고 참는 모습을 보인다.",
-        "몸이 힘들어도 티 내지 않고 열심히 책임감 있게 일하는 모습을 보여준다.",
-        "성기훈의 모습이 탐탁치 않지만 그에게 상처를 주지 않고 차분하게 그를 대하는 모습이 나타난다.",
+        " As player 456’s mother, she endures and does not scold her son for not taking care of his daughter.",
+        "Even though it is not easy make a living, she works hard with great responsibility.",
+        "Even though she is not satisfied with her son, she deals with her son calmly without hurting his feelings. ",
       ],
       firstTest: null,
     };
   },
   head() {
     return {
-      title: "당신은 오징어게임에서 성기훈어머니 ISFJ",
+      title: "You are Player 456’ mother in Squid game",
       meta: [
         {
           hid: "title",
           name: "og:title",
-          content: "당신은 오징어게임에서 성기훈어머니 ISFJ",
+          content: "You are Player 456’ mother in Squid game",
         },
         {
           hid: "description",
           name: "og:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ISFJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ISFJ.png`,
         },
         // Twitter Open Graph
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "당신은 오징어게임에서 성기훈어머니 ISFJ",
+          content: "You are Player 456’ mother in Squid game",
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
 
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ISFJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ISFJ.png`,
         },
       ],
     };
@@ -266,5 +271,5 @@ export default {
 </script>
 
 <style scoped>
-@import "~/assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI_EN.css";
 </style>

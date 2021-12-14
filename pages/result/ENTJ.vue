@@ -1,20 +1,22 @@
 <template>
   <div class="Final_MBTI" :class="{ notScroll: showModal }">
     <div class="testMBTI">
-      <p class="testTitle">당신은 오징어게임에서</p>
+      <p class="testTitle">You Are…</p>
       <img
         src="~/assets/image/final/조상우_ENTJ_200.png"
         alt="조상우 이미지"
         class="mbtiIMG"
       />
-      <p class="mbti">ENTJ</p>
-      <p class="charName">조상우</p>
-      <p class="mbtiSummary">전략가로서 실리를 챙기는 <br />지도자형 인물</p>
+      <p class="charName">Player 218</p>
+      <p class="mbtiSummary">
+        As a strategist, <br />takes care of practical things.<br />
+        Leader-type person.
+      </p>
     </div>
     <main>
       <div class="mbtiInfo_wrap">
         <section class="mbtiInfo">
-          <p class="mbtiInfo_summary">오징어 게임에서 당신은?</p>
+          <p class="mbtiInfo_summary">Player 218</p>
           <ul class="mbtiInfo_text">
             <li v-for="(text, i) in mbtiInfo_text" :key="i">
               <span>{{ text }}</span>
@@ -24,7 +26,7 @@
       </div>
       <div class="mbtiInfo2_wrap">
         <section class="mbtiInfo2">
-          <p class="mbtiInfo2_summary">현실세계에서 당신은?</p>
+          <p class="mbtiInfo2_summary">You</p>
           <ul class="mbtiInfo2_text">
             <LinkShare
               v-if="!firstTest"
@@ -32,6 +34,7 @@
               :home-link="homeLink"
               :mbti="mbti"
               :middle="true"
+              :eng="true"
               @blurClass="blurResult"
             ></LinkShare>
             <li
@@ -45,7 +48,7 @@
         </section>
       </div>
       <section v-if="!firstTest" class="typeMatch">
-        <p class="title">유형별 궁합</p>
+        <p class="title">Compatibility by type</p>
         <div class="GoodBad">
           <section class="typeGood" @click="typeLink('INFP')">
             <p class="typeTitle">GOOD</p>
@@ -53,9 +56,10 @@
               src="~/assets/image/final/강새벽_INFP_100.png"
               alt="ENTJ와 잘맞는 유형"
             />
-            <p class="typeCharName">강새벽</p>
+            <p class="typeCharName">Player 067</p>
             <p class="typeCharInfo">
-              신념과 조화를 중시하는 <br />이상주의자 인물
+              Values belief and harmony.<br />
+              An idealist.
             </p>
           </section>
           <section class="typeBad" @click="typeLink('ISFJ')">
@@ -64,9 +68,10 @@
               src="~/assets/image/final/성기훈어머니_ISFJ_100.png"
               alt="ENTJ와 잘맞는 유형"
             />
-            <p class="typeCharName">성기훈의 어머니</p>
+            <p class="typeCharName">Player 456’ mother</p>
             <p class="typeCharInfo">
-              책임감이 강하고 헌신적인 <br />인내심 많은 인물
+              Responsible and dedicated.<br />
+              A patient person.
             </p>
           </section>
         </div>
@@ -78,10 +83,11 @@
           :result-link="resultLink"
           :home-link="homeLink"
           :mbti="mbti"
+          :eng="true"
         ></LinkShare>
         <div class="footerBTN">
           <button class="allResultBTN" @click="showResult">
-            결과 전체보기
+            All the results
             <svg
               width="7"
               height="11"
@@ -98,7 +104,7 @@
             </svg>
           </button>
           <button class="testRestart" @click="testRestart">
-            테스트 다시하기
+            Test again
             <svg
               width="10"
               height="13"
@@ -135,7 +141,7 @@
       </section>
       <article v-else>
         <button class="returnResult" @click="returnResult">
-          결과로 돌아가기
+          Back to result
         </button>
       </article>
     </footer>
@@ -176,59 +182,60 @@ export default {
       blurClass: true,
       mbti: "ENTJ",
       mbtiInfo2_text: [
-        "다소 내향적이고 합리적이며 이성적인 판단을 잘 한다.",
-        "독립적인 성격이 강해 많은 사람들과 있는 거 보디 혼자 만의 시간을 즐기는 편이다. ",
-        "주변 사람들에게는 친절하지만 사생활을 중시하는 성격이다. ",
-        "어떠한 상황에도 실리를 챙긴다.",
-        "팀워크가 필요할 때 전력가로서 빛을 발한다.",
-        "비효율적이거나 확실치 않은 상황을 싫어한다.",
-        "사전 준비가 철저하고 계획적이다.",
-        "일을 할 때 논리적이고 분석적이다.",
+        "Slightly withdrawn but makes rational and reasonable decisions. ",
+        "Have an independent personality and prefers to spend time alone.",
+        "Kind to other people but personal life comes first.",
+        "Always put practical interests above anything else.",
+        "Becomes a strategist when teamwork is needed.",
+        "Doesn’t lie inefficient and uncertain situations.",
+        "Well-organized and plans ahead.",
+        "Logical and analytic when working.",
       ],
       mbtiInfo_text: [
-        "드라마 내에서 서울대 경영학과 수석 입학 출신으로 똑똑하고 능력이 있지만 산더미 같은 빚에 허덕이며 살고 있으며, 회사 돈을 횡령한 죄로 범죄자 신세다.",
-        "빚이 쌓여서 막막한 상황에 놓여있을 때도 주변의 조언과 도움을 요청하기 보다 혼자서 고민하고 해결하려는 모습을 보여준다. ",
-        "다리게임에서 앞사람을 밀고 강새벽을 잔인하게 죽이고 구슬게임에서 알리압둘을 속이듯이 어떤 상황에서도 사람과 감정보다 실리와 효율적인 선택을 한다.",
-        "게임 도중에 팀워크가 필요할 때는 직접 나서서 전략가로서 빛을 발하기도 한다. ",
+        "Within the drama, player 218 is smart and talented after graduating Seoul National University top of his class. However, he now has a lot of debt and is on the run after embezzling money from his company.",
+        "Despite his troubles, he tends to worry about it all by himself.",
+        "He always chooses rationality above human feeling. Such personality shows when he pushes the man in front of him in the stepping stone game, murders player 067 and tricks player 199 in the marble game. ",
+        "He shows leadership and strategic abilities when teamwork is needed within the team.",
       ],
+
       firstTest: null,
     };
   },
   head() {
     return {
-      title: "당신은 오징어게임에서 조상우 ENTJ",
+      title: "You are Player 218 in Squid game",
       meta: [
         {
           hid: "title",
           name: "og:title",
-          content: "당신은 오징어게임에서 조상우 ENTJ",
+          content: "You are Player 218 in Squid game",
         },
         {
           hid: "description",
           name: "og:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
         {
           hid: "image",
           name: "og:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ENTJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ENTJ.png`,
         },
         // Twitter Open Graph
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "당신은 오징어게임에서 조상우 ENTJ",
+          content: "You are Player 218 in Squid game",
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "내가 오징어게임 주인공이라면?",
+          content: "Which squid game character are you?",
         },
 
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.baseURL}/image/meta/metaimg_ENTJ.png`,
+          content: `${process.env.baseURL}/image/meta_eng/metaimg_ENTJ.png`,
         },
       ],
     };
@@ -267,5 +274,5 @@ export default {
 </script>
 
 <style scoped>
-@import "~/assets/css/Final_MBTI.css";
+@import "~/assets/css/Final_MBTI_EN.css";
 </style>

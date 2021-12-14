@@ -14,7 +14,7 @@
       />
     </article>
     <article v-else class="event_question">
-      <p class="question_text">
+      <p class="question_text" :class="{ question_EngText: lang_en }">
         {{ lang_en ? "You might die soon." : "곧 죽을지도 모른다." }}
       </p>
       <TimeOut :half-time="halfTime" :timer-stop="timerStop"></TimeOut>
@@ -137,12 +137,19 @@ export default {
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 500;
+  line-height: 26.64px;
+}
+.event_question .question_EngText {
+  font-size: 16px;
+  line-height: 23.68px;
 }
 .event_question .question_btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 14px;
+  line-height: 20.72px;
+  letter-spacing: -0.02em;
   font-weight: 500;
 }
 .event_question .question_btn .event_option1 {

@@ -1,7 +1,12 @@
 <template>
   <div
-    id="timer"
-    :class="{ pause: timerStop, disable: timerStop, halfTime: halfTime }"
+    class="timer"
+    :class="{
+      pause: timerStop,
+      disable: timerStop,
+      halfTime: halfTime,
+      eng: eng,
+    }"
   ></div>
 </template>
 
@@ -11,6 +16,7 @@ export default {
   props: {
     timerStop: Boolean,
     halfTime: Boolean,
+    eng: Boolean,
   },
 };
 </script>
@@ -21,7 +27,7 @@ export default {
   background-color: #333 !important;
 }
 
-#timer {
+.timer {
   position: relative;
   width: 300px;
   height: 16px;
@@ -36,12 +42,12 @@ export default {
   font-size: 10px;
   line-height: 15px;
 }
-#timer::after {
+.timer::after {
   content: "TIME";
   position: relative;
   color: #000;
 }
-#timer::before {
+.timer::before {
   content: "";
   position: absolute;
   width: 300.68px;
@@ -52,7 +58,10 @@ export default {
   box-sizing: border-box;
   animation: timer 15s 1;
 }
-#timer.halfTime::before {
+.timer.eng::before {
+  animation: timer 20s 1;
+}
+.timer.halfTime::before {
   content: "";
   position: absolute;
   width: 300.68px;
@@ -63,7 +72,7 @@ export default {
   box-sizing: border-box;
   animation: timerHalf 8s 1;
 }
-#timer.disable::before {
+.timer.disable::before {
   content: "";
   position: absolute;
   width: 300.68px;
