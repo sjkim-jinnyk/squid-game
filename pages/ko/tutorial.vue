@@ -27,7 +27,7 @@
       </div>
       <img src="~/assets/image/tutorial.png" />
       <p class="tutorialText">
-        12개의 상황마다 <br />
+        14개의 상황마다 <br />
         시간제한이 있습니다. <br />
         게임에 참가하시겠습니까?
       </p>
