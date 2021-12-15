@@ -308,6 +308,8 @@ export default {
   background-color: black;
   transition: all 0.3s ease;
   color: white;
+  width: 360px;
+  margin: auto;
 }
 .modal-header {
   display: flex;
@@ -317,7 +319,9 @@ export default {
   font-size: 18px;
   margin-bottom: 40px;
 }
-
+.fa-times {
+  cursor: pointer;
+}
 .modal-default-button {
   float: right;
 }

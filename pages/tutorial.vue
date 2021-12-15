@@ -27,7 +27,7 @@
       </div>
       <img src="~/assets/image/tutorial.png" />
       <p class="tutorialText">
-        In every 12 situations, <br />
+        In every 14 situations, <br />
         There's a time limit. <br />
         Do you want to participate <br />
         in the game?
