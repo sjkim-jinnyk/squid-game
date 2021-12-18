@@ -1,69 +1,50 @@
-# nuxt-squid
+# 오징어게임 심리테스트 
 
-## Build Setup
+## 전세계는 지금 오징어게임 열풍!
 
+넷플릭스 드라마 "오징어 게임"에 과몰입한 사람들은 주목!!
+
+실제 드라마의 장면들로 구성된 심리테스트를 진행하면서 
+내가 어떤 캐릭터와 비슷한지 분석해봐요 ! ㅇㅅㅁ
+
+## 사용자
+- 넷플릭스 드라마 "오징어 게임"을 재밌게 본 사람
+- 긴박한 상황의 심리테스트를 해보고 싶은 사람
+
+## 사이트
+www.squid0games.site
+
+## 개발 기간
+- 2021.11~ 2021.12
+- 사용자의 피드백을 받아 개선할 예정
+
+## 기술 스택
+- Front
+  - Vue.JS
+  - Nuxt.JS
+
+## 프로젝트 구조
 ```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+  └─ aaa
+      │  bbb
+      │  bbb
+      │  
+      ├─bbb
+      │  │  bbb.py
+      │  │  bbb.py
+...중략...
 ```
+## 기획 및 설계 
+* [스프린트](https://www.notion.so/ddusi/Sprint-Board-43ccbde594cc41c0b54a82d446ef44db)
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+## 역활 분담
+- FE :  홍길동
+- BE : 홍길동
+- 디자인 : 
 
 
-### `pages`
+## UI / BM
+- 아래 페이지별 상세 설명, 더 큰 이미지로 하나하나씩 설명 필요
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+## 개발하며 느낀점
