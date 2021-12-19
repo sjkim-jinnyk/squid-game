@@ -109,12 +109,12 @@ https://squid-games.site
 
 ## 📑 기획 및 설계 
 * [스프린트](https://www.notion.so/ddusi/Sprint-Board-43ccbde594cc41c0b54a82d446ef44db)
-
+* [페이지 상세 설명]()
 <br>
 
-## 🔖 역활 분담
+## 🔖 역할 분담
 - 팀장 : 조원상
 - FE :  김수진
-- BE : 조원상
+- FE,BE : 조원상
 - 디자인 : 진승희
 - 기획 : 노준서
