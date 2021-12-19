@@ -22,8 +22,6 @@ jobs:
         script: |
           cd /home/ubuntu/squid-game;
           git pull origin master;
-          ddusi
-          ${{ secrets.USER_TOKEN }}
           yarn build;
           pm2 restart all; 
       
