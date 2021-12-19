@@ -2,122 +2,126 @@
   <div>
     <TestLoading v-if="test_done" class="container" />
     <EventPage v-if="event_show" @event_close="event_close" />
-    <div
+    <ul
       v-for="question in question_list.slice().reverse()"
       v-else
       :key="question.id"
     >
-      <transition name="fade">
-        <div v-if="!counter_list[question.id]" class="container">
-          <main class="question_main">
-            <div class="count_box">
-              <svg
-                width="260"
-                height="16"
-                viewBox="0 0 260 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
-                <path
-                  d="M25 0L31.9282 12H18.0718L25 0Z"
-                  :fill="getCounterColor(counter_list[0])"
-                />
-                <rect
-                  x="37"
-                  width="12"
-                  height="12"
-                  :fill="getCounterColor(counter_list[1])"
-                />
-                <circle
-                  cx="59.5"
-                  cy="6.5"
-                  r="6.5"
-                  :fill="getCounterColor(counter_list[2])"
-                />
-                <path
-                  d="M78 0L84.9282 12H71.0718L78 0Z"
-                  :fill="getCounterColor(counter_list[3])"
-                />
-                <rect
-                  x="90"
-                  width="12"
-                  height="12"
-                  :fill="getCounterColor(counter_list[4])"
-                />
-                <circle
-                  cx="112.5"
-                  cy="6.5"
-                  r="6.5"
-                  :fill="getCounterColor(counter_list[5])"
-                />
-                <path
-                  d="M131 0L137.928 12H124.072L131 0Z"
-                  :fill="getCounterColor(counter_list[6])"
-                />
-                <rect
-                  x="143"
-                  width="12"
-                  height="12"
-                  :fill="getCounterColor(counter_list[7])"
-                />
-                <circle
-                  cx="165.5"
-                  cy="6.5"
-                  r="6.5"
-                  :fill="getCounterColor(counter_list[8])"
-                />
-                <path
-                  d="M184 0L190.928 12H177.072L184 0Z"
-                  :fill="getCounterColor(counter_list[9])"
-                />
-                <rect
-                  x="196"
-                  width="12"
-                  height="12"
-                  :fill="getCounterColor(counter_list[10])"
-                />
-                <circle
-                  cx="218.5"
-                  cy="6.5"
-                  r="6.5"
-                  :fill="getCounterColor(counter_list[11])"
-                />
-                <path
-                  d="M237 0L243.9282 12H230.0718L237 0Z"
-                  :fill="getCounterColor(counter_list[12])"
-                />
-              </svg>
-            </div>
-            <img :src="require(`~/assets/image/${question.id}_question.png`)" />
-            <p class="QuestionText" v-html="question.desc"></p>
-          </main>
+      <div>
+        <transition name="fade">
+          <div v-if="!counter_list[question.id]" class="container">
+            <main class="question_main">
+              <div class="count_box">
+                <svg
+                  width="260"
+                  height="16"
+                  viewBox="0 0 260 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="6.5" cy="6.5" r="6.5" fill="#E73E7E" />
+                  <path
+                    d="M25 0L31.9282 12H18.0718L25 0Z"
+                    :fill="getCounterColor(counter_list[0])"
+                  />
+                  <rect
+                    x="37"
+                    width="12"
+                    height="12"
+                    :fill="getCounterColor(counter_list[1])"
+                  />
+                  <circle
+                    cx="59.5"
+                    cy="6.5"
+                    r="6.5"
+                    :fill="getCounterColor(counter_list[2])"
+                  />
+                  <path
+                    d="M78 0L84.9282 12H71.0718L78 0Z"
+                    :fill="getCounterColor(counter_list[3])"
+                  />
+                  <rect
+                    x="90"
+                    width="12"
+                    height="12"
+                    :fill="getCounterColor(counter_list[4])"
+                  />
+                  <circle
+                    cx="112.5"
+                    cy="6.5"
+                    r="6.5"
+                    :fill="getCounterColor(counter_list[5])"
+                  />
+                  <path
+                    d="M131 0L137.928 12H124.072L131 0Z"
+                    :fill="getCounterColor(counter_list[6])"
+                  />
+                  <rect
+                    x="143"
+                    width="12"
+                    height="12"
+                    :fill="getCounterColor(counter_list[7])"
+                  />
+                  <circle
+                    cx="165.5"
+                    cy="6.5"
+                    r="6.5"
+                    :fill="getCounterColor(counter_list[8])"
+                  />
+                  <path
+                    d="M184 0L190.928 12H177.072L184 0Z"
+                    :fill="getCounterColor(counter_list[9])"
+                  />
+                  <rect
+                    x="196"
+                    width="12"
+                    height="12"
+                    :fill="getCounterColor(counter_list[10])"
+                  />
+                  <circle
+                    cx="218.5"
+                    cy="6.5"
+                    r="6.5"
+                    :fill="getCounterColor(counter_list[11])"
+                  />
+                  <path
+                    d="M237 0L243.9282 12H230.0718L237 0Z"
+                    :fill="getCounterColor(counter_list[12])"
+                  />
+                </svg>
+              </div>
+              <img
+                :src="require(`~/assets/image/${question.id}_question.png`)"
+              />
+              <p class="QuestionText" v-html="question.desc"></p>
+            </main>
 
-          <div class="option_box">
-            <TimeOut :timer-stop="timerStop"></TimeOut>
-            <div class="optionBtn">
-              <button
-                id="option1"
-                class="option1"
-                :class="{ option1Active: option_0, disable: timerStop }"
-                @click="toUserChoice(0)"
-              >
-                {{ question.option[0] }}
-              </button>
+            <div class="option_box">
+              <TimeOut :timer-stop="timerStop"></TimeOut>
+              <div class="optionBtn">
+                <button
+                  id="option1"
+                  class="option1"
+                  :class="{ option1Active: option_0, disable: timerStop }"
+                  @click="toUserChoice(0)"
+                >
+                  {{ question.option[0] }}
+                </button>
 
-              <button
-                id="option2"
-                class="option2"
-                :class="{ option2Active: option_1, disable: timerStop }"
-                @click="toUserChoice(1)"
-              >
-                {{ question.option[1] }}
-              </button>
+                <button
+                  id="option2"
+                  class="option2"
+                  :class="{ option2Active: option_1, disable: timerStop }"
+                  @click="toUserChoice(1)"
+                >
+                  {{ question.option[1] }}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </transition>
-    </div>
+        </transition>
+      </div>
+    </ul>
   </div>
 </template>
 <script>
