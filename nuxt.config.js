@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "server",
   env: {
-    baseURL: process.env.BASE_URL || "https://www.squid-games.site",
+    baseURL: process.env.BASE_URL || "https://squid-games.site",
     dev: process.env.NODE_ENV !== "production",
   },
   build: {
@@ -137,8 +137,8 @@ export default {
     "@nuxtjs/robots",
   ],
   sitemap: {
-    hostname: "https://www.squid-games.site",
-    lastmod: "2021-12-09",
+    hostname: "https://squid-games.site",
+    lastmod: "2021-12-19",
     gzip: true,
     exclude: ["/result/Final_Modal"],
   },
