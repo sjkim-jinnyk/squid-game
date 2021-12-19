@@ -94,7 +94,7 @@ https://squid-games.site
 ```
 ## 📑 기획 및 설계 
 * [스프린트](https://www.notion.so/ddusi/Sprint-Board-43ccbde594cc41c0b54a82d446ef44db)
-* [디자인] (https://www.figma.com/file/yDIBjJAcHNf7gqhIdV4stk/Side-Project---%EC%98%A4%EC%A7%95%EC%96%B4%EA%B2%8C%EC%9E%84%ED%85%8C%EC%8A%A4%ED%8A%B8)
+
 ## 🔖 역활 분담
 - 팀장 : 조원상
 - FE :  김수진
