@@ -7,21 +7,34 @@
 실제 드라마의 장면들로 구성된 심리테스트를 진행하면서 
 내가 어떤 캐릭터와 비슷한지 분석해봐요 ! ㅇㅅㅁ
 
+
+![notion_header](https://user-images.githubusercontent.com/85085844/146677929-d30f3272-68a4-4afe-bb3f-288affe52c76.png)
+
+<br>
+
 ## 🙆‍♀️ 사용자
 - 넷플릭스 드라마 "오징어 게임"을 재밌게 본 사람
 - 긴박한 상황의 심리테스트를 해보고 싶은 사람
 
+<br>
+
 ## 🖥 사이트
 https://squid-games.site
+
+<br>
 
 ## ⏱ 개발 기간
 - 2021.11~ 2021.12
 - 사용자의 피드백을 받아 개선할 예정
 
+<br>
+
 ## ⚙️ 기술 스택
 - Front
   - Vue.JS
   - Nuxt.JS
+
+<br>
 
 ## 🛠 프로젝트 구조
 ```bash
@@ -92,8 +105,12 @@ https://squid-games.site
 │       └── meta
 └── store
 ```
+<br>
+
 ## 📑 기획 및 설계 
 * [스프린트](https://www.notion.so/ddusi/Sprint-Board-43ccbde594cc41c0b54a82d446ef44db)
+
+<br>
 
 ## 🔖 역활 분담
 - 팀장 : 조원상
