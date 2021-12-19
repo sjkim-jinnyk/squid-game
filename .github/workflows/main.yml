@@ -1,0 +1,46 @@
+name: remote ssh and deploy
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script_stop: true
+        script: |
+          cd /home/ubuntu/im-here/im-here-react;
+          git pull origin master;
+          yarn install;
+          yarn build;
+          cd /home/ubuntu/squid-game;
+          git pull origin master;
+          ddusi
+          ${{ secrets.USER_TOKEN }}
+          yarn build;
+          pm2 restart all; 
+      
+#     - name: Discord Alert Success
+#       uses: sarisia/actions-status-discord@v1
+#       if: success()
+#       with:
+#         webhook: ${{ secrets.DISCORD_WEBHOOK }}
+#         description: "🎉 사이트가 배포되었습니다!"
+
+#     - name: Discord Alert Failure
+#       uses: sarisia/actions-status-discord@v1
+#       if: failure()
+#       with:
+#         webhook: ${{ secrets.DISCORD_WEBHOOK }}
+#         description: "🔥 사이트 배포를 실패하였습니다."
