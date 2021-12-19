@@ -111,12 +111,16 @@ https://squid-games.site
 * [스프린트](https://www.notion.so/ddusi/Sprint-Board-43ccbde594cc41c0b54a82d446ef44db)
 * 페이지 상세 설명
   1. 메인 페이지
+  
   ![Main](https://user-images.githubusercontent.com/85085844/146678339-6e60bc07-22ba-48b6-9f0c-98bafc3afe8d.png)
+  
   - 테스트하기를 누르면 라우터 링크를 통해 튜토리얼 페이지로 이동한다.
   - SNS 공유하기는 등록된 메타태그를 통해 이미지와 함께 현재 링크가 공유된다. 
   
   2. 튜토리얼
+  
   ![Tutorial](https://user-images.githubusercontent.com/85085844/146678406-5cdf6d88-ed7b-47c7-897a-3632b38281e1.png)
+  
   - 자동 클릭되는 메소드를 이용하여 15초가 지나면 버튼이 자동으로 클릭되어 라우터로 연결된 질문지로 이동한다.
   
   3. 질문지
