@@ -20,10 +20,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script_stop: true
         script: |
-          cd /home/ubuntu/im-here/im-here-react;
-          git pull origin master;
-          yarn install;
-          yarn build;
           cd /home/ubuntu/squid-game;
           git pull origin master;
           ddusi
