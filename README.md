@@ -109,56 +109,8 @@ https://squid-games.site
 
 ## 📑 기획 및 설계 
 * [스프린트](https://www.notion.so/ddusi/Sprint-Board-43ccbde594cc41c0b54a82d446ef44db)
-* 페이지 상세 설명
-  1. 메인 페이지
-  
-  ![Main](https://user-images.githubusercontent.com/85085844/146678339-6e60bc07-22ba-48b6-9f0c-98bafc3afe8d.png)
-  
-  - 테스트하기를 누르면 라우터 링크를 통해 튜토리얼 페이지로 이동한다.
-  - SNS 공유하기는 등록된 메타태그를 통해 이미지와 함께 현재 링크가 공유된다. 
-  
-  <br>
-  
-  2. 튜토리얼
-  
-  ![Tutorial](https://user-images.githubusercontent.com/85085844/146678406-5cdf6d88-ed7b-47c7-897a-3632b38281e1.png)
-  
-  - 자동 클릭되는 메소드를 이용하여 15초가 지나면 버튼이 자동으로 클릭되어 라우터로 연결된 질문지로 이동한다.
-  
-  <br>
-  
-  3. 질문지
-  
-  ![Q1](https://user-images.githubusercontent.com/85085844/146678506-8d4897e1-f422-4325-bfe1-05ec963c2e7a.png)
-  
-  - 튜토리얼과 마찬가지로 자동 클릭 메소드가 존재하여 시간이 지나면 랜덤으로 선택하게 된다.
-  - 해당 버튼에 키 값을 부여하여 선택할 때마다 값이 쌓이도록 구현하여 값이 일정 갯수 이상일 때 결과문자(mbti)로 생성한다.
-  - 마지막 질문지까지 선택하면 결과 문자가 생성되는데 이 문자를 라우터 path로 사용하여 해당하는 결과 페이지로 이동하게 된다. 
+* [페이지 상세 설명](https://github.com/sjkim-jinnyk/squid-game/wiki)
 
-<br>
-
-  4. 결과
-  
-  ![결과 - 궁합 - 좋음](https://user-images.githubusercontent.com/85085844/146704652-de40f622-cdde-40f7-8b77-81556feb2763.png)
-  
-  - SNS에 공유해야만 나머지 결과를 볼 수 있다. 
-  - 유형별 궁합을 클릭하면 해당 결과를 볼 수 있다.
-  - 전체 결과보기를 클릭하면 모든 유형의 결과를 볼 수 있다.
-  
-  5. 전체 결과보기 모달창
-
-  ![결과 - 전체보기](https://user-images.githubusercontent.com/85085844/146714688-dccdddbd-1373-48fd-b986-d2ec4eb8dc30.png)
-
-  - 유형을 클릭하면 해당 인물의 결과를 볼 수 있다. 
- 
-  <br>
-   6. 이벤트 페이지
-  
-  ![Q6 이후 EVENT - 2](https://user-images.githubusercontent.com/85085844/146714789-6a070dd3-6bf2-41c2-836a-6072f9bfe2c5.png)
-  
-  - 사진과 함께 총소리가 나며 사용자의 몰입감을 위해 삽입한 이벤트 페이지입니다.
-  
-  <br>
 
 ## 🔖 역할 분담
 - 팀장 : 조원상
